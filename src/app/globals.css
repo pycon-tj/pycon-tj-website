@@ -1,0 +1,534 @@
+@import "tailwindcss";
+@import "lenis/dist/lenis.css";
+
+/* ───────────────────────── Design tokens ───────────────────────── */
+@theme {
+  --color-ink: #141012;
+  --color-ink-2: #1c1417;
+  --color-ink-3: #251a1e;
+  --color-wine: #5b1426;
+  --color-wine-deep: #300a14;
+  --color-gold: #c9a24a;
+  --color-gold-hi: #f1d68e;
+  --color-gold-lo: #8a6a26;
+  --color-ivory: #f4ebd9;
+  --color-lapis: #0f2f8f;
+  --color-tj-red: #cc1f32;
+  --color-tj-white: #ffffff;
+  --color-tj-green: #1f7a3a;
+
+  --ease-lux: cubic-bezier(0.2, 0.7, 0.1, 1);
+  --breakpoint-xs: 30rem;
+}
+
+@theme inline {
+  --font-display: var(--font-unbounded), "Arial Black", system-ui, sans-serif;
+  --font-serif: var(--font-cormorant), "Iowan Old Style", Georgia, serif;
+  --font-sans: var(--font-golos), system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, Menlo, Consolas, monospace;
+}
+
+:root {
+  color-scheme: dark;
+  --line: rgb(201 162 74 / 0.28);
+  --ivory-dim: rgb(244 235 217 / 0.68);
+  --girih: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 96 96'%3E%3Cg fill='none' stroke='%23c9a24a' stroke-width='1'%3E%3Crect x='27' y='27' width='42' height='42'/%3E%3Crect x='27' y='27' width='42' height='42' transform='rotate(45 48 48)'/%3E%3Ccircle cx='48' cy='48' r='7'/%3E%3Cpath d='M0 0L27 27M96 0L69 27M0 96L27 69M96 96L69 69M48 0v18M48 96V78M0 48h18M96 48H78'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* ───────────────────────── Base ───────────────────────── */
+@layer base {
+  html {
+    background: var(--color-ink);
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    background: var(--color-ink);
+    color: var(--color-ivory);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    overflow-x: clip;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  ::selection {
+    background: var(--color-gold);
+    color: var(--color-ink);
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-gold-hi);
+    outline-offset: 3px;
+    border-radius: 3px;
+  }
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+  button {
+    cursor: pointer;
+  }
+}
+
+/* ───────────────────────── Utilities ───────────────────────── */
+@utility wrap {
+  width: 100%;
+  max-width: 1320px;
+  margin-inline: auto;
+  padding-inline: max(16px, env(safe-area-inset-left));
+  @media (width >= 40rem) {
+    padding-inline: 28px;
+  }
+  @media (width >= 64rem) {
+    padding-inline: 40px;
+  }
+}
+
+@utility girih-bg {
+  background-image: var(--girih);
+  background-size: 112px;
+}
+
+@utility eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  &::before {
+    content: "";
+    width: 28px;
+    height: 1px;
+    background: currentColor;
+  }
+}
+
+/* Gold text with a slow travelling sheen */
+@utility text-gold-sheen {
+  background: linear-gradient(
+    100deg,
+    var(--color-gold-hi) 0%,
+    var(--color-gold) 38%,
+    var(--sheen-mid, #fff4cf) 52%,
+    var(--color-gold) 66%,
+    var(--color-gold-lo) 100%
+  );
+  background-size: 260% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: sheen 7s ease-in-out infinite;
+}
+
+/* Fine film grain on dark surfaces */
+@utility grain {
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.07;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+}
+
+/* ───────────────────────── Components ───────────────────────── */
+@layer components {
+  /* Buttons */
+  .btn {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    height: 56px;
+    padding: 0 26px;
+    border-radius: 2px;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 12.5px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition:
+      transform 0.5s var(--ease-lux),
+      color 0.4s var(--ease-lux),
+      box-shadow 0.5s var(--ease-lux);
+    will-change: transform;
+  }
+  .btn:active {
+    scale: 0.97;
+  }
+  .btn .arr {
+    display: inline-block;
+    transition: transform 0.5s var(--ease-lux);
+  }
+  .btn:hover .arr {
+    transform: translateX(5px);
+  }
+  .btn-sm {
+    height: 44px;
+    padding: 0 20px;
+    font-size: 11px;
+  }
+
+  .btn-gold {
+    color: #1a0e08;
+    /* Brand gold stays the same in both themes */
+    background: linear-gradient(135deg, #f1d68e, #c9a24a 45%, #8a6a26);
+    box-shadow:
+      0 10px 40px -12px rgb(201 162 74 / 0.6),
+      inset 0 1px 0 rgb(255 255 255 / 0.5);
+  }
+  .btn-gold::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(110deg, transparent 30%, rgb(255 255 255 / 0.6) 50%, transparent 70%);
+    transform: translateX(-120%);
+    transition: transform 0.9s var(--ease-lux);
+  }
+  .btn-gold:hover::before,
+  .btn-gold:focus-visible::before {
+    transform: translateX(120%);
+  }
+  .btn-gold:hover {
+    box-shadow:
+      0 16px 50px -12px rgb(241 214 142 / 0.7),
+      inset 0 1px 0 rgb(255 255 255 / 0.6);
+  }
+
+  .btn-outline {
+    color: var(--color-ivory);
+    border: 1px solid var(--line);
+    background: var(--btn-outline-bg, rgb(20 16 18 / 0.35));
+    backdrop-filter: blur(6px);
+  }
+  .btn-outline::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: var(--color-ivory);
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.5s var(--ease-lux);
+  }
+  .btn-outline:hover,
+  .btn-outline:focus-visible {
+    color: var(--color-ink);
+  }
+  .btn-outline:hover::before,
+  .btn-outline:focus-visible::before {
+    transform: scaleY(1);
+  }
+
+  /* Nav link underline */
+  .nav-link {
+    position: relative;
+    padding: 8px 14px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--ivory-dim);
+    transition: color 0.3s;
+  }
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 14px;
+    right: 14px;
+    bottom: 2px;
+    height: 1px;
+    background: var(--color-gold);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.45s var(--ease-lux);
+  }
+  .nav-link:hover,
+  .nav-link[aria-current="true"] {
+    color: var(--color-ivory);
+  }
+  .nav-link:hover::after,
+  .nav-link[aria-current="true"]::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  /* Hero intro: lines slide up one after another */
+  .intro-line {
+    display: block;
+    overflow: hidden;
+    padding-bottom: 0.06em;
+    margin-bottom: -0.06em;
+  }
+  .intro-line > span {
+    display: inline-block;
+    animation: rise 1.25s var(--ease-lux) both;
+    animation-delay: calc(0.35s + var(--i, 0) * 0.13s);
+  }
+  .intro-fade {
+    animation: fade-up 1.1s var(--ease-lux) both;
+    animation-delay: var(--d, 0s);
+  }
+
+  /* Outlined marquee type */
+  .outline-type {
+    color: transparent;
+    -webkit-text-stroke: 1px rgb(244 235 217 / 0.38);
+  }
+}
+
+/* ───────────────────────── Keyframes ───────────────────────── */
+@keyframes sheen {
+  0%,
+  100% {
+    background-position: 100% 0;
+  }
+  50% {
+    background-position: 0 0;
+  }
+}
+@keyframes rise {
+  from {
+    transform: translateY(108%);
+  }
+  to {
+    transform: none;
+  }
+}
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+@keyframes cue {
+  to {
+    top: 100%;
+  }
+}
+@keyframes ping-ring {
+  from {
+    transform: scale(0.1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+/* ───────────────────────── Reduced motion ───────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    animation-delay: 0s !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ═════════════════════ Sections (About → Footer) ═════════════════════ */
+@layer components {
+  /* 3D tilt driven by --rx / --ry from useTilt() */
+  .tilt {
+    transform: perspective(1100px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+    transform-style: preserve-3d;
+    transition: transform 0.45s var(--ease-lux);
+  }
+
+  /* Cursor-following gold glow (uses --mx / --my) */
+  .glow-follow::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0;
+    background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 0%), rgb(201 162 74 / 0.17), transparent 45%);
+    transition: opacity 0.4s;
+  }
+  .glow-follow:hover::before,
+  .glow-follow:focus-within::before {
+    opacity: 1;
+  }
+
+  /* Animated atlas / adras ikat band */
+  .ikat-band {
+    position: absolute;
+    inset: -24px -10%;
+    filter: blur(2.2px) saturate(1.1);
+    animation: ikat 32s linear infinite;
+    will-change: transform; /* own GPU layer: blur is rasterised once, then only moved */
+    background: repeating-linear-gradient(
+      90deg,
+      #6e1427 0 34px,
+      #c9a24a 34px 46px,
+      #f4ebd9 46px 52px,
+      #1f7a3a 52px 64px,
+      #f4ebd9 64px 70px,
+      #c9a24a 70px 82px,
+      #6e1427 82px 116px,
+      #0f2f8f 116px 128px,
+      #141012 128px 150px,
+      #cc1f32 150px 172px,
+      #141012 172px 194px,
+      #0f2f8f 194px 206px
+    );
+    -webkit-mask-image: repeating-linear-gradient(20deg, #000 0 22px, rgb(0 0 0 / 0.55) 22px 30px, #000 30px 52px);
+    mask-image: repeating-linear-gradient(20deg, #000 0 22px, rgb(0 0 0 / 0.55) 22px 30px, #000 30px 52px);
+  }
+  .ikat-thin {
+    height: 6px;
+    background: repeating-linear-gradient(90deg, #6e1427 0 18px, #c9a24a 18px 24px, #f4ebd9 24px 27px, #1f7a3a 27px 33px, #c9a24a 33px 39px, #0f2f8f 39px 47px);
+    filter: blur(0.6px);
+    opacity: 0.85;
+  }
+
+  /* Scrollbars inside code chips */
+  .code-scroll {
+    scrollbar-width: none;
+  }
+  .code-scroll::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Chorkhona stack (3D CSS) */
+  .chork-stage {
+    perspective: 1200px;
+  }
+  .chork-stack {
+    position: absolute;
+    inset: 0;
+    transform-style: preserve-3d;
+    transform: rotateX(var(--tx, 52deg)) rotateZ(var(--tz, 0deg));
+    transition: transform 0.25s linear;
+  }
+  .chork-layer {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border: 1.5px solid var(--color-gold);
+    transform-style: preserve-3d;
+    box-shadow:
+      inset 0 0 40px rgb(201 162 74 / 0.14),
+      0 18px 40px rgb(0 0 0 / 0.45);
+  }
+}
+
+@keyframes ikat {
+  to {
+    transform: translateX(206px);
+  }
+}
+@keyframes spin-slow {
+  to {
+    rotate: 360deg;
+  }
+}
+@keyframes caret {
+  50% {
+    opacity: 0;
+  }
+}
+@keyframes float-y {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+@keyframes river {
+  to {
+    stroke-dashoffset: -140;
+  }
+}
+
+/* ═════════════════════ Themes ═════════════════════
+   Dark is the default (tokens in @theme above). Light swaps the tokens;
+   `.dark-island` panels (Hero, nav, burgundy bands, code, map, footer)
+   restore the night palette so they look identical in both themes. */
+:root[data-theme="light"] {
+  color-scheme: light;
+  --color-ink: #f6efe2;
+  --color-ink-2: #efe5d2;
+  --color-ink-3: #e6d9c1;
+  --color-ivory: #1c1417;
+  --color-gold: #86621a;
+  --color-gold-hi: #7a5410;
+  --color-gold-lo: #5e4310;
+  --line: rgb(134 98 26 / 0.3);
+  --ivory-dim: rgb(28 20 23 / 0.74);
+  --sheen-mid: #c9a24a;
+  --btn-outline-bg: rgb(255 255 255 / 0.45);
+}
+
+:root[data-theme="light"] .dark-island {
+  color-scheme: dark;
+  --color-ink: #141012;
+  --color-ink-2: #1c1417;
+  --color-ink-3: #251a1e;
+  --color-ivory: #f4ebd9;
+  --color-gold: #c9a24a;
+  --color-gold-hi: #f1d68e;
+  --color-gold-lo: #8a6a26;
+  --line: rgb(201 162 74 / 0.28);
+  --ivory-dim: rgb(244 235 217 / 0.68);
+  --sheen-mid: #fff4cf;
+  --btn-outline-bg: rgb(20 16 18 / 0.35);
+  color: var(--color-ivory);
+}
+
+body {
+  transition:
+    background-color 0.5s var(--ease-lux),
+    color 0.5s var(--ease-lux);
+}
+
+/* Smooth cross-fade when the theme changes (View Transitions, where supported) */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.45s;
+  animation-timing-function: cubic-bezier(0.2, 0.7, 0.1, 1);
+}
+
+/* Hero poster — sized and placed to match the 3D statue exactly (see computeLayout in HeroScene).
+   Mobile: camera fits the statue to 84% of the stage height, or its width+margin to the stage width;
+   the rig sits 0.45 / 9 of the statue height below centre. Desktop: 80% height, centred at 72.5% of
+   the width (rig x = 0.45 × half-width), 0.3 / 9 of the statue height below centre. */
+.hero-poster {
+  --ph: min(84cqh, 118.42cqw);
+  height: var(--ph);
+  width: auto;
+  aspect-ratio: 736 / 1104;
+  left: 50cqw;
+  top: calc(50cqh + var(--ph) * 0.05);
+  translate: -50% -50%;
+}
+@media (width >= 64rem) {
+  .hero-poster {
+    --ph: 80cqh;
+    left: 72.5cqw;
+    top: calc(50cqh + var(--ph) * 0.03333);
+  }
+}
