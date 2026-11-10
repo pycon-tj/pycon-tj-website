@@ -3,9 +3,10 @@
 import { useId, useState } from "react";
 import type { Speaker } from "@/content/speakers";
 import { useDict } from "@/i18n/I18nProvider";
-import { useSectionMotion, useTilt } from "@/lib/sectionMotion";
+import { useSectionMotion } from "@/lib/sectionMotion";
+import { useCardTilt } from "@/lib/cardTilt";
 import { Ph, SectionHeading } from "../ui/SectionHeading";
-import { ArchOutline, Chorkhona } from "../ui/Ornaments";
+import { ArchOutline, StarRosette } from "../ui/Ornaments";
 import { LinkButton } from "../ui/Button";
 
 function Portrait({ s, index }: { s: Speaker; index: number }) {
@@ -43,14 +44,14 @@ function Portrait({ s, index }: { s: Speaker; index: number }) {
 function SpeakerCard({ s, index }: { s: Speaker; index: number }) {
   const { ui } = useDict();
   const [open, setOpen] = useState(false);
-  const tilt = useTilt<HTMLElement>(6);
+  const tilt = useCardTilt<HTMLElement>();
   const bioId = useId();
   return (
     <div data-reveal className="min-w-0 [perspective:1100px]">
       <article
         ref={tilt}
         data-open={open}
-        className="tilt group relative h-full overflow-hidden border border-ivory/12 bg-ink-2 transition-[border-color] duration-500 hover:border-[var(--line)] data-[open=true]:border-[var(--line)]"
+        className="group relative h-full overflow-hidden border border-ivory/12 bg-ink-2 transition-[border-color] duration-500 hover:border-[var(--line)] data-[open=true]:border-[var(--line)]"
       >
         <Portrait s={s} index={index} />
         <div className="relative px-6 pb-6 pt-5">
@@ -88,7 +89,7 @@ export default function Speakers() {
   return (
     <section ref={ref} id="speakers" aria-labelledby="speakers-title" className="relative overflow-hidden py-[clamp(96px,12vw,170px)]">
       <div aria-hidden data-speed="0.4" className="pointer-events-none absolute -left-40 top-40 size-[460px] text-gold opacity-[.05]">
-        <Chorkhona className="size-full" strokeWidth={0.5} />
+        <StarRosette className="size-full" strokeWidth={0.5} />
       </div>
       <div className="wrap relative">
         <SectionHeading
@@ -108,7 +109,7 @@ export default function Speakers() {
           <div data-reveal className="h-full min-w-0">
             <div className="dark-island relative flex h-full min-h-[420px] flex-col justify-between overflow-hidden border border-[var(--line)] bg-[linear-gradient(160deg,#41101e,#1d0f13_75%)] p-7 sm:p-8">
               <div aria-hidden className="absolute -bottom-24 -right-24 size-72 text-gold-hi opacity-[.14]">
-                <Chorkhona className="size-full animate-[spin-slow_90s_linear_infinite]" strokeWidth={0.6} />
+                <StarRosette className="size-full animate-[spin-slow_90s_linear_infinite]" strokeWidth={0.6} />
               </div>
               <div className="relative">
                 <div className="flex items-center justify-between gap-3">

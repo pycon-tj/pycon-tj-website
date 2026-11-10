@@ -5,7 +5,7 @@ import type { Level, Workshop } from "@/content/workshops";
 import { useDict } from "@/i18n/I18nProvider";
 import { useSectionMotion, useTilt } from "@/lib/sectionMotion";
 import { Ph, SectionHeading } from "../ui/SectionHeading";
-import { GirihStar } from "../ui/Ornaments";
+import { StarRosette } from "../ui/Ornaments";
 
 const ICON_PATHS: Record<Workshop["icon"], string> = {
   seed: "M12 21v-8M12 13c0-4 3-7 7-7 0 4-3 7-7 7ZM12 15c0-3-2.5-5.5-6-5.5 0 3 2.5 5.5 6 5.5Z",
@@ -100,7 +100,7 @@ export default function Workshops() {
     <section ref={ref} id="workshops" aria-labelledby="workshops-title" className="relative overflow-hidden py-[clamp(96px,12vw,170px)]">
       <div aria-hidden data-speed="0.35" className="girih-bg pointer-events-none absolute inset-x-0 -top-20 h-[60%] opacity-[.035] [mask-image:linear-gradient(180deg,#000,transparent)]" />
       <div aria-hidden data-speed="-0.4" className="pointer-events-none absolute -left-28 bottom-10 size-[360px] text-gold opacity-[.05]">
-        <GirihStar className="size-full animate-[spin-slow_140s_linear_infinite]" strokeWidth={0.5} />
+        <StarRosette className="size-full animate-[spin-slow_140s_linear_infinite]" strokeWidth={0.5} />
       </div>
       <div className="wrap relative">
         <SectionHeading

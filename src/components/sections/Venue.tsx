@@ -3,7 +3,7 @@
 import { useDict } from "@/i18n/I18nProvider";
 import { useSectionMotion } from "@/lib/sectionMotion";
 import { Ph } from "../ui/SectionHeading";
-import { GirihStar } from "../ui/Ornaments";
+import { CompassRose } from "../ui/Ornaments";
 
 /** Stylised, non-geographic map of Dushanbe (placeholder until the venue is confirmed). */
 function MapArt({ river }: { river: string }) {
@@ -96,7 +96,7 @@ export default function Venue() {
               <Ph>{venue.map.tag}</Ph>
             </div>
             <div aria-hidden className="absolute right-4 top-4 flex flex-col items-center gap-1 text-gold/70">
-              <GirihStar className="size-10 animate-[spin-slow_60s_linear_infinite]" strokeWidth={2} />
+              <CompassRose className="size-10" strokeWidth={2} />
               <span className="font-mono text-[10px] tracking-[0.2em]">N</span>
             </div>
             {/* Pin */}

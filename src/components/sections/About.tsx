@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useDict } from "@/i18n/I18nProvider";
 import { useInViewOnce, useSectionMotion, useTilt } from "@/lib/sectionMotion";
 import { prefersReducedMotion } from "@/lib/motion";
-import { Chorkhona, GlobeIcon, HisorGate, GirihStar } from "../ui/Ornaments";
+import { GlobeIcon, HisorGate, SevenStars, Star5, StarRosette } from "../ui/Ornaments";
 
 const TOKEN: Record<string, string> = {
   k: "text-[#e98a7a]",
@@ -43,7 +43,7 @@ function Repl() {
           <i className="size-2.5 rounded-full bg-[#e9e1d0]" />
           <i className="size-2.5 rounded-full bg-tj-green" />
           <span className="ml-3 font-mono text-[11.5px] text-[var(--ivory-dim)]">{about.repl.title}</span>
-          <GirihStar className="ml-auto size-4 text-gold/60" />
+          <Star5 className="ml-auto size-4 text-gold/60" strokeWidth={5} />
         </div>
         <pre aria-hidden className="code-scroll overflow-x-auto px-5 py-5 font-mono text-[13px] leading-[1.9] sm:px-6 sm:text-[14px]">
           {about.repl.lines.map((l, i) => (
@@ -73,7 +73,7 @@ function Repl() {
   );
 }
 
-const ICONS = { globe: GlobeIcon, chorkhona: Chorkhona, gate: HisorGate };
+const ICONS = { globe: GlobeIcon, stars: SevenStars, gate: HisorGate };
 
 export default function About() {
   const { about } = useDict();
@@ -83,10 +83,10 @@ export default function About() {
     <section ref={ref} id="about" aria-labelledby="about-title" className="relative overflow-hidden py-[clamp(96px,12vw,170px)]">
       {/* Parallax ornaments */}
       <div aria-hidden data-speed="0.5" className="pointer-events-none absolute -right-40 top-10 size-[560px] text-gold opacity-[.07] max-lg:hidden">
-        <Chorkhona className="size-full animate-[spin-slow_120s_linear_infinite]" strokeWidth={0.4} />
+        <StarRosette className="size-full animate-[spin-slow_120s_linear_infinite]" strokeWidth={0.4} />
       </div>
       <div aria-hidden data-speed="-0.35" className="pointer-events-none absolute -left-24 bottom-24 size-[300px] text-gold opacity-[.05]">
-        <GirihStar className="size-full" strokeWidth={0.5} />
+        <SevenStars className="size-full" strokeWidth={0.5} />
       </div>
 
       <div className="wrap relative">

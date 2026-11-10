@@ -39,7 +39,7 @@ export const about = {
       text: "A programme shaped the way PyCons run worldwide: an open call for proposals, community review and a code of conduct.",
     },
     {
-      icon: "chorkhona",
+      icon: "stars",
       title: "Local roots",
       text: "Talks and workshops in Tajik, Russian and English, with speakers who build software here.",
     },
@@ -48,5 +48,5 @@ export const about = {
       title: "Open doors",
       text: "Students, career changers, teachers and senior engineers share the same rooms — and the same tea.",
     },
-  ] as { icon: "globe" | "chorkhona" | "gate"; title: string; text: string }[],
+  ] as { icon: "globe" | "stars" | "gate"; title: string; text: string }[],
 };

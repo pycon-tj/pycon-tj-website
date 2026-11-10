@@ -1,5 +1,5 @@
 import { NextResponse, type NextRequest } from "next/server";
-import { LOCALE_COOKIE, defaultLocale, hasLocale, type Locale } from "./i18n/config";
+import { LOCALE_COOKIE, defaultLocale, hasLocale, type Locale } from "@/i18n/config";
 
 /** Pick the best supported locale from Accept-Language (e.g. "ru-RU,ru;q=0.9,en;q=0.8"). */
 function fromAcceptLanguage(header: string | null): Locale | null {
@@ -20,10 +20,12 @@ function fromAcceptLanguage(header: string | null): Locale | null {
 }
 
 /**
- * Only runs on "/": sends visitors to /en, /ru or /tg.
+ * "/" sends visitors to /en, /ru or /tg.
  * A remembered manual choice (cookie) wins over the browser's language.
+ * (A route handler rather than proxy/middleware: same redirect, and it deploys as a
+ * plain serverless function — Netlify cannot bundle a Next 16 proxy built on Windows.)
  */
-export function proxy(request: NextRequest) {
+export function GET(request: NextRequest) {
   const saved = request.cookies.get(LOCALE_COOKIE)?.value;
   const locale =
     (saved && hasLocale(saved) ? saved : null) ??
@@ -34,4 +36,3 @@ export function proxy(request: NextRequest) {
   return NextResponse.redirect(url, 307);
 }
 
-export const config = { matcher: ["/"] };

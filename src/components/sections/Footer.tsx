@@ -1,7 +1,7 @@
 "use client";
 
 import { useDict } from "@/i18n/I18nProvider";
-import { FlagStripe, Chorkhona } from "../ui/Ornaments";
+import { FlagStripe, StarRosette } from "../ui/Ornaments";
 import { Ph } from "../ui/SectionHeading";
 
 export default function Footer() {
@@ -10,7 +10,7 @@ export default function Footer() {
     <footer className="dark-island relative overflow-hidden border-t border-[var(--line)] bg-[#0e0a0b] pb-10 pt-[clamp(64px,8vw,96px)] text-[14px] text-[var(--ivory-dim)]">
       <FlagStripe className="absolute inset-x-0 top-0 opacity-80" />
       <div aria-hidden className="pointer-events-none absolute -bottom-40 -right-40 size-[460px] text-gold opacity-[.04]">
-        <Chorkhona className="size-full" strokeWidth={0.5} />
+        <StarRosette className="size-full" strokeWidth={0.5} />
       </div>
 
       <div className="wrap relative">

@@ -56,8 +56,8 @@ export async function generateMetadata({ params }: LayoutProps<"/[lang]">): Prom
     description: d.meta.description,
     icons: {
       icon: "/assets/python-logo.svg",
-      shortcut: "/assets/icon-256.png",
-      apple: "/assets/icon-256.png",
+      shortcut: "/assets/python-logo.svg",
+      apple: "/assets/python-logo.svg",
     },
     alternates: {
       canonical: `/${lang}`,

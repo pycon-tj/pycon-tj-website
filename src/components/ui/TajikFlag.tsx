@@ -5,9 +5,13 @@ export default function TajikFlag({ className = "" }: { className?: string }) {
       aria-hidden
       className={`relative inline-grid h-[18px] w-[26px] grid-rows-[2fr_3fr_2fr] overflow-hidden rounded-[3px] shadow-[0_0_0_1px_rgb(255_255_255/0.15)] ${className}`}
     >
+      {/* eslint-disable-next-line @next/next/no-img-element -- 26×18 decorative flag: the image optimiser adds nothing at this size */}
       <img
         src="/assets/flagtjk.jpeg"
-        alt=" "
+        alt=""
+        width={26}
+        height={18}
+        decoding="async"
         className="h-[18px] w-full object-cover"
       />
     </span>

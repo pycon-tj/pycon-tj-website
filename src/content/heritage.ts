@@ -3,13 +3,14 @@ export const heritage = {
   eyebrow: "07 — Tajik Heritage",
   title: { before: "Geometry is our ", em: "oldest", after: " language" },
   lead: "Long before code, Tajik craftspeople worked in patterns, symmetry and repetition. The visual language of PyCon Tajikistan borrows from them — quietly, and with respect.",
-  chorkhonaCaption: "Chorkhona · four frames, one opening to the sky",
+  emblemCaption: "Nishon · State Emblem of the Republic of Tajikistan",
+  emblemAlt: "3D model of the State Emblem of Tajikistan: a crown and seven stars above the sun rising over mountains, framed by wheat and cotton bound with the national tricolour, above an open book",
   items: [
     {
-      icon: "chorkhona",
-      name: "Chorkhona",
-      local: "чорхона",
-      text: "Four nested squares, each turned 45°. A pattern of balance found in carved wood, ceilings and textiles — and the frame of this page.",
+      icon: "stars",
+      name: "Seven stars",
+      local: "ҳафт ситора",
+      text: "A crown beneath an arc of seven stars — the emblem at the heart of the Tajik flag. Seven is an old number of completeness in Tajik and Persian tradition; the stars scattered across this page come from it.",
     },
     {
       icon: "suzani",
@@ -29,7 +30,7 @@ export const heritage = {
       local: "Ҳисор",
       text: "The fortress gate of Hisor, west of Dushanbe: two towers and an arch. Our section frames and the final call to action borrow its silhouette.",
     },
-  ] as { icon: "chorkhona" | "suzani" | "atlas" | "hisor"; name: string; local: string; text: string }[],
+  ] as { icon: "stars" | "suzani" | "atlas" | "hisor"; name: string; local: string; text: string }[],
   ikatLabel: "Atlas · Adras · Ikat",
   somoni: {
     kicker: "The monument",
