@@ -6,6 +6,7 @@ import Providers from "@/components/Providers";
 import { I18nProvider } from "@/i18n/I18nProvider";
 import { hasLocale, locales } from "@/i18n/config";
 import { getDict } from "@/content";
+import { toClientDict } from "@/i18n/clientDict";
 
 // Tajik needs Cyrillic Extended (ғ ӣ қ ӯ ҳ ҷ). Unicode-range means each visitor only
 // downloads the subsets their language uses. Golos is the one text + heading face.
@@ -88,7 +89,7 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[la
         >
           {dict.ui.skip}
         </a>
-        <I18nProvider locale={lang} dict={dict}>
+        <I18nProvider locale={lang} dict={toClientDict(dict)}>
           <Providers>{children}</Providers>
         </I18nProvider>
       </body>

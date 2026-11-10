@@ -71,7 +71,7 @@ export const en = {
     tracks: "Tracks",
     conferenceDays: "Conference days",
     notToScale: "Stylised · not to scale",
-    opensMapsSr: "(opens Google Maps for Dushanbe in a new tab)",
+    opensMapsSr: "(opens Google Maps for Dushanbe)",
     contact: "Contact",
     organisedBy: "Organised by",
     edition: "Edition",

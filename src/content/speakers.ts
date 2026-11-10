@@ -54,7 +54,7 @@ export const speakers: Speaker[] = [
 export const cfp = {
   kicker: "Call for proposals",
   title: { before: "Your talk could be", em: "here" },
-  text: "Have something to share — a library, a lesson learned, a project from Tajikistan? The call for proposals opens soon. Talks in Tajik, Russian or English are welcome.",
+  text: "Have something to share — a library, a lesson learned, a project from Tajikistan? The call for proposals opens soon.",
   status: "Opens soon",
   cta: { label: "Contact the organisers", href: "#contact" },
 };

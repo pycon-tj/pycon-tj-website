@@ -12,7 +12,6 @@ export const venue = {
     { label: "Address", value: "To be announced", placeholder: true },
     { label: "Airport", value: "Dushanbe International", note: "DYU" },
     { label: "Time zone", value: "UTC+5", note: "Tajikistan Time" },
-    { label: "Languages", value: "Tajik · Russian · English" },
   ] as { label: string; value: string; note?: string; placeholder?: boolean }[],
   map: {
     tag: "Map placeholder",

@@ -36,12 +36,12 @@ export const about = {
     {
       icon: "globe",
       title: "Global standard",
-      text: "A programme shaped the way PyCons run worldwide: an open call for proposals, community review and a code of conduct.",
+      text: "A programme shaped the way PyCons run worldwide: an open call for proposals and community review.",
     },
     {
       icon: "stars",
       title: "Local roots",
-      text: "Talks and workshops in Tajik, Russian and English, with speakers who build software here.",
+      text: "Rooted in Tajikistan's own developer community.",
     },
     {
       icon: "gate",

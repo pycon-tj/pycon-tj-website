@@ -12,7 +12,6 @@ import {
   type ReactNode,
 } from "react";
 import { useDict } from "@/i18n/I18nProvider";
-import { useLenis } from "./SmoothScroll";
 
 type Ctx = { open: () => void };
 const TicketContext = createContext<Ctx>({ open: () => {} });
@@ -49,11 +48,9 @@ function TicketDialog({ open, onClose }: { open: boolean; onClose: () => void })
   const descId = useId();
   const boxRef = useRef<HTMLDivElement>(null);
   const closeBtn = useRef<HTMLButtonElement>(null);
-  const lenis = useLenis();
 
   useEffect(() => {
     if (!open) return;
-    lenis?.stop();
     const prevOverflow = document.documentElement.style.overflow;
     document.documentElement.style.overflow = "hidden";
     const t = setTimeout(() => closeBtn.current?.focus(), 60);
@@ -82,9 +79,8 @@ function TicketDialog({ open, onClose }: { open: boolean; onClose: () => void })
       clearTimeout(t);
       document.removeEventListener("keydown", onKey);
       document.documentElement.style.overflow = prevOverflow;
-      lenis?.start();
     };
-  }, [open, onClose, lenis]);
+  }, [open, onClose]);
 
   return (
     <div
