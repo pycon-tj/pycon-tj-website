@@ -6,23 +6,13 @@ import { prefersReducedMotion } from "@/lib/motion";
 
 type Theme = "light" | "dark";
 
+// Light is the default; dark only when the visitor picks it.
 function subscribe(cb: () => void) {
   const mo = new MutationObserver(cb);
   mo.observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
-  // Follow the OS setting until the visitor picks a theme themselves.
-  const mq = matchMedia("(prefers-color-scheme: light)");
-  const onSystem = () => {
-    try {
-      if (!localStorage.getItem("theme")) document.documentElement.dataset.theme = mq.matches ? "light" : "dark";
-    } catch {}
-  };
-  mq.addEventListener("change", onSystem);
-  return () => {
-    mo.disconnect();
-    mq.removeEventListener("change", onSystem);
-  };
+  return () => mo.disconnect();
 }
-const getTheme = (): Theme => (document.documentElement.dataset.theme === "light" ? "light" : "dark");
+const getTheme = (): Theme => (document.documentElement.dataset.theme === "dark" ? "dark" : "light");
 
 function applyTheme(next: Theme) {
   const set = () => {
@@ -39,7 +29,7 @@ function applyTheme(next: Theme) {
 /** Sun / moon switch. The initial theme is set before paint by the script in the layout. */
 export default function ThemeToggle({ className = "" }: { className?: string }) {
   const ui = useDict().ui;
-  const theme = useSyncExternalStore(subscribe, getTheme, () => "dark" as Theme);
+  const theme = useSyncExternalStore(subscribe, getTheme, () => "light" as Theme);
   const next: Theme = theme === "light" ? "dark" : "light";
   return (
     <button
@@ -47,7 +37,7 @@ export default function ThemeToggle({ className = "" }: { className?: string }) 
       onClick={() => applyTheme(next)}
       aria-label={next === "light" ? ui.toLight : ui.toDark}
       title={next === "light" ? ui.toLight : ui.toDark}
-      className={`group relative grid size-10 shrink-0 place-items-center rounded-full border border-[var(--line)] text-gold-hi transition-colors hover:border-gold-hi/60 hover:bg-gold/10 ${className}`}
+      className={`group relative grid size-10 shrink-0 place-items-center rounded-full border border-[var(--line)] text-ivory transition-colors hover:border-ivory/40 ${className}`}
     >
       {/* Sun */}
       <svg

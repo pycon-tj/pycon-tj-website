@@ -88,7 +88,7 @@ function TicketDialog({ open, onClose }: { open: boolean; onClose: () => void })
 
   return (
     <div
-      className={`fixed inset-0 z-[80] grid place-items-center bg-[rgb(10_6_8/0.74)] px-4 backdrop-blur-md transition-[opacity,visibility] duration-400 ${
+      className={`fixed inset-0 z-[80] grid place-items-center bg-[rgb(10_6_8/0.45)] px-4 transition-[opacity,visibility] duration-400 ${
         open ? "visible opacity-100" : "pointer-events-none invisible opacity-0"
       }`}
       onMouseDown={(e) => {
@@ -103,22 +103,18 @@ function TicketDialog({ open, onClose }: { open: boolean; onClose: () => void })
         aria-modal="true"
         aria-labelledby={titleId}
         aria-describedby={descId}
-        className={`relative w-full max-w-[480px] overflow-hidden border border-[var(--line)] bg-ink-2 p-8 transition-transform duration-500 ease-lux sm:p-10 ${
-          open ? "translate-y-0 scale-100" : "translate-y-5 scale-[.98]"
+        className={`relative w-full max-w-[480px] overflow-hidden rounded-2xl border border-[var(--line)] bg-ink-2 p-8 shadow-[0_20px_50px_-20px_rgb(0_0_0/0.35)] transition-transform duration-300 ease-out sm:p-10 ${
+          open ? "translate-y-0" : "translate-y-3"
         }`}
       >
-        <div aria-hidden className="girih-bg pointer-events-none absolute -right-16 -top-16 size-56 opacity-[.08]" />
         <p className="eyebrow">{ticketModal.eyebrow}</p>
-        <h2 id={titleId} className="mt-5 font-display text-[26px] font-extrabold uppercase leading-[1.08] tracking-[-0.02em]">
-          {ticketModal.title.before}{" "}
-          <em className="font-serif text-[1.15em] font-semibold normal-case tracking-normal text-gold-hi">
-            {ticketModal.title.em}
-          </em>
+        <h2 id={titleId} className="mt-3 text-[26px] font-semibold leading-[1.2]">
+          {ticketModal.title.before} <span className="text-[var(--btn-primary-bg)]">{ticketModal.title.em}</span>
         </h2>
         <p id={descId} className="mt-4 text-[var(--ivory-dim)]">
           {ticketModal.body}
         </p>
-        <p className="mt-3 font-mono text-[11px] uppercase tracking-[0.14em] text-gold">{ticketModal.note}</p>
+        <p className="mt-3 text-[14px] text-gold">{ticketModal.note}</p>
         <button ref={closeBtn} type="button" className="btn btn-gold mt-8" onClick={onClose}>
           {ticketModal.close} <span className="arr" aria-hidden>→</span>
         </button>

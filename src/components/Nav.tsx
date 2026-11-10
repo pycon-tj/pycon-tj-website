@@ -4,41 +4,31 @@ import { useEffect, useId, useRef, useState } from "react";
 import { useDict } from "@/i18n/I18nProvider";
 import LogoPlate from "./ui/LogoPlate";
 import { TicketButton } from "./ui/Button";
-import { useLenis } from "./SmoothScroll";
 import ThemeToggle from "./ui/ThemeToggle";
 import LanguageSwitcher from "./ui/LanguageSwitcher";
 
+/**
+ * Calm sticky header: logo, a few section links, language, theme, one primary action.
+ * Below lg the links move into a simple sheet under the bar.
+ */
 export default function Nav() {
   const { nav, mobileExtraNav, ui } = useDict();
-  const [solid, setSolid] = useState(false);
   const [active, setActive] = useState<string>("");
   const [open, setOpen] = useState(false);
   const menuId = useId();
   const burgerRef = useRef<HTMLButtonElement>(null);
   const menuRef = useRef<HTMLDivElement>(null);
-  const lenis = useLenis();
+  const items = [...nav, ...mobileExtraNav];
 
-  // Solid bar after scrolling
+  // Highlight the section in view
   useEffect(() => {
-    const onScroll = () => setSolid(window.scrollY > 40);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  // Active section
-  useEffect(() => {
-    const ids = [...nav, ...mobileExtraNav].map((n) => n.id);
-    const els = ids
-      .map((id) => document.getElementById(id))
+    const els = items
+      .map((n) => document.getElementById(n.id))
       .filter(Boolean) as HTMLElement[];
     if (!els.length) return;
     const io = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) setActive(e.target.id);
-        });
-      },
+      (entries) =>
+        entries.forEach((e) => e.isIntersecting && setActive(e.target.id)),
       { rootMargin: "-45% 0px -50% 0px" },
     );
     els.forEach((el) => io.observe(el));
@@ -50,16 +40,15 @@ export default function Nav() {
       io.disconnect();
       window.removeEventListener("scroll", clearAtTop);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- items derive from the dictionary, stable per page
   }, [nav, mobileExtraNav]);
 
-  // Mobile menu: lock scroll, Escape, focus management
+  // Mobile sheet: lock scroll, Escape closes, focus moves in and back out
   useEffect(() => {
     if (!open) return;
-    lenis?.stop();
     const prev = document.documentElement.style.overflow;
     document.documentElement.style.overflow = "hidden";
-    const first = menuRef.current?.querySelector<HTMLElement>("a");
-    const t = setTimeout(() => first?.focus(), 250);
+    menuRef.current?.querySelector<HTMLElement>("a")?.focus();
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
         setOpen(false);
@@ -67,49 +56,27 @@ export default function Nav() {
       }
     };
     document.addEventListener("keydown", onKey);
-    const mq = window.matchMedia("(min-width: 80rem)");
+    const mq = window.matchMedia("(min-width: 64rem)");
     const onMq = () => mq.matches && setOpen(false);
     mq.addEventListener("change", onMq);
     return () => {
-      clearTimeout(t);
       document.removeEventListener("keydown", onKey);
       mq.removeEventListener("change", onMq);
       document.documentElement.style.overflow = prev;
-      lenis?.start();
     };
-  }, [open, lenis]);
-
-  const mobileItems = [...nav.slice(0, 4), ...mobileExtraNav, ...nav.slice(4)];
+  }, [open]);
 
   return (
     <>
-      <header
-        className={`dark-island intro-fade fixed inset-x-0 top-0 z-50 border-b pt-[env(safe-area-inset-top)] transition-[background-color,border-color,backdrop-filter] duration-500 ${
-          solid && !open
-            ? "border-[var(--line)] bg-[rgb(20_16_18/0.78)] backdrop-blur-[14px] backdrop-saturate-[1.4]"
-            : "border-transparent"
-        }`}
-        style={{ "--d": "0.15s" } as React.CSSProperties}
-      >
-        <div
-          className={`wrap flex items-center gap-7 transition-[height] duration-500 ease-lux ${
-            solid ? "h-[64px]" : "h-[76px]"
-          }`}
-        >
-          <a
-            href="#top"
-            aria-label={ui.backToTopAria}
-            className="relative z-[2] shrink-0"
-          >
-            <LogoPlate
-              width={solid ? 104 : 118}
-              className="transition-all duration-500"
-            />
+      <header className="fixed inset-x-0 top-0 z-50 border-b border-[var(--line)] bg-[color-mix(in_srgb,var(--color-ink)_88%,transparent)] pt-[env(safe-area-inset-top)] backdrop-blur-md">
+        <div className="wrap flex h-16 items-center gap-6">
+          <a href="#top" aria-label={ui.backToTopAria} className="shrink-0">
+            <LogoPlate width={104} />
           </a>
 
-          <nav aria-label={ui.primaryNav} className="ml-auto hidden xl:block">
+          <nav aria-label={ui.primaryNav} className="ml-auto hidden lg:block">
             <ul className="flex gap-1">
-              {nav.map((n) => (
+              {items.map((n) => (
                 <li key={n.id}>
                   <a
                     href={`#${n.id}`}
@@ -123,96 +90,73 @@ export default function Nav() {
             </ul>
           </nav>
 
-          <div className="hidden items-center gap-2.5 xl:flex">
-            <LanguageSwitcher />
+          <div className="ml-auto flex items-center gap-2 lg:ml-0">
+            <div className="hidden sm:block">
+              <LanguageSwitcher />
+            </div>
             <ThemeToggle />
-          </div>
-
-          <TicketButton size="sm" className="hidden lg:ml-auto lg:inline-flex xl:ml-0">
-            {ui.register}
-          </TicketButton>
-
-          <ThemeToggle className="ml-auto lg:ml-0 xl:hidden" />
-
-          <button
-            ref={burgerRef}
-            type="button"
-            className="relative z-[2] size-11 xl:hidden"
-            aria-label={open ? ui.closeMenu : ui.openMenu}
-            aria-expanded={open}
-            aria-controls={menuId}
-            onClick={() => setOpen((o) => !o)}
-          >
-            {[0, 1, 2].map((i) => (
-              <span
-                key={i}
+            <TicketButton size="sm" className="hidden lg:inline-flex">
+              {ui.register}
+            </TicketButton>
+            <button
+              ref={burgerRef}
+              type="button"
+              className="grid size-10 place-items-center rounded-full border border-[var(--line)] lg:hidden"
+              aria-label={open ? ui.closeMenu : ui.openMenu}
+              aria-expanded={open}
+              aria-controls={menuId}
+              onClick={() => setOpen((o) => !o)}
+            >
+              <svg
+                viewBox="0 0 24 24"
                 aria-hidden
-                className="absolute left-[11px] right-[11px] h-[1.5px] bg-ivory transition-[transform,opacity] duration-400 ease-lux"
-                style={{
-                  top: 16 + i * 6,
-                  transform: open
-                    ? i === 0
-                      ? "translateY(6px) rotate(45deg)"
-                      : i === 2
-                        ? "translateY(-6px) rotate(-45deg)"
-                        : ""
-                    : "",
-                  opacity: open && i === 1 ? 0 : 1,
-                }}
-              />
-            ))}
-          </button>
+                className="size-5 fill-none stroke-current"
+                strokeWidth={1.8}
+                strokeLinecap="round"
+              >
+                {open ? (
+                  <path d="M6 6l12 12M18 6L6 18" />
+                ) : (
+                  <path d="M4 7h16M4 12h16M4 17h16" />
+                )}
+              </svg>
+            </button>
+          </div>
         </div>
       </header>
 
-      {/* Full-screen burgundy menu (mobile / tablet) */}
+      {/* Mobile / tablet sheet — a sibling of the header: the header's backdrop-filter
+          would otherwise become the containing block for this fixed panel. */}
       <div
         id={menuId}
         ref={menuRef}
         role="dialog"
         aria-modal="true"
         aria-label={ui.siteMenu}
-        inert={!open}
-        className="dark-island fixed inset-0 z-[45] flex flex-col overflow-y-auto bg-wine-deep px-4 pb-10 pt-[calc(96px+env(safe-area-inset-top))] transition-[clip-path,visibility] duration-700 ease-lux sm:px-7 xl:hidden"
-        style={{
-          clipPath: open
-            ? "circle(150% at calc(100% - 40px) 40px)"
-            : "circle(0% at calc(100% - 40px) 40px)",
-          visibility: open ? "visible" : "hidden",
-        }}
+        hidden={!open}
+        className="fixed inset-x-0 bottom-0 top-[calc(64px+env(safe-area-inset-top))] z-40 overflow-y-auto border-t border-[var(--line)] bg-ink lg:hidden"
       >
-        <div
-          aria-hidden
-          className="girih-bg pointer-events-none absolute inset-0 opacity-[.07]"
-        />
-        <nav aria-label={ui.mobileNav} className="relative my-auto">
+        <nav aria-label={ui.mobileNav} className="wrap py-6">
           <ul>
-            {mobileItems.map((n, i) => (
-              <li
-                key={n.id}
-                className="border-b border-gold-hi/15 transition-[opacity,transform] duration-700 ease-lux"
-                style={{
-                  opacity: open ? 1 : 0,
-                  transform: open ? "none" : "translateY(24px)",
-                  transitionDelay: open ? `${0.15 + i * 0.05}s` : "0s",
-                }}
-              >
+            {items.map((n) => (
+              <li key={n.id} className="border-b border-[var(--line)]">
                 <a
                   href={`#${n.id}`}
                   onClick={() => setOpen(false)}
-                  className="flex items-baseline gap-4 py-3 font-display text-[clamp(28px,8.5vw,46px)] font-extrabold uppercase leading-[1.15] tracking-[-0.02em]"
+                  className="block py-4 text-[20px] font-semibold"
                 >
-                  <small className="font-mono text-xs font-normal text-gold">
-                    {n.num}
-                  </small>
                   {n.label}
                 </a>
               </li>
             ))}
           </ul>
-          <div className="mt-9 flex flex-wrap items-center gap-4">
-            <TicketButton onClick={() => setOpen(false)}>{ui.register}</TicketButton>
-            <LanguageSwitcher size="lg" />
+          <div className="mt-8 flex flex-wrap items-center gap-4">
+            <TicketButton onClick={() => setOpen(false)}>
+              {ui.register}
+            </TicketButton>
+            <div className="sm:hidden">
+              <LanguageSwitcher size="lg" />
+            </div>
           </div>
         </nav>
       </div>

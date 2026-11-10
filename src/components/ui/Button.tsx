@@ -1,7 +1,6 @@
 "use client";
 
 import type { ReactNode } from "react";
-import { useMagnetic } from "@/lib/motion";
 import { useTickets } from "../TicketModal";
 
 type Variant = "gold" | "outline";
@@ -24,11 +23,9 @@ export function TicketButton({
   className?: string;
   onClick?: () => void;
 }) {
-  const ref = useMagnetic<HTMLButtonElement>();
   const { open } = useTickets();
   return (
     <button
-      ref={ref}
       type="button"
       aria-haspopup="dialog"
       className={cls(variant, size, className)}
@@ -42,7 +39,7 @@ export function TicketButton({
   );
 }
 
-/** Anchor styled as a button, with the magnetic hover. */
+/** Anchor styled as a button. */
 export function LinkButton({
   href,
   children,
@@ -58,9 +55,8 @@ export function LinkButton({
   className?: string;
   arrow?: string;
 }) {
-  const ref = useMagnetic<HTMLAnchorElement>();
   return (
-    <a ref={ref} href={href} className={cls(variant, size, className)}>
+    <a href={href} className={cls(variant, size, className)}>
       {children} <span className="arr" aria-hidden>{arrow}</span>
     </a>
   );

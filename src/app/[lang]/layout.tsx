@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { notFound } from "next/navigation";
-import { Unbounded, Cormorant_Garamond, Golos_Text, JetBrains_Mono } from "next/font/google";
+import { Golos_Text, JetBrains_Mono } from "next/font/google";
 import "../globals.css";
 import Providers from "@/components/Providers";
 import { I18nProvider } from "@/i18n/I18nProvider";
@@ -8,29 +8,12 @@ import { hasLocale, locales } from "@/i18n/config";
 import { getDict } from "@/content";
 
 // Tajik needs Cyrillic Extended (ғ ӣ қ ӯ ҳ ҷ). Unicode-range means each visitor only
-// downloads the subsets their language uses; only the display face is preloaded.
-const unbounded = Unbounded({
-  subsets: ["latin", "cyrillic", "cyrillic-ext"],
-  weight: ["600", "800"],
-  variable: "--font-unbounded",
-  display: "swap",
-});
-
-const cormorant = Cormorant_Garamond({
-  subsets: ["latin", "cyrillic", "cyrillic-ext"],
-  weight: ["500", "600"],
-  style: ["italic"],
-  variable: "--font-cormorant",
-  display: "swap",
-  preload: false,
-});
-
+// downloads the subsets their language uses. Golos is the one text + heading face.
 const golos = Golos_Text({
   subsets: ["latin", "cyrillic", "cyrillic-ext"],
-  weight: ["400", "500", "600"],
+  weight: ["400", "500", "600", "700"],
   variable: "--font-golos",
   display: "swap",
-  preload: false,
 });
 
 const jetbrains = JetBrains_Mono({
@@ -73,15 +56,15 @@ export async function generateMetadata({ params }: LayoutProps<"/[lang]">): Prom
 }
 
 export const viewport: Viewport = {
-  themeColor: "#141012",
+  themeColor: "#faf7f2",
   viewportFit: "cover",
 };
 
 /**
- * Sets data-theme before first paint (saved choice → system preference → dark),
- * so there's no flash of the wrong theme.
+ * Sets data-theme before first paint: light by default, dark only when the visitor
+ * chose it with the toggle — so there's no flash of the wrong theme.
  */
-const themeScript = `(function(){try{var t=localStorage.getItem('theme');if(t!=='light'&&t!=='dark'){t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark'}document.documentElement.dataset.theme=t}catch(e){document.documentElement.dataset.theme='dark'}})();`;
+const themeScript = `(function(){try{document.documentElement.dataset.theme=localStorage.getItem('theme')==='dark'?'dark':'light'}catch(e){}})();`;
 
 export default async function RootLayout({ children, params }: LayoutProps<"/[lang]">) {
   const { lang } = await params;
@@ -91,9 +74,9 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[la
   return (
     <html
       lang={lang}
-      data-theme="dark"
+      data-theme="light"
       suppressHydrationWarning
-      className={`${unbounded.variable} ${cormorant.variable} ${golos.variable} ${jetbrains.variable}`}
+      className={`${golos.variable} ${jetbrains.variable}`}
     >
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />

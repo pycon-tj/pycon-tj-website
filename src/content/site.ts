@@ -25,13 +25,12 @@ export type NavItem = { id: string; label: string; num: string };
 export const nav: NavItem[] = [
   { id: "about", label: "About", num: "02" },
   { id: "speakers", label: "Speakers", num: "04" },
-  { id: "schedule", label: "Schedule", num: "05" },
-  { id: "workshops", label: "Workshops", num: "06" },
+  { id: "heritage", label: "Heritage", num: "07" },
   { id: "venue", label: "Venue", num: "08" },
 ];
 
 /** Extra links shown only in the full-screen mobile menu. */
-export const mobileExtraNav: NavItem[] = [{ id: "heritage", label: "Heritage", num: "07" }];
+export const mobileExtraNav: NavItem[] = [];
 
 export const hero = {
   badge: "First Python Conference in Tajikistan",

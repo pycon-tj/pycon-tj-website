@@ -1,17 +1,12 @@
 "use client";
 
 import type { ReactNode } from "react";
-import SmoothScroll from "./SmoothScroll";
 import { TicketProvider } from "./TicketModal";
-import Cursor from "./Cursor";
 
+/**
+ * Calm redesign: native scrolling (no smooth-scroll library) and the system cursor.
+ * SmoothScroll and Cursor remain in the codebase but are no longer mounted.
+ */
 export default function Providers({ children }: { children: ReactNode }) {
-  return (
-    <SmoothScroll>
-      <TicketProvider>
-        {children}
-        <Cursor />
-      </TicketProvider>
-    </SmoothScroll>
-  );
+  return <TicketProvider>{children}</TicketProvider>;
 }

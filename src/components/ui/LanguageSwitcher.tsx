@@ -113,7 +113,7 @@ export default function LanguageSwitcher({
         ref={list}
         id={listId}
         aria-label={ui.language}
-        className={`absolute right-0 z-50 min-w-[190px] origin-top-right overflow-hidden rounded-[10px] border border-gold-hi/25 bg-ink-2/95 p-1.5 shadow-[0_24px_60px_-18px_rgb(0_0_0/0.85)] backdrop-blur-md ease-lux ${
+        className={`absolute right-0 z-50 min-w-[190px] origin-top-right overflow-hidden rounded-[10px] border border-[var(--line)] bg-ink-2 p-1.5 shadow-[0_16px_40px_-16px_rgb(0_0_0/0.3)] ease-lux ${
           placement === "up" ? "bottom-full mb-2 origin-bottom-right" : "top-full mt-2"
         } ${open ? "visible scale-100 opacity-100 [transition:opacity_.3s,transform_.3s,visibility_0s]" : "pointer-events-none invisible scale-95 opacity-0 [transition:opacity_.3s,transform_.3s,visibility_0s_.3s]"}`}
         onKeyDown={(e) => {
@@ -128,7 +128,6 @@ export default function LanguageSwitcher({
           focusItem(target);
         }}
       >
-        <span aria-hidden className="absolute inset-x-4 top-0 h-px bg-[linear-gradient(90deg,transparent,var(--color-gold-hi),transparent)] opacity-60" />
         {locales.map((l) => {
           const active = l === current;
           return (

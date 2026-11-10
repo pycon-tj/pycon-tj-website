@@ -40,15 +40,12 @@ export const footer = {
       title: "Conference",
       links: [
         { label: "About", href: "#about" },
-        { label: "Highlights", href: "#highlights" },
         { label: "Speakers", href: "#speakers" },
-        { label: "Schedule", href: "#schedule" },
       ],
     },
     {
       title: "Experience",
       links: [
-        { label: "Workshops", href: "#workshops" },
         { label: "Heritage", href: "#heritage" },
         { label: "Venue", href: "#venue" },
       ],
