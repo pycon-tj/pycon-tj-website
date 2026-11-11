@@ -49,6 +49,8 @@ chmod 600 /home/deploy/.ssh/authorized_keys
 echo "== Code in $APP"
 install -d -o deploy -g deploy "$APP"
 [ -d "$APP/.git" ] || sudo -u deploy git clone --quiet --depth 1 "$REPO" "$APP"
+sudo -u deploy git -C "$APP" fetch --quiet --depth 1 origin "${DEPLOY_REF:-main}"
+sudo -u deploy git -C "$APP" reset --quiet --hard FETCH_HEAD
 
 echo "== Secrets in $APP/deploy/.env"
 if [ ! -f "$APP/deploy/.env" ]; then
