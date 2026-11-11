@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% translate "Tickets" %} | PyCon Tajikistan 2026{% endblock %}
+{% block content %}
+<section class="page">
+  <h1>{% translate "Tickets" %}</h1>
+  <p class="lead">{% translate "Every ticket includes all talks and workshops, lunch, tea all day, stickers and your personal suzani badge." %}</p>
+  <div class="tickets">
+    <article class="permit"><h3>{% translate "Student" %}</h3><p>{% translate "For school pupils and students, with ID. Paid for in part by our sponsors." %}</p></article>
+    <article class="permit"><h3>{% translate "Personal" %}</h3><p>{% translate "For people paying for themselves." %}</p></article>
+    <article class="permit permit-featured"><h3>{% translate "Supporter" %}</h3><p>{% translate "When your employer pays. You help pay for student tickets." %}</p></article>
+    <article class="permit"><h3>{% translate "Pay it forward" %}</h3><p>{% translate "Add a donation and give a free ticket to a student who cannot afford one." %}</p></article>
+  </div>
+  {% if event.pretix_url %}
+    <a class="btn btn-sun" href="{{ event.pretix_url }}">{% translate "Buy a ticket" %}</a>
+  {% else %}
+    <p class="soon">{% translate "Ticket sales open soon. Follow our Telegram channel to hear first." %}</p>
+  {% endif %}
+  <p class="aid-line">{% translate "Every attendee agrees to follow our" %} <a class="link" href="{% url 'code_of_conduct' %}">{% translate "Code of Conduct" %}</a>.</p>
+  <p class="aid-line">{% translate "Cannot afford a ticket or travel?" %} <a class="link" href="{% url 'aid' %}">{% translate "Apply for financial aid" %}</a></p>
+</section>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load i18n suzani_tags %}
+{% block title %}{% translate "Page not found" %} | PyCon Tajikistan 2026{% endblock %}
+{% block content %}
+<section class="page split">
+  <div>
+    <h1>{% translate "You've lost the trail." %}</h1>
+    <p class="lead">{% translate "Even snow leopards get lost sometimes. Let's go back to base camp." %}</p>
+    <a class="btn btn-sun" href="/">{% translate "Back to home" %}</a>
+  </div>
+  <div class="medallion" aria-hidden="true">{% rosette "lost" 300 %}</div>
+</section>
+{% endblock %}

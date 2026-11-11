@@ -1,87 +1,65 @@
-# PyCon Tajikistan 2026
+# PyCon Tajikistan 2026: website
 
-The website for PyCon Tajikistan 2026, the first Python conference in Tajikistan (Dushanbe), organised by Softclub. It's available in English, Russian and Tajik.
+> Python at the Summit. The site of the first PyCon in Tajikistan, built with Python: Django, Wagtail and HTMX.
 
-## Tech stack
+Planning documents: [plan.md](plan.md) · [design.md](design.md) · [tezis.md](tezis.md)
 
-- [Next.js](https://nextjs.org) 16.4.5 (App Router, Turbopack) and React 19.3
-- TypeScript 5
-- Tailwind CSS 4
-- ESLint 9 (`eslint-config-next`)
-- Three.js / React Three Fiber, GSAP and Lenis: installed and used by components that the current homepage does not mount (the former 3D hero, the 3D emblem, and the schedule and workshops sections)
+## Run it locally
 
-## Requirements
-
-- Node.js 20.9.0 or newer (required by Next.js 16)
-- npm (the repository uses `package-lock.json`)
-
-## Local setup
+You need Python 3.13 and [uv](https://docs.astral.sh/uv/) (`pip install uv`).
 
 ```bash
-git clone https://github.com/pycon-tj/pycon-tj-website.git
+uv sync                                  # install everything
+cp .env.example .env                     # local settings (DEBUG on)
+uv run python manage.py migrate          # create the database and home page
+uv run python manage.py seed_tiers       # mountain-named sponsor tiers
+uv run python manage.py createsuperuser  # your admin login
+uv run python manage.py runserver
 ```
+
+- Site: http://localhost:8000 (redirects to `/tg/`, `/ru/` or `/en/`)
+- Content editor (Wagtail): http://localhost:8000/admin/
+- Data admin (sponsors, talks, volunteers, aid): http://localhost:8000/django-admin/
+- JSON API docs: http://localhost:8000/api/docs
+
+## What is where
+
+| Folder | What it does |
+|--------|--------------|
+| `config/` | Settings, URLs, the django-ninja API |
+| `apps/pages/` | Wagtail home and text pages, suzani views and template tags, `build_locale` command |
+| `apps/program/` | Rooms, speakers, talks. `sync_pretalx` imports them from pretalx |
+| `apps/sponsors/` | Sponsor tiers ("ledges") and sponsors |
+| `apps/tickets/` | Tickets page (sales run on pretix) |
+| `apps/volunteers/`, `apps/aid/` | Volunteer and financial aid forms (HTMX) |
+| `apps/live/` | "Now on stage" page for the event day, refreshes every 30 s |
+| `apps/news/` | News posts and `post_to_telegram` |
+| `suzani/` | Pure-Python pattern generator. Runs on the server **and** in the browser (Pyodide) |
+| `templates/`, `static/` | Django templates, CSS tokens, the ascent and terminal scripts |
+| `locale/` | Translations. Edit `locale/drafts.py`, then `uv run python manage.py build_locale` |
+
+## Useful commands
 
 ```bash
-cd pycon-tj-website
+uv run pytest                              # tests
+uv run ruff check . && uv run ruff format . # lint and format
+uv run python manage.py build_locale       # rebuild TJ / RU translations
+uv run python manage.py sync_pretalx       # import talks (needs PRETALX_EVENT_URL)
+uv run python manage.py post_to_telegram   # post news (needs TELEGRAM_BOT_TOKEN, TELEGRAM_CHANNEL)
+docker compose up --build                  # production-like run with PostgreSQL
 ```
 
-```bash
-npm ci
-```
+## The wow parts
 
-`NEXT_PUBLIC_SITE_URL` is optional locally. It sets the absolute URLs used in canonical and language-alternate links, and defaults to `http://localhost:3000`.
+- **Sunrise hero:** the sun from the logo rises behind the mountains, the red and green swoosh draws itself. Plays once; off with reduced motion.
+- **Altitude rail:** climbs from 800 m to a 2,026 m summit (the year) as you scroll.
+- **Python terminal:** real Python in the browser via Pyodide, loaded only when the visitor presses Start. `draw("name")` uses the same `suzani` module as the server.
+- **Your suzani:** `/suzani/` weaves a personal rosette from a name, live with HTMX, downloadable as a profile picture. The same seed goes on the printed badge.
+- **Atlas shimmer:** buttons shimmer like adras silk on hover.
 
-## Development server
+## Before launch
 
-```bash
-npm run dev
-```
-
-Open <http://localhost:3000>. Visiting `/` redirects to `/en`, `/ru` or `/tg` based on the saved language cookie or the browser language. English is the fallback.
-
-## Production build
-
-```bash
-npm run build
-```
-
-```bash
-npm run start
-```
-
-Check the code with:
-
-```bash
-npm run lint
-```
-
-## Project structure
-
-- `src/app/[lang]/`: the localised pages (`layout.tsx`, `page.tsx`)
-- `src/app/route.ts`: the `/` language redirect
-- `src/components/`: the navigation, hero, page sections and UI pieces
-- `src/content/`: all site text. Edit English in the section files (`site.ts`, `about.ts` and so on). Russian is in `ru.ts` and Tajik in `tg.ts`; TypeScript flags any key that is missing from a translation.
-- `src/i18n/`: the locale configuration and provider
-- `public/assets/`: the logos, the monument image and the other images
-
-Values marked "To be announced" or "placeholder" must be confirmed before they're changed. Don't replace them with invented dates, venues or numbers.
-
-## Deployment
-
-The site is deployed to Netlify, which runs Next.js through its Next.js runtime: <https://pycon-tajikistan-2026.netlify.app>
-
-- **Environment variable:** set `NEXT_PUBLIC_SITE_URL` in the Netlify site settings to the public URL.
-- **Deploying:** deploys are made with the Netlify CLI from a folder linked to the site. The link is stored in `.netlify/`, which git ignores.
-
-  ```bash
-  npx netlify-cli deploy --prod
-  ```
-
-- **Windows note:** stop any running `npm run dev` before deploying on Windows. The deploy step renames the `.next` folder, and a running dev server keeps files in it open.
-
-## Contributing
-
-1. Create a branch from `main`.
-2. Make your changes. For text, edit the files in `src/content/` and keep `en`, `ru` and `tg` in sync.
-3. Run `npm run lint` and `npm run build`, and fix anything they report.
-4. Push the branch and open a pull request against `main` on GitHub.
+- A native speaker proofreads `locale/drafts.py` (Tajik and Russian are drafts).
+- Set `DJANGO_SECRET_KEY`, `DJANGO_ALLOWED_HOSTS`, `DATABASE_URL`, `PRETALX_EVENT_URL`, `PRETIX_SHOP_URL`.
+- `uv run python manage.py check --deploy`
+- Replace the GitHub link in the footer with the real repository.

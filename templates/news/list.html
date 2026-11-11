@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% translate "News" %} | PyCon Tajikistan 2026{% endblock %}
+{% block content %}
+<section class="page">
+  <h1>{% translate "News" %}</h1>
+  {% for post in posts %}
+    <article>
+      <h2><a href="{% url 'news_detail' post.slug %}">{{ post.title }}</a></h2>
+      <p><time datetime="{{ post.published_at|date:'c' }}">{{ post.published_at|date:"j F Y" }}</time></p>
+    </article>
+  {% empty %}
+    <p class="empty">{% translate "No news yet. Follow our Telegram channel to hear first." %}</p>
+  {% endfor %}
+</section>
+{% endblock %}

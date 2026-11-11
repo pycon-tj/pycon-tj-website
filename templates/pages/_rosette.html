@@ -1,0 +1,3 @@
+{% load i18n suzani_tags %}
+{% rosette seed 420 %}
+<p><a class="btn btn-ink" href="{% url 'suzani_download' %}?name={{ seed|urlencode }}&amp;size=1080" download>{% translate "Download as a profile picture" %}</a></p>

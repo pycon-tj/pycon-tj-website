@@ -1,0 +1,486 @@
+#
+msgid ""
+msgstr ""
+"Language: ru\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+msgid "12 December 2026"
+msgstr "12 декабря 2026"
+
+msgid "25 minutes and 5 for questions"
+msgstr "25 минут и 5 на вопросы"
+
+msgid "5 minutes, sign up on the day"
+msgstr "5 минут, запись в день события"
+
+msgid "90 minutes, hands-on"
+msgstr "90 минут практики"
+
+msgid "Accepted"
+msgstr ""
+
+msgid ""
+"Add a donation and give a free ticket to a student who cannot afford one."
+msgstr ""
+
+msgid "Advanced"
+msgstr ""
+
+msgid "All languages"
+msgstr ""
+
+msgid "All levels"
+msgstr ""
+
+msgid "Anything else we should know?"
+msgstr ""
+
+msgid "Anything that helps"
+msgstr ""
+
+msgid "Application received. We'll reply by email within two weeks."
+msgstr ""
+
+msgid "Apply for financial aid"
+msgstr "Подать заявку на помощь"
+
+msgid "Back to home"
+msgstr "На главную"
+
+msgid "Back to the program"
+msgstr ""
+
+msgid "Become a sponsor"
+msgstr "Стать спонсором"
+
+msgid "Become part of the crew"
+msgstr ""
+
+msgid "Beginner"
+msgstr ""
+
+msgid "Bring Education Day to your school"
+msgstr "Пригласите День образования в вашу школу"
+
+msgid "Bring your laptop. Leave with working code."
+msgstr "Приходите с ноутбуком. Уходите с работающим кодом."
+
+msgid "Buy a ticket"
+msgstr "Купить билет"
+
+msgid "Cannot afford a ticket or travel?"
+msgstr ""
+
+msgid "City you travel from"
+msgstr ""
+
+msgid "Code of Conduct"
+msgstr "Кодекс поведения"
+
+msgid "Coming up"
+msgstr ""
+
+msgid "Declined"
+msgstr ""
+
+msgid "Download as a profile picture"
+msgstr "Скачать как аватар"
+
+msgid "Dushanbe Innovation Institute"
+msgstr "Душанбинский инновационный институт"
+
+msgid "Education Day"
+msgstr "День образования"
+
+msgid "Email"
+msgstr ""
+
+msgid "Estimated travel cost, if any"
+msgstr ""
+
+msgid "Even snow leopards get lost sometimes. Let's go back to base camp."
+msgstr ""
+
+msgid "Every attendee agrees to follow our"
+msgstr "Каждый участник соглашается соблюдать наш"
+
+msgid ""
+"Every ticket includes all talks and workshops, lunch, tea all day, stickers "
+"and your personal suzani badge."
+msgstr ""
+
+msgid "Filter"
+msgstr ""
+
+msgid "Financial aid"
+msgstr "Финансовая помощь"
+
+msgid "First time speaking? We'll pair you with a mentor."
+msgstr "Выступаете впервые? Мы найдём вам наставника."
+
+msgid ""
+"Five minutes, any topic, sign up on the day. Your first talk could be here."
+msgstr ""
+"Пять минут, любая тема, запись в день события. Ваш первый доклад может быть "
+"здесь."
+
+msgid "Footer"
+msgstr ""
+
+msgid "For people paying for themselves."
+msgstr ""
+
+msgid ""
+"For school pupils and students, with ID. Paid for in part by our sponsors."
+msgstr ""
+
+msgid "Full name"
+msgstr ""
+
+msgid "Get a ticket"
+msgstr "Купить билет"
+
+msgid ""
+"Help at registration, in the rooms or on stage. You get a free ticket, a "
+"crew T-shirt, and a story about how you helped start the first PyCon in "
+"Tajikistan."
+msgstr ""
+
+msgid "I need a free ticket"
+msgstr ""
+
+msgid "Intermediate"
+msgstr ""
+
+msgid "Join the crew"
+msgstr ""
+
+msgid "Keynote"
+msgstr ""
+
+msgid "Language"
+msgstr ""
+
+msgid "Languages you speak"
+msgstr ""
+
+msgid "Leave empty to use the default."
+msgstr ""
+
+msgid "Level"
+msgstr ""
+
+msgid "Lightning talk"
+msgstr "Молниеносный доклад"
+
+msgid "Lightning talks"
+msgstr "Молниеносные доклады"
+
+msgid "Live"
+msgstr "Прямой эфир"
+
+msgid "Made with Python and green tea in Dushanbe."
+msgstr "Сделано на Python и зелёном чае в Душанбе."
+
+msgid "Main"
+msgstr ""
+
+msgid "Make your suzani"
+msgstr "Создать своё сюзане"
+
+msgid "Menu"
+msgstr "Меню"
+
+msgid ""
+"Money should not stop you from coming. We give free tickets and pay back "
+"travel costs against receipts after the event. Aid is based on need, not on "
+"your CV."
+msgstr ""
+
+msgid "New"
+msgstr ""
+
+msgid "News"
+msgstr "Новости"
+
+msgid "No news yet. Follow our Telegram channel to hear first."
+msgstr ""
+
+msgid "Nothing on stage right now."
+msgstr ""
+
+msgid "Now on stage"
+msgstr ""
+
+msgid "On this page"
+msgstr "На этой странице"
+
+msgid "One day of Python, in three languages"
+msgstr "Один день Python на трёх языках"
+
+msgid ""
+"One ticket, one day, a hundred new friends. Student tickets are paid for by "
+"our sponsors."
+msgstr ""
+"Один билет, один день, сто новых друзей. Студенческие билеты оплачивают наши"
+" спонсоры."
+
+msgid "Page not found"
+msgstr ""
+
+msgid "Pay it forward"
+msgstr "Подарите билет"
+
+msgid "Personal"
+msgstr "Личный"
+
+msgid "Phone or Telegram"
+msgstr ""
+
+msgid "Photo and social media"
+msgstr ""
+
+msgid ""
+"Practical stories from people who use Python at work, in research and in "
+"startups."
+msgstr ""
+"Практические истории людей, которые используют Python в работе, науке и "
+"стартапах."
+
+msgid "Preferred role"
+msgstr ""
+
+msgid "Program"
+msgstr "Программа"
+
+msgid ""
+"PyCon Tajikistan is a harassment-free event for everyone. Read the Code of "
+"Conduct and how to report an incident."
+msgstr ""
+"PyCon Tajikistan — мероприятие без притеснений для всех. Прочитайте кодекс "
+"поведения и узнайте, как сообщить о нарушении."
+
+msgid "PyCon is a trademark of the Python Software Foundation."
+msgstr "PyCon является товарным знаком Python Software Foundation."
+
+msgid ""
+"PyCon is a worldwide family of community conferences about Python. Now it "
+"has a home in Tajikistan."
+msgstr ""
+"PyCon — это всемирная семья конференций сообщества о Python. Теперь у неё "
+"есть дом в Таджикистане."
+
+msgid "Read the code"
+msgstr "Посмотреть код"
+
+msgid "Registration desk"
+msgstr ""
+
+msgid "Robots, AI demos and apps made by students from Tajikistan."
+msgstr "Роботы, демо ИИ и приложения от студентов Таджикистана."
+
+msgid "Room host and session chair"
+msgstr ""
+
+msgid "Say hello in Python"
+msgstr "Скажите привет на Python"
+
+msgid "See the program"
+msgstr "Смотреть программу"
+
+msgid "Send application"
+msgstr ""
+
+msgid "Setup and teardown"
+msgstr ""
+
+msgid "Share what you know"
+msgstr "Поделитесь знаниями"
+
+msgid "Skip to content"
+msgstr "Перейти к содержанию"
+
+msgid "Speak"
+msgstr "Выступить"
+
+msgid "Sponsors"
+msgstr "Спонсоры"
+
+msgid "Sponsors keep it open to everyone"
+msgstr "Спонсоры делают PyCon доступным для всех"
+
+msgid ""
+"Sponsors keep tickets affordable and help students attend. Higher support, "
+"higher ledge."
+msgstr ""
+"Спонсоры делают билеты доступными и помогают студентам прийти. Больше "
+"поддержка, выше уступ."
+
+msgid "Stage and sound"
+msgstr ""
+
+msgid "Start Python"
+msgstr "Запустить Python"
+
+msgid "Starting downloads about 10 MB, once."
+msgstr "Запуск загрузит около 10 МБ, один раз."
+
+msgid "Student"
+msgstr "Студенческий"
+
+msgid "Student exhibition"
+msgstr "Студенческая выставка"
+
+msgid "Submit a talk"
+msgstr "Подать доклад"
+
+msgid "Supporter"
+msgstr "Поддерживающий"
+
+msgid "Switch to dark theme"
+msgstr "Включить тёмную тему"
+
+msgid "Switch to light theme"
+msgstr "Включить светлую тему"
+
+msgid "Talk"
+msgstr "Доклад"
+
+msgid "Talks"
+msgstr "Доклады"
+
+msgid ""
+"Talks appear here after the call for talks closes. Want to be on this list?"
+msgstr ""
+
+msgid "Talks in Tajik, Russian and English"
+msgstr "Доклады на таджикском, русском и английском"
+
+msgid "Talks in Tajik, Russian and English. Filter by language and level."
+msgstr ""
+
+msgid "Tea and conversations"
+msgstr "Чай и разговоры"
+
+msgid "Tea break"
+msgstr ""
+
+msgid "Thank you! We'll write to you soon about training and your shift."
+msgstr ""
+
+msgid ""
+"The Code of Conduct is published in English. Tajik and Russian versions are "
+"coming before the event."
+msgstr ""
+"Кодекс поведения опубликован на английском. Версии на таджикском и русском "
+"появятся до начала мероприятия."
+
+msgid "The best talks happen between talks, over a cup of green tea."
+msgstr "Лучшие разговоры случаются между докладами, за чашкой зелёного чая."
+
+msgid "The call for talks opens soon."
+msgstr "Приём докладов скоро откроется."
+
+msgid "The capital. On 12 December the first PyCon in Tajikistan opens here."
+msgstr "Столица. 12 декабря здесь откроется первый PyCon в Таджикистане."
+
+msgid ""
+"The first PyCon in Tajikistan. One day of talks, workshops and friends in "
+"Dushanbe."
+msgstr ""
+"Первый PyCon в Таджикистане. Один день докладов, мастер-классов и друзей в "
+"Душанбе."
+
+msgid "The program is on its way"
+msgstr ""
+
+msgid ""
+"This is real Python running in your browser. Start it, then try draw('your "
+"name') to weave your own suzani."
+msgstr ""
+"Это настоящий Python в вашем браузере. Запустите его и попробуйте draw('ваше"
+" имя'), чтобы соткать своё сюзане."
+
+msgid "This site runs on Django."
+msgstr "Сайт работает на Django."
+
+msgid "Ticket sales open soon. Follow our Telegram channel to hear first."
+msgstr ""
+
+msgid "Tickets"
+msgstr "Билеты"
+
+msgid ""
+"Type your name. Python weaves a rosette that belongs only to you. The same "
+"pattern is printed on your conference badge."
+msgstr ""
+
+msgid "Volunteer"
+msgstr "Волонтёрам"
+
+msgid ""
+"We take Python to schools and universities: first programs, small robots, "
+"and a session for teachers on how to teach Python."
+msgstr ""
+"Мы приносим Python в школы и университеты: первые программы, маленькие "
+"роботы и занятие для учителей о том, как преподавать Python."
+
+msgid "Weave"
+msgstr ""
+
+msgid "Welcome to Dushanbe"
+msgstr "Добро пожаловать в Душанбе"
+
+msgid "When your employer pays. You help pay for student tickets."
+msgstr ""
+
+msgid "Why do you want to come?"
+msgstr ""
+
+msgid "Workshop"
+msgstr "Мастер-класс"
+
+msgid "Workshops"
+msgstr "Мастер-классы"
+
+msgid ""
+"You don't need to be an expert. If you learned something with Python, "
+"someone in the hall wants to hear it."
+msgstr ""
+"Не нужно быть экспертом. Если вы чему-то научились с Python, кто-то в зале "
+"хочет это услышать."
+
+msgid "You've lost the trail."
+msgstr "Вы сбились с тропы."
+
+msgid "Your logo here"
+msgstr "Здесь ваш логотип"
+
+msgid "Your name"
+msgstr "Ваше имя"
+
+msgid "Your suzani"
+msgstr "Ваше сюзане"
+
+msgid "home"
+msgstr ""
+
+msgid ""
+"“Hello, world” in Tajik. The first PyCon in Tajikistan: talks, workshops and"
+" green tea for 100 Pythonistas in Dushanbe."
+msgstr ""
+"«Привет, мир» по-таджикски. Первый PyCon в Таджикистане: доклады, воркшопы и"
+" зелёный чай для 100 питонистов в Душанбе."
+
+msgid "%(days)s day to go"
+msgid_plural "%(days)s days to go"
+msgstr[0] "%(days)s день до начала"
+msgstr[1] "%(days)s дня до начала"
+msgstr[2] "%(days)s дней до начала"
+
+msgid "%(days)s day to the summit"
+msgid_plural "%(days)s days to the summit"
+msgstr[0] "%(days)s день до вершины"
+msgstr[1] "%(days)s дня до вершины"
+msgstr[2] "%(days)s дней до вершины"

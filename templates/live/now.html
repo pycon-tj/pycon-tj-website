@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% translate "Live" %} | PyCon Tajikistan 2026{% endblock %}
+{% block content %}
+<section class="page">
+  <h1>{% translate "Now on stage" %}</h1>
+  <div hx-get="{% url 'live' %}" hx-trigger="every 30s" hx-swap="innerHTML">{% include "live/_now.html" %}</div>
+</section>
+{% endblock %}
