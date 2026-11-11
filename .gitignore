@@ -9,3 +9,4 @@ staticfiles/
 .pytest_cache/
 .ruff_cache/
 .claude/
+deploy/backups/
