@@ -24,9 +24,9 @@
   --py-blue: #3776AB;
   --py-yellow: #FFC21A;
 
-  --font-display: "Unbounded", "Manrope", system-ui, sans-serif;
-  --font-body: "Manrope", "Noto Sans", system-ui, sans-serif;
-  --font-code: "JetBrains Mono", "Noto Sans Mono", ui-monospace, monospace;
+  --font-display: "Montserrat", "Onest", system-ui, sans-serif;
+  --font-body: "Onest", "Noto Sans", system-ui, sans-serif;
+  --font-code: "Fira Code", "Noto Sans Mono", ui-monospace, monospace;
 
   --step--1: clamp(0.85rem, 0.8rem + 0.2vw, 0.95rem);
   --step-0: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
@@ -118,6 +118,8 @@ html { scrollbar-color: var(--ink-2) var(--snow); }
 .btn-ink { background: var(--ink); color: var(--snow); }
 .btn-light { background: var(--paper); color: var(--fuchsia); }
 .btn-ghost { border-color: currentColor; color: inherit; background: transparent; }
+/* Over the scenes the outline button gets a solid fill, so ridges and ribbons never run through its label. */
+.hero .btn-ghost, .close .btn-ghost { background: rgb(var(--shade) / .92); backdrop-filter: blur(6px); }
 .btn-small { min-height: 40px; padding: .5em 1.1em; font-size: var(--step--1); background: var(--saffron); color: var(--ink); }
 
 /* Hover: a run of atlas threads slides through the button, like silk catching light. */
@@ -154,7 +156,7 @@ html { scrollbar-color: var(--ink-2) var(--snow); }
 .home .site-header { position: fixed; inset: 0 0 auto 0; background: transparent; }
 .home .site-header.is-solid { background: rgb(var(--shade) / .92); backdrop-filter: blur(10px); padding-block: .6rem; box-shadow: 0 10px 30px -20px rgb(0 0 0 / .6); }
 .brand { display: flex; align-items: center; gap: .6rem; text-decoration: none; font: 500 var(--step-0)/1 var(--font-display); white-space: nowrap; }
-.brand-tile { display: grid; place-items: center; width: 58px; height: 46px; background: var(--paper); border-radius: 10px; padding: 4px 5px; box-shadow: 0 6px 18px -10px rgb(0 0 0 / .6); }
+.brand-tile { display: grid; place-items: center; width: 66px; height: 48px; background: var(--paper); border-radius: 10px; padding: 3px 4px; box-shadow: 0 6px 18px -10px rgb(0 0 0 / .6); }
 .brand-tile svg { width: 100%; height: 100%; }
 .brand b { font-weight: 800; }
 .main-nav { display: flex; gap: clamp(.9rem, 1.3vw, 1.4rem); margin-left: auto; }
@@ -396,14 +398,15 @@ html { scrollbar-color: var(--ink-2) var(--snow); }
 .snowfall { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 2; }
 .close::after {
   content: ""; position: absolute; inset: 0; z-index: -1;
-  background: linear-gradient(90deg, rgb(var(--shade) / .7) 0%, rgb(var(--shade) / .2) 55%, rgb(var(--shade) / 0) 80%);
+  background:
+    linear-gradient(0deg, rgb(var(--shade) / .9) 0%, rgb(var(--shade) / .55) 22%, rgb(var(--shade) / 0) 45%),
+    linear-gradient(90deg, rgb(var(--shade) / .7) 0%, rgb(var(--shade) / .2) 55%, rgb(var(--shade) / 0) 80%);
 }
 .close-copy { padding-block: 0 clamp(4rem, 10vh, 7rem); }
 .welcome {
   font: 900 clamp(3.2rem, 10vw, 10rem)/.9 var(--font-display); letter-spacing: -0.045em;
   margin: 0 0 .25em; max-width: none; color: var(--deep-accent);
 }
-.close h2 { font-size: var(--step-2); }
 .close .lead { color: var(--on-deep-muted); }
 
 /* ── Inner pages ─────────────────────────────────────────────────── */

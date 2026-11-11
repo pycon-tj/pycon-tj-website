@@ -1,26 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 -40 248 248"><rect x="-4" y="-40" width="248" height="248" rx="44" fill="#FFFFFF"/>
-  <defs>
-    <clipPath id="logo-sun-full"><circle cx="150" cy="64" r="56"/></clipPath>
-  </defs>
-  <g class="logo-sun" clip-path="url(#logo-sun-full)">
-    <rect x="90" y="4" width="120" height="124" fill="#FEB702"/>
-    <path d="M90 44 C116 32 146 54 210 36 V128 H90Z" fill="#FD7C08"/>
-    <path d="M90 66 C120 54 154 76 210 58 V128 H90Z" fill="#F93C33"/>
-    <path d="M90 88 C122 78 156 98 210 80 V128 H90Z" fill="#D30D60"/>
-  </g>
-  <g class="logo-stars" fill="#FF9F02">
-    <path d="M64 10 l4.5 12.5 12.5 4.5 -12.5 4.5 -4.5 12.5 -4.5 -12.5 -12.5 -4.5 12.5 -4.5Z"/>
-    <path d="M46 38 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3Z"/>
-    <path d="M80 46 l2.5 6.5 6.5 2.5 -6.5 2.5 -2.5 6.5 -2.5 -6.5 -6.5 -2.5 6.5 -2.5Z"/>
-  </g>
-  <path class="logo-range" fill="#001848" stroke="#FFFFFF" stroke-width="2.5" stroke-linejoin="round" paint-order="stroke"
-        d="M6 134 L38 108 L52 98 L58 101 L76 82 L88 90 L98 84 L126 48 L139 64 L147 60 L166 80 L176 73 L196 92 L214 102 L226 112 C170 110 92 114 6 134Z"/>
-  <g class="logo-snow" fill="#FFFFFF">
-    <path d="M126 48 L110 68 L119 63 L123 74 L130 61 L137 68 L139 64Z"/>
-    <path d="M76 82 L67 93 L73 91 L76 97 L81 89 L88 90Z"/>
-    <path d="M176 73 L169 82 L174 80 L177 86 L182 79Z"/>
-    <path d="M98 84 L92 92 L97 90 L100 94 L104 88Z" opacity=".9"/>
-  </g>
-  <path class="logo-red" fill="#DC0C24" d="M2 158 C36 116 130 103 228 83 C235 82 238 86 234 93 C140 114 54 128 2 158Z"/>
-  <path class="logo-green" fill="#02822B" d="M14 168 C58 132 146 119 237 99 C242 99 242 106 237 111 C156 131 78 145 14 168Z"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="70 -100 1040 1040"><rect x="70" y="-100" width="1040" height="1040" rx="190" fill="#FFFFFF"/>
+<defs><clipPath id="logo-sun-fav"><circle cx="690" cy="262" r="212"/></clipPath></defs>
+<g class="logo-sun" clip-path="url(#logo-sun-fav)">
+<rect x="470" y="40" width="440" height="320" fill="#FDB515"/>
+<path d="M470 150 C560 118 640 152 720 132 C800 112 860 120 910 110 V360 H470Z" fill="#FB8A12"/>
+<path d="M470 200 C560 170 650 205 730 185 C810 165 865 175 910 165 V360 H470Z" fill="#F7542B"/>
+<path d="M470 240 C565 214 655 246 735 228 C815 210 868 218 910 210 V360 H470Z" fill="#EE3B3B"/>
+<path d="M470 272 C570 250 660 280 745 262 C820 248 870 254 910 248 V360 H470Z" fill="#D41C6A"/>
+</g>
+<g class="logo-stars" fill="#F9A51A">
+<path d="M412 112 Q422.64 139.36 450 150 Q422.64 160.64 412 188 Q401.36 160.64 374 150 Q401.36 139.36 412 112Z"/><path d="M354 173 Q360.44 189.56 377 196 Q360.44 202.44 354 219 Q347.56 202.44 331 196 Q347.56 189.56 354 173Z"/><path d="M440 204 Q444.76 216.24 457 221 Q444.76 225.76 440 238 Q435.24 225.76 423 221 Q435.24 216.24 440 204Z"/>
+</g>
+<path class="logo-range" fill="#14246B" stroke="#FFFFFF" stroke-width="7" stroke-linejoin="round" paint-order="stroke"
+ d="M150 438 L262 330 L292 312 L312 318 L386 248 L428 282 L452 292 L478 282 L560 232 L636 192 L700 244 L732 262 L760 262 L792 280 L828 300 L868 314 L900 312 L990 356 C820 344 520 344 150 438Z"/>
+<g class="logo-snow" fill="#FFFFFF">
+<path d="M636 192 L562 240 L596 234 L572 290 L616 252 L638 306 L654 258 L694 284 L680 246 L700 244Z"/>
+<path d="M386 248 L338 290 L364 284 L370 330 L396 288 L420 300 L428 282Z"/>
+<path d="M792 280 L758 292 L784 294 L800 326 L810 298 L828 300Z"/>
+<path d="M292 312 L272 330 L286 328 L290 352 L302 326 L312 318Z"/>
+</g>
+<path class="logo-red" fill="#E0202E" d="M1057 284 C1030 345 940 362 780 360 C540 356 260 380 150 450 C100 482 92 530 118 580 C112 525 130 490 175 466 C300 400 540 378 780 380 C980 382 1060 345 1057 284Z"/>
+<path class="logo-green" fill="#1E9A46" d="M1077 304 C1060 380 960 405 790 414 C560 426 300 452 190 520 C140 552 150 620 260 680 C190 625 185 570 225 540 C330 470 560 444 800 434 C1000 425 1085 380 1077 304Z"/>
 </svg>

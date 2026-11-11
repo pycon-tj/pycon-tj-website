@@ -419,9 +419,6 @@ msgstr ""
 msgid "Weave"
 msgstr ""
 
-msgid "Welcome to Dushanbe"
-msgstr "Добро пожаловать в Душанбе"
-
 msgid "When your employer pays. You help pay for student tickets."
 msgstr ""
 

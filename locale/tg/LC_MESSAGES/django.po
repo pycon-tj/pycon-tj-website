@@ -420,9 +420,6 @@ msgstr ""
 msgid "Weave"
 msgstr ""
 
-msgid "Welcome to Dushanbe"
-msgstr "Ба Душанбе хуш омадед"
-
 msgid "When your employer pays. You help pay for student tickets."
 msgstr ""
 
