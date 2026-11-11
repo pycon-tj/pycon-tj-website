@@ -1,0 +1,55 @@
+# Production stack on the Hetzner server: Caddy (HTTPS) -> Django (gunicorn) -> PostgreSQL.
+# Secrets live in deploy/.env on the server (created by setup-server.sh, never committed).
+name: pycon
+
+services:
+  db:
+    image: postgres:17
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: pycon
+      POSTGRES_USER: pycon
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set in deploy/.env}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U pycon -d pycon"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  web:
+    build: ..
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    env_file: .env
+    environment:
+      DATABASE_URL: postgres://pycon:${POSTGRES_PASSWORD}@db:5432/pycon
+      DJANGO_DEBUG: "0"
+    volumes:
+      - media:/app/media
+    expose: ["8000"]
+
+  caddy:
+    image: caddy:2
+    restart: unless-stopped
+    depends_on: [web]
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    environment:
+      SITE_DOMAIN: ${SITE_DOMAIN:-pycon.tj}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - media:/srv/media:ro
+      - caddy_data:/data
+      - caddy_config:/config
+
+volumes:
+  pgdata:
+  media:
+  caddy_data:
+  caddy_config:
