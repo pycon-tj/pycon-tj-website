@@ -71,5 +71,5 @@ echo "== Nightly database backup at 03:30"
 echo "30 3 * * * deploy $APP/deploy/backup.sh" >/etc/cron.d/pycon-backup
 
 echo "== First deploy"
-sudo -u deploy "$APP/deploy/deploy.sh"
+sudo -u deploy DEPLOY_REF="${DEPLOY_REF:-main}" "$APP/deploy/deploy.sh"
 echo "Server ready. HTTPS starts working once $DOMAIN points to this server's IP."

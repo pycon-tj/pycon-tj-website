@@ -7,8 +7,9 @@ cd "$(dirname "$0")/.."
 exec 9>/tmp/pycon-deploy.lock
 flock 9
 
-git fetch --quiet --depth 1 origin main
-git reset --quiet --hard origin/main
+ref="${DEPLOY_REF:-main}"   # only setup can pass another branch; the deploy key always gets main
+git fetch --quiet --depth 1 origin "$ref"
+git reset --quiet --hard FETCH_HEAD
 
 compose="docker compose -f deploy/docker-compose.prod.yml"
 domain="$(grep -E '^SITE_DOMAIN=' deploy/.env | cut -d= -f2)"
