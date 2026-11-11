@@ -160,7 +160,7 @@ msgid "Keynote"
 msgstr ""
 
 msgid "Language"
-msgstr ""
+msgstr "Забон"
 
 msgid "Languages you speak"
 msgstr ""
@@ -212,9 +212,6 @@ msgstr ""
 
 msgid "Now on stage"
 msgstr ""
-
-msgid "On this page"
-msgstr "Дар ин саҳифа"
 
 msgid "One day of Python, in three languages"
 msgstr "Як рӯзи Python бо се забон"
@@ -368,13 +365,6 @@ msgstr ""
 
 msgid "Thank you! We'll write to you soon about training and your shift."
 msgstr ""
-
-msgid ""
-"The Code of Conduct is published in English. Tajik and Russian versions are "
-"coming before the event."
-msgstr ""
-"Кодекси рафтор бо забони англисӣ нашр шудааст. Версияҳои тоҷикӣ ва русӣ то "
-"оғози чорабинӣ омода мешаванд."
 
 msgid "The best talks happen between talks, over a cup of green tea."
 msgstr "Беҳтарин суҳбатҳо дар байни маърӯзаҳо, бо пиёлаи чойи кабуд мешаванд."

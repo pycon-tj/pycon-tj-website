@@ -47,14 +47,11 @@
       <a href="{% url 'suzani' %}">{% translate "Your suzani" %}</a>
       <a href="{% url 'volunteer' %}">{% translate "Volunteer" %}</a>
     </nav>
-    <form class="lang" action="{% url 'set_language' %}" method="post">
-      {% csrf_token %}
-      <input name="next" type="hidden" value="{{ request.get_full_path|slice:'3:' }}">
-      {% get_available_languages as LANGUAGES %}
-      {% for code, name in LANGUAGES %}
-        <button name="language" value="{{ code }}" {% if code == LANG %}aria-current="true"{% endif %} lang="{{ code }}">{{ code|upper }}</button>
+    <nav class="lang" aria-label="{% translate "Language" %}">
+      {% for code, url in language_links %}
+        <a href="{{ url }}" hreflang="{{ code }}" lang="{{ code }}" data-lang="{{ code }}"{% if code == LANG %} aria-current="page"{% endif %}>{% if code == "tg" %}TJ{% else %}{{ code|upper }}{% endif %}</a>
       {% endfor %}
-    </form>
+    </nav>
     <button class="theme-toggle" type="button" data-theme-toggle
             data-label-light="{% translate "Switch to light theme" %}" data-label-dark="{% translate "Switch to dark theme" %}"
             aria-label="{% translate "Switch to light theme" %}">

@@ -190,14 +190,11 @@ DRAFTS: dict[str, tuple[str, str]] = {
     ),
     "Welcome to Dushanbe": ("Добро пожаловать в Душанбе", "Ба Душанбе хуш омадед"),
     "Menu": ("Меню", "Меню"),
+    "Language": ("Язык", "Забон"),
     "Code of Conduct": ("Кодекс поведения", "Кодекси рафтор"),
     "PyCon Tajikistan is a harassment-free event for everyone. Read the Code of Conduct and how to report an incident.": (
         "PyCon Tajikistan — мероприятие без притеснений для всех. Прочитайте кодекс поведения и узнайте, как сообщить о нарушении.",
         "PyCon Tajikistan чорабиниест, ки барои ҳама бе таҳқир мегузарад. Кодекси рафторро хонед ва бифаҳмед, ки чӣ тавр дар бораи вайронкунӣ хабар диҳед.",
-    ),
-    "The Code of Conduct is published in English. Tajik and Russian versions are coming before the event.": (
-        "Кодекс поведения опубликован на английском. Версии на таджикском и русском появятся до начала мероприятия.",
-        "Кодекси рафтор бо забони англисӣ нашр шудааст. Версияҳои тоҷикӣ ва русӣ то оғози чорабинӣ омода мешаванд.",
     ),
     "On this page": ("На этой странице", "Дар ин саҳифа"),
     "Every attendee agrees to follow our": (

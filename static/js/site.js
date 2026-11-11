@@ -177,6 +177,11 @@
   }, { threshold: 0.35 });
   document.querySelectorAll("[data-draw]").forEach((el) => reduce ? el.classList.add("is-seen") : once.observe(el));
 
+  // ── Language links: remember the choice for visits to the bare domain ──
+  document.querySelectorAll(".lang a[data-lang]").forEach((a) => a.addEventListener("click", () => {
+    document.cookie = `django_language=${a.dataset.lang}; path=/; max-age=31536000; SameSite=Lax`;
+  }));
+
   // ── Light / dark theme ─────────────────────────────────────────────
   const root = document.documentElement;
   const themeBtn = document.querySelector("[data-theme-toggle]");

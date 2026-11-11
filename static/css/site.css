@@ -157,17 +157,19 @@ html { scrollbar-color: var(--ink-2) var(--snow); }
 .brand-tile { display: grid; place-items: center; width: 58px; height: 46px; background: var(--paper); border-radius: 10px; padding: 4px 5px; box-shadow: 0 6px 18px -10px rgb(0 0 0 / .6); }
 .brand-tile svg { width: 100%; height: 100%; }
 .brand b { font-weight: 800; }
-.main-nav { display: flex; gap: 1.4rem; margin-left: auto; }
+.main-nav { display: flex; gap: clamp(.9rem, 1.3vw, 1.4rem); margin-left: auto; }
+
 .main-nav a { text-decoration: none; font-weight: 600; white-space: nowrap; padding-block: .4rem;
   background: linear-gradient(var(--saffron), var(--saffron)) 0 100% / 0 2px no-repeat; transition: background-size .25s var(--ease-out); }
 .main-nav a:hover { background-size: 100% 2px; }
 .lang { display: flex; gap: 2px; background: rgb(var(--chip) / .12); border-radius: 8px; padding: 3px; }
-.lang button {
-  border: 0; background: transparent; color: inherit; cursor: pointer;
+.lang a {
+  display: inline-grid; place-items: center; text-decoration: none;
+  background: transparent; color: inherit;
   font: 700 var(--step--1)/1 var(--font-body); padding: .5em .7em; border-radius: 6px; min-width: 44px; min-height: 36px;
 }
-.lang button:hover { background: rgb(var(--chip) / .12); }
-.lang button[aria-current] { background: var(--on-deep); color: var(--deep); }
+.lang a:hover { background: rgb(var(--chip) / .12); }
+.lang a[aria-current] { background: var(--on-deep); color: var(--deep); }
 .header-cta { min-height: 44px; padding: .55em 1.1em; white-space: nowrap; }
 .menu-toggle { display: none; }
 .theme-toggle {
@@ -473,8 +475,11 @@ html { scrollbar-color: var(--ink-2) var(--snow); }
 .small { font-size: var(--step--1); }
 .trademark, .credits { grid-column: 1 / -1; color: var(--on-deep-faint); margin: 0; max-width: none; }
 
-/* ── Phones and small tablets ────────────────────────────────────── */
-@media (max-width: 899px) {
+/* The header must never clip. Tajik and Russian menu words are long and the header lines up
+   with the page content, so the logo mark stands alone (the hero says "PyCon Tajikistan 2026")
+   and the menu moves into the ☰ button below 1280px. */
+.brand-word { display: none; }
+@media (max-width: 1279px) {
   .site-header { gap: .75rem; }
   .brand-word { display: none; }
   .header-cta { display: none; }
@@ -501,6 +506,13 @@ html { scrollbar-color: var(--ink-2) var(--snow); }
   .main-nav a { font: 800 var(--step-2)/1.2 var(--font-display); padding-block: .5rem; }
   .menu-open .main-nav { opacity: 1; visibility: visible; }
   .menu-open { overflow: hidden; }
+}
+@media (max-width: 1279px) and (min-width: 900px) {
+  .header-cta { display: inline-flex; }
+}
+
+/* ── Phones and small tablets ────────────────────────────────────── */
+@media (max-width: 899px) {
 
   .hero-copy { padding-top: 7rem; }
   .hero-shade {

@@ -98,6 +98,7 @@ TEMPLATES = [
                 "django.template.context_processors.i18n",
                 "wagtail.contrib.settings.context_processors.settings",
                 "apps.pages.context_processors.event",
+                "apps.pages.context_processors.language_links",
             ],
         },
     },
