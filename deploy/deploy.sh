@@ -15,6 +15,7 @@ compose="docker compose -f deploy/docker-compose.prod.yml"
 domain="$(grep -E '^SITE_DOMAIN=' deploy/.env | cut -d= -f2)"
 
 $compose up -d --build --remove-orphans
+$compose exec -T web uv run --no-dev python manage.py migrate --noinput
 $compose exec -T web uv run --no-dev python manage.py seed_tiers
 docker image prune -f >/dev/null
 
