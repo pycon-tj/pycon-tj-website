@@ -34,7 +34,9 @@ PasswordAuthentication no
 KbdInteractiveAuthentication no
 PermitRootLogin prohibit-password
 CONF
-systemctl reload ssh
+sshd -t
+# Ubuntu 24.04 starts sshd per connection (ssh.socket), so new logins read this at once.
+systemctl try-reload-or-restart ssh.service 2>/dev/null || true
 
 echo "== deploy user (its key may only run deploy/deploy.sh)"
 id deploy >/dev/null 2>&1 || useradd -m -s /bin/bash -G docker deploy
