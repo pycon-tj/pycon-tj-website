@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load i18n suzani_tags %}
+{% block title %}{{ title }} | PyCon Tajikistan 2026{% endblock %}
+{% block content %}
+<section class="page">
+  <header class="page-head">
+    <div><h1>{{ title }}</h1><p class="lead">{{ intro }}</p></div>
+    <div class="medallion" aria-hidden="true">{% rosette seed 160 %}</div>
+  </header>
+  <div id="form-wrap">{% include "partials/form.html" %}</div>
+</section>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% load i18n %}
+{% if talks %}
+<ul class="talks">
+  {% for talk in talks %}
+  <li>
+    <p>{% if talk.start %}<time datetime="{{ talk.start|date:'c' }}">{{ talk.start|time:"H:i" }}</time>{% endif %}<br><small>{{ talk.room|default:"" }}</small></p>
+    <div>
+      <h3><a href="{% url 'talk' talk.slug %}">{{ talk.title }}</a></h3>
+      <p>{% for s in talk.speakers.all %}{{ s.name }}{% if not forloop.last %}, {% endif %}{% endfor %}</p>
+    </div>
+    <p><span class="tag" lang="{{ talk.language }}">{{ talk.get_language_display }}</span> <span class="tag">{{ talk.get_level_display }}</span></p>
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<div class="empty">
+  <h2>{% translate "The program is on its way" %}</h2>
+  <p>{% translate "Talks appear here after the call for talks closes. Want to be on this list?" %}</p>
+  <a class="btn btn-ink" href="/#speak">{% translate "Submit a talk" %}</a>
+</div>
+{% endif %}

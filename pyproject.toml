@@ -1,0 +1,52 @@
+[project]
+name = "pycon-tj"
+version = "0.1.0"
+description = "Website of PyCon Tajikistan 2026, built with Django and Wagtail."
+requires-python = ">=3.13"
+dependencies = [
+    "dj-database-url>=3.1.2",
+    "django>=5.2,<5.3",
+    "django-htmx>=1.29.0",
+    "django-ninja>=1.8.0",
+    "gunicorn>=27.0.0",
+    "httpx>=0.28.1",
+    "pillow>=13.0.0",
+    "psycopg[binary]>=3.3.8",
+    "python-dotenv>=1.2.4",
+    "wagtail>=7",
+    "wagtail-localize>=1.14.5",
+    "whitenoise>=6.12.0",
+]
+
+[tool.uv]
+package = false
+
+[dependency-groups]
+dev = [
+    "django-stubs>=6.1.2",
+    "mypy>=2.4.1",
+    "polib>=1.2.0",
+    "pytest>=9.2.0",
+    "pytest-django>=4.14.0",
+    "ruff>=0.17.4",
+]
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "config.settings"
+python_files = ["test_*.py"]
+testpaths = ["tests"]
+filterwarnings = ["ignore:No directory at:UserWarning"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+extend-exclude = ["**/migrations/*"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "DJ", "SIM"]
+ignore = ["E501"]  # the formatter handles line length; long strings are fine
+
+[tool.mypy]
+python_version = "3.13"
+ignore_missing_imports = true
+exclude = ["migrations/"]

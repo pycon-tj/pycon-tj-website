@@ -1,0 +1,168 @@
+{% extends "base.html" %}
+{% load static i18n suzani_tags %}
+{% block body_class %}home{% endblock %}
+
+{% block content %}
+{# ── Hero: Python says hello in Tajik, over the mountains ───────────── #}
+<section class="hero" data-hero>
+  <div class="scene hero-scene" data-scene="sunrise" data-parallax aria-hidden="true">{% scene "sunrise" %}</div>
+  <div class="hero-shade" aria-hidden="true"></div>
+
+  <div class="wrap hero-copy">
+    <p class="hero-code" aria-hidden="true"><span class="p">&gt;&gt;&gt;</span> <span data-type>print("Салом, ҷаҳон!")</span><i class="caret"></i></p>
+    <h1 class="hero-title">
+      <span class="hello" lang="tg" data-hello>Салом,<br>ҷаҳон!</span>
+      <span class="hero-name">PyCon Tajikistan 2026</span>
+    </h1>
+    <p class="hero-sub">{% translate "“Hello, world” in Tajik. The first PyCon in Tajikistan: talks, workshops and green tea for 100 Pythonistas in Dushanbe." %}</p>
+    <ul class="hero-facts">
+      <li><time datetime="{{ event.start }}">{% translate "12 December 2026" %}</time></li>
+      <li>{% translate "Dushanbe Innovation Institute" %}</li>
+      <li>{% blocktranslate count days=days_left %}{{ days }} day to go{% plural %}{{ days }} days to go{% endblocktranslate %}</li>
+    </ul>
+    <div class="hero-actions">
+      <a class="btn btn-sun" href="{% url 'tickets' %}">{% translate "Get a ticket" %}</a>
+      <a class="btn btn-ghost" href="#speak">{% translate "Submit a talk" %}</a>
+    </div>
+  </div>
+  <canvas class="ikat" data-ikat="hero" data-weave aria-hidden="true"></canvas>
+</section>
+
+{# ── Dushanbe: where it happens ─────────────────────────────────── #}
+<section class="chapters" id="about">
+  <article class="chapter">
+    <div class="scene" data-scene="city" aria-hidden="true">{% scene "city" %}</div>
+    <figure class="chapter-art chapter-tower" data-draw>{% include "pages/_tower.svg.html" %}</figure>
+    <div class="wrap chapter-copy">
+      <h2 class="chapter-title" lang="tg">Душанбе</h2>
+      <p>{% translate "The capital. On 12 December the first PyCon in Tajikistan opens here." %}</p>
+    </div>
+  </article>
+</section>
+
+{# ── The day ─────────────────────────────────────────────────────── #}
+<section class="day" id="program">
+  <div class="wrap day-grid">
+    <div class="day-head">
+      <h2>{% translate "One day of Python, in three languages" %}</h2>
+      <p class="lead">{% translate "PyCon is a worldwide family of community conferences about Python. Now it has a home in Tajikistan." %}</p>
+    </div>
+    <div>
+    <ul class="day-rows">
+      <li><h3>{% translate "Talks" %}</h3><p>{% translate "Practical stories from people who use Python at work, in research and in startups." %}</p></li>
+      <li><h3>{% translate "Workshops" %}</h3><p>{% translate "Bring your laptop. Leave with working code." %}</p></li>
+      <li><h3>{% translate "Tea and conversations" %}</h3><p>{% translate "The best talks happen between talks, over a cup of green tea." %}</p></li>
+      <li><h3>{% translate "Student exhibition" %}</h3><p>{% translate "Robots, AI demos and apps made by students from Tajikistan." %}</p></li>
+      <li><h3>{% translate "Lightning talks" %}</h3><p>{% translate "Five minutes, any topic, sign up on the day. Your first talk could be here." %}</p></li>
+    </ul>
+    <p class="day-foot">
+      <span>{% translate "Talks in Tajik, Russian and English" %}</span>
+      <a class="link" href="{% url 'schedule' %}">{% translate "See the program" %}</a>
+    </p>
+    </div>
+  </div>
+</section>
+
+{# ── Live Python terminal (Pyodide) ──────────────────────────────── #}
+<section class="terminal-section">
+  <div class="wrap terminal-grid">
+    <div class="terminal-intro">
+      <h2>{% translate "Say hello in Python" %}</h2>
+      <p>{% translate "This is real Python running in your browser. Start it, then try draw('your name') to weave your own suzani." %}</p>
+      <a class="link link-light" href="{% url 'suzani' %}">{% translate "Make your suzani" %}</a>
+    </div>
+    <div class="terminal" data-terminal data-source="{% url 'suzani_source' %}">
+      <div class="terminal-bar" aria-hidden="true"><i></i><i></i><i></i><span>python 3</span></div>
+      <div class="terminal-log" data-log aria-live="polite">
+<pre><span class="p">&gt;&gt;&gt;</span> print("Салом, ҷаҳон!")
+Салом, ҷаҳон!
+<span class="p">&gt;&gt;&gt;</span> pycon_tj.when()
+'12 December 2026, Dushanbe'</pre>
+      </div>
+      <div class="terminal-canvas" data-canvas></div>
+      <form class="terminal-input" data-form>
+        <label class="p" for="py-in">&gt;&gt;&gt;</label>
+        <input id="py-in" name="code" autocomplete="off" spellcheck="false" placeholder='draw("Your name")' disabled>
+        <button class="btn btn-small" type="button" data-start>{% translate "Start Python" %}</button>
+      </form>
+      <p class="terminal-note">{% translate "Starting downloads about 10 MB, once." %}</p>
+    </div>
+  </div>
+</section>
+
+{# ── Speak ───────────────────────────────────────────────────────── #}
+<section class="speak" id="speak">
+  <div class="wrap split">
+    <div>
+      <h2>{% translate "Share what you know" %}</h2>
+      <p class="lead">{% translate "You don't need to be an expert. If you learned something with Python, someone in the hall wants to hear it." %}</p>
+      <dl class="formats">
+        <div><dt>{% translate "Talk" %}</dt><dd>{% translate "25 minutes and 5 for questions" %}</dd></div>
+        <div><dt>{% translate "Workshop" %}</dt><dd>{% translate "90 minutes, hands-on" %}</dd></div>
+        <div><dt>{% translate "Lightning talk" %}</dt><dd>{% translate "5 minutes, sign up on the day" %}</dd></div>
+      </dl>
+      <p>{% translate "First time speaking? We'll pair you with a mentor." %}</p>
+      {% if event.pretalx_url %}
+        <a class="btn btn-ink" href="{{ event.pretalx_url }}/cfp">{% translate "Submit a talk" %}</a>
+      {% else %}
+        <p class="soon">{% translate "The call for talks opens soon." %}</p>
+      {% endif %}
+    </div>
+    <div class="medallion" aria-hidden="true">{% rosette "speaker" 480 %}</div>
+  </div>
+</section>
+
+{# ── Education Day: the one drenched colour field ───────────────────── #}
+<section class="edu" id="education">
+  <div class="wrap edu-grid">
+    <h2>{% translate "Education Day" %}</h2>
+    <div>
+      <p class="lead">{% translate "We take Python to schools and universities: first programs, small robots, and a session for teachers on how to teach Python." %}</p>
+      <a class="btn btn-light" href="mailto:hello@pycon.tj?subject=Education%20Day">{% translate "Bring Education Day to your school" %}</a>
+    </div>
+  </div>
+</section>
+
+{# ── Sponsors ────────────────────────────────────────────────────── #}
+<section class="sponsors" id="sponsors">
+  <div class="wrap">
+    <div class="sponsors-head">
+      <h2>{% translate "Sponsors keep it open to everyone" %}</h2>
+      <p class="lead">{% translate "Sponsors keep tickets affordable and help students attend. Higher support, higher ledge." %}</p>
+    </div>
+    <div class="ledges">
+      {% for tier in tiers %}
+        <div class="ledge" style="--step: {{ forloop.counter0 }}">
+          <p class="ledge-name">{{ tier.name }}</p>
+          <div class="ledge-logos">
+            {% for sponsor in tier.sponsors.all %}{% if sponsor.is_active %}
+              <a href="{{ sponsor.url|default:'#' }}" rel="noopener">{% if sponsor.logo %}<img src="{{ sponsor.logo.url }}" alt="{{ sponsor.name }}">{% else %}{{ sponsor.name }}{% endif %}</a>
+            {% endif %}{% empty %}
+              <span class="ledge-free">{% translate "Your logo here" %}</span>
+            {% endfor %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <a class="btn btn-ink" href="mailto:sponsors@pycon.tj">{% translate "Become a sponsor" %}</a>
+  </div>
+</section>
+
+{# ── Close: welcome ──────────────────────────────────────────────── #}
+<section class="close" id="tickets">
+  <div class="scene" data-scene="night" aria-hidden="true">{% scene "night" %}<canvas class="snowfall" data-snow></canvas></div>
+  <div class="wrap close-copy">
+    <p class="welcome" lang="tg" aria-hidden="true">Хуш омадед!</p>
+    <h2>{% translate "Welcome to Dushanbe" %}</h2>
+    <p class="lead">{% translate "One ticket, one day, a hundred new friends. Student tickets are paid for by our sponsors." %}</p>
+    <div class="hero-actions">
+      <a class="btn btn-sun" href="{% url 'tickets' %}">{% translate "Get a ticket" %}</a>
+      <a class="btn btn-ghost" href="{% url 'aid' %}">{% translate "Apply for financial aid" %}</a>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static 'js/terminal.js' %}" defer></script>
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}{{ post.title }} | PyCon Tajikistan 2026{% endblock %}
+{% block content %}
+<article class="page" lang="{{ post.language }}">
+  <h1>{{ post.title }}</h1>
+  <p><time datetime="{{ post.published_at|date:'c' }}">{{ post.published_at|date:"j F Y" }}</time></p>
+  {{ post.body|linebreaks }}
+</article>
+{% endblock %}

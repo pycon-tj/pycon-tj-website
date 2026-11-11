@@ -1,0 +1,91 @@
+{% load static i18n %}<!doctype html>
+{% get_current_language as LANG %}
+<html lang="{{ LANG }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}PyCon Tajikistan 2026{% endblock %}</title>
+  <meta name="description" content="{% block description %}{% translate "The first PyCon in Tajikistan. One day of talks, workshops and friends in Dushanbe." %}{% endblock %}">
+  <meta property="og:title" content="PyCon Tajikistan 2026">
+  <meta property="og:description" content="Салом, ҷаҳон! {% translate "The first PyCon in Tajikistan. One day of talks, workshops and friends in Dushanbe." %}">
+  <meta property="og:image" content="{% static 'img/logo.png' %}">
+  <meta name="theme-color" content="#001848">
+  <script>
+    // Theme before first paint: the visitor's saved choice, else their system setting.
+    (function () {
+      var d = document.documentElement, t = null;
+      d.classList.add("js");
+      try { t = localStorage.getItem("theme"); } catch (e) {}
+      var q = /[?&]theme=(light|dark)\b/.exec(location.search);
+      if (q) t = q[1]; // a shared link can ask for a theme: ?theme=light
+      if (t !== "light" && t !== "dark") t = matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+      d.setAttribute("data-theme", t);
+    })();
+  </script>
+  <link rel="icon" href="{% static 'img/favicon.svg' %}" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Unbounded:wght@500;700;900&family=JetBrains+Mono:wght@400;700&display=swap&subset=cyrillic-ext">
+  <link rel="stylesheet" href="{% static 'css/site.css' %}">
+  <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.4/dist/htmx.min.js" defer></script>
+  {% block head %}{% endblock %}
+</head>
+<body class="{% block body_class %}{% endblock %}">
+  <a class="skip" href="#main">{% translate "Skip to content" %}</a>
+  <header class="site-header" data-header>
+    <a class="brand" href="/{{ LANG }}/" aria-label="PyCon Tajikistan 2026, {% translate "home" %}">
+      <span class="brand-tile" aria-hidden="true">{% include "partials/logo_mark.svg.html" with id="hdr" %}</span>
+      <span class="brand-word">PyCon <b>Tajikistan</b></span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" data-menu>
+      <span class="menu-lines" aria-hidden="true"></span><span class="visually-hidden">{% translate "Menu" %}</span>
+    </button>
+    <nav class="main-nav" id="main-nav" aria-label="{% translate "Main" %}">
+      <a href="{% url 'schedule' %}">{% translate "Program" %}</a>
+      <a href="/{{ LANG }}/#speak">{% translate "Speak" %}</a>
+      <a href="/{{ LANG }}/#sponsors">{% translate "Sponsors" %}</a>
+      <a href="{% url 'suzani' %}">{% translate "Your suzani" %}</a>
+      <a href="{% url 'volunteer' %}">{% translate "Volunteer" %}</a>
+    </nav>
+    <form class="lang" action="{% url 'set_language' %}" method="post">
+      {% csrf_token %}
+      <input name="next" type="hidden" value="{{ request.get_full_path|slice:'3:' }}">
+      {% get_available_languages as LANGUAGES %}
+      {% for code, name in LANGUAGES %}
+        <button name="language" value="{{ code }}" {% if code == LANG %}aria-current="true"{% endif %} lang="{{ code }}">{{ code|upper }}</button>
+      {% endfor %}
+    </form>
+    <button class="theme-toggle" type="button" data-theme-toggle
+            data-label-light="{% translate "Switch to light theme" %}" data-label-dark="{% translate "Switch to dark theme" %}"
+            aria-label="{% translate "Switch to light theme" %}">
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="currentColor"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.5 14.6A8.6 8.6 0 0 1 9.4 3.5a8.6 8.6 0 1 0 11.1 11.1Z"/></svg>
+    </button>
+    <a class="btn btn-sun header-cta" href="{% url 'tickets' %}">{% translate "Get a ticket" %}</a>
+  </header>
+
+  <main id="main">{% block content %}{% endblock %}</main>
+
+  <footer class="site-footer">
+    <canvas class="ikat" data-ikat="footer" aria-hidden="true"></canvas>
+    <div class="wrap footer-inner">
+      <div>
+        <p class="footer-logo"><img src="{% static 'img/logo.svg' %}" alt="PyCon Tajikistan 2026" width="200" height="170"></p>
+        <p>{% translate "Made with Python and green tea in Dushanbe." %}</p>
+        <p class="small">{% translate "This site runs on Django." %} <a href="https://github.com/">{% translate "Read the code" %}</a></p>
+      </div>
+      <nav aria-label="{% translate "Footer" %}">
+        <a href="{% url 'tickets' %}">{% translate "Tickets" %}</a>
+        <a href="{% url 'aid' %}">{% translate "Financial aid" %}</a>
+        <a href="{% url 'volunteer' %}">{% translate "Volunteer" %}</a>
+        <a href="{% url 'news' %}">{% translate "News" %}</a>
+        <a href="{% url 'live' %}">{% translate "Live" %}</a>
+        <a href="{% url 'code_of_conduct' %}">{% translate "Code of Conduct" %}</a>
+      </nav>
+      <p class="small trademark">{% translate "PyCon is a trademark of the Python Software Foundation." %}</p>
+    </div>
+  </footer>
+  <script src="{% static 'js/site.js' %}" defer></script>
+  {% block scripts %}{% endblock %}
+</body>
+</html>

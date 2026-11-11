@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% translate "Your suzani" %} | PyCon Tajikistan 2026{% endblock %}
+{% block content %}
+<section class="page">
+  <div class="split">
+    <div>
+      <h1>{% translate "Your suzani" %}</h1>
+      <p class="lead">{% translate "Type your name. Python weaves a rosette that belongs only to you. The same pattern is printed on your conference badge." %}</p>
+      <form class="form suzani-form" action="{% url 'suzani' %}" method="get">
+        <div>
+          <label for="name">{% translate "Your name" %}</label>
+          <input id="name" name="name" value="{{ seed }}" maxlength="60" autocomplete="name"
+                 hx-get="{% url 'suzani' %}" hx-trigger="input changed delay:250ms" hx-target="#rosette" hx-swap="innerHTML">
+        </div>
+        <noscript><button class="btn btn-sun" type="submit">{% translate "Weave" %}</button></noscript>
+      </form>
+    </div>
+    <div id="rosette" class="rosette-out" aria-live="polite">{% include "pages/_rosette.html" %}</div>
+  </div>
+</section>
+{% endblock %}

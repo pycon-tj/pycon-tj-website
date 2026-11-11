@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load i18n suzani_tags %}
+{% block title %}{{ talk.title }} | PyCon Tajikistan 2026{% endblock %}
+{% block content %}
+<article class="page">
+  <p><a class="link" href="{% url 'schedule' %}">{% translate "Back to the program" %}</a></p>
+  <h1>{{ talk.title }}</h1>
+  <p><span class="tag">{{ talk.get_kind_display }}</span> <span class="tag" lang="{{ talk.language }}">{{ talk.get_language_display }}</span> <span class="tag">{{ talk.get_level_display }}</span></p>
+  {% if talk.start %}<p><strong>{{ talk.start|date:"j F, H:i" }}</strong> {{ talk.room|default:"" }}</p>{% endif %}
+  <div class="lead">{{ talk.abstract|linebreaks }}</div>
+  {% for s in talk.speakers.all %}
+    <section class="split">
+      <div><h2>{{ s.name }}</h2>{{ s.bio|linebreaks }}</div>
+      <div class="medallion" aria-hidden="true">{% rosette s.name 220 %}</div>
+    </section>
+  {% endfor %}
+</article>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% load i18n %}
+<form class="form" method="post" hx-post="{{ request.path }}" hx-target="#form-wrap" hx-swap="innerHTML">
+  {% csrf_token %}
+  {{ form.non_field_errors }}
+  {% for field in form %}
+    <div>
+      {% if field.field.widget.input_type == "checkbox" %}
+        <label>{{ field }} {{ field.label }}</label>
+      {% else %}
+        {{ field.label_tag }} {{ field }}
+      {% endif %}
+      {{ field.errors }}
+    </div>
+  {% endfor %}
+  <div><button class="btn btn-sun" type="submit">{{ submit }}</button></div>
+</form>

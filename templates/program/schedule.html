@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% translate "Program" %} | PyCon Tajikistan 2026{% endblock %}
+{% block content %}
+<section class="page">
+  <h1>{% translate "Program" %}</h1>
+  <p class="lead">{% translate "Talks in Tajik, Russian and English. Filter by language and level." %}</p>
+  <form class="filters" hx-get="{% url 'schedule' %}" hx-target="#talks" hx-trigger="change" hx-push-url="true">
+    <select name="language" aria-label="{% translate "Language" %}">
+      <option value="">{% translate "All languages" %}</option>
+      {% for code, name in languages %}<option value="{{ code }}" {% if selected.language == code %}selected{% endif %}>{{ name }}</option>{% endfor %}
+    </select>
+    <select name="level" aria-label="{% translate "Level" %}">
+      <option value="">{% translate "All levels" %}</option>
+      {% for code, name in levels %}<option value="{{ code }}" {% if selected.level == code %}selected{% endif %}>{{ name }}</option>{% endfor %}
+    </select>
+    <noscript><button class="btn btn-small" type="submit">{% translate "Filter" %}</button></noscript>
+  </form>
+  <div id="talks">{% include "program/_talk_list.html" %}</div>
+</section>
+{% endblock %}

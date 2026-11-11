@@ -1,0 +1,21 @@
+{% load i18n %}
+{% if live %}
+  <ul class="talks">
+    {% for talk in live %}
+      <li>
+        <p>{{ talk.room|default:"" }}</p>
+        <div><h3><a href="{% url 'talk' talk.slug %}">{{ talk.title }}</a></h3>
+          <p>{% for s in talk.speakers.all %}{{ s.name }}{% if not forloop.last %}, {% endif %}{% endfor %}</p></div>
+        <p><span class="tag">{{ talk.get_language_display }}</span></p>
+      </li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p class="lead">{% translate "Nothing on stage right now." %}</p>
+{% endif %}
+{% if next %}
+  <h2>{% translate "Coming up" %}</h2>
+  <ul class="talks">
+    {% for talk in next %}<li><p>{{ talk.start|time:"H:i" }}</p><div><h3>{{ talk.title }}</h3></div><p>{{ talk.room|default:"" }}</p></li>{% endfor %}
+  </ul>
+{% endif %}
