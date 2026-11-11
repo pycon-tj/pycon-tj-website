@@ -160,7 +160,7 @@ msgid "Keynote"
 msgstr ""
 
 msgid "Language"
-msgstr ""
+msgstr "Забон"
 
 msgid "Languages you speak"
 msgstr ""

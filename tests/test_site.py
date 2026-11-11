@@ -80,3 +80,17 @@ def test_code_of_conduct_page(client, lang, title):
 
 def test_footer_links_to_code_of_conduct(client):
     assert "/en/code-of-conduct/" in client.get("/en/").content.decode()
+
+
+@pytest.mark.parametrize(
+    ("start", "expected"),
+    [
+        ("/en/code-of-conduct/", ['href="/tg/code-of-conduct/"', 'href="/ru/code-of-conduct/"']),
+        ("/ru/tickets/", ['href="/tg/tickets/"', 'href="/en/tickets/"']),
+        ("/tg/", ['href="/ru/"', 'href="/en/"']),
+    ],
+)
+def test_language_links_open_the_same_page_in_each_language(client, start, expected):
+    page = client.get(start).content.decode()
+    for link in expected:
+        assert link in page
