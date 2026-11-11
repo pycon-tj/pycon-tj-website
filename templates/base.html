@@ -49,7 +49,7 @@
     </nav>
     <nav class="lang" aria-label="{% translate "Language" %}">
       {% for code, url in language_links %}
-        <a href="{{ url }}" hreflang="{{ code }}" lang="{{ code }}" data-lang="{{ code }}"{% if code == LANG %} aria-current="page"{% endif %}>{{ code|upper }}</a>
+        <a href="{{ url }}" hreflang="{{ code }}" lang="{{ code }}" data-lang="{{ code }}"{% if code == LANG %} aria-current="page"{% endif %}>{% if code == "tg" %}TJ{% else %}{{ code|upper }}{% endif %}</a>
       {% endfor %}
     </nav>
     <button class="theme-toggle" type="button" data-theme-toggle

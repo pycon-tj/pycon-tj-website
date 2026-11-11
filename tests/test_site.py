@@ -67,15 +67,28 @@ def test_api_schedule(client):
 
 
 @pytest.mark.parametrize(
-    ("lang", "title"),
-    [("en", "Code of Conduct"), ("ru", "Кодекс поведения"), ("tg", "Кодекси рафтор")],
+    ("lang", "title", "section"),
+    [
+        ("en", "Code of Conduct", "Reporting an incident"),
+        ("ru", "Кодекс поведения", "Как сообщить о нарушении"),
+        ("tg", "Кодекси рафтор", "Хабар додан дар бораи вайронкунӣ"),
+    ],
 )
-def test_code_of_conduct_page(client, lang, title):
+def test_code_of_conduct_page_in_each_language(client, lang, title, section):
     body = client.get(f"/{lang}/code-of-conduct/").content.decode()
     assert title in body
-    assert "Reporting an incident" in body
+    assert section in body
     assert "mailto:coc@pycon.tj" in body
     assert "to confirm" not in body  # unconfirmed contacts are never shown as raw placeholders
+    assert "{#" not in body and "{%" not in body  # no template syntax leaks onto the page
+    if lang != "en":
+        assert "Reporting an incident" not in body  # the full text is translated, not English
+
+
+def test_tajik_button_reads_tj(client):
+    body = client.get("/en/").content.decode()
+    assert ">TJ</a>" in body
+    assert ">TG</a>" not in body
 
 
 def test_footer_links_to_code_of_conduct(client):

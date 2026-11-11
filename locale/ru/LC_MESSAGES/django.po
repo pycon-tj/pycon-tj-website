@@ -213,9 +213,6 @@ msgstr ""
 msgid "Now on stage"
 msgstr ""
 
-msgid "On this page"
-msgstr "На этой странице"
-
 msgid "One day of Python, in three languages"
 msgstr "Один день Python на трёх языках"
 
@@ -368,13 +365,6 @@ msgstr ""
 
 msgid "Thank you! We'll write to you soon about training and your shift."
 msgstr ""
-
-msgid ""
-"The Code of Conduct is published in English. Tajik and Russian versions are "
-"coming before the event."
-msgstr ""
-"Кодекс поведения опубликован на английском. Версии на таджикском и русском "
-"появятся до начала мероприятия."
 
 msgid "The best talks happen between talks, over a cup of green tea."
 msgstr "Лучшие разговоры случаются между докладами, за чашкой зелёного чая."
