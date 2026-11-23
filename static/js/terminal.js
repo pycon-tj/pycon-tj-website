@@ -38,7 +38,7 @@ exec(SUZANI_SOURCE, suzani_mod.__dict__)
 from suzani import rosette_svg
 
 pycon_tj = types.ModuleType("pycon_tj")
-pycon_tj.when = lambda: "12 December 2026, Dushanbe"
+pycon_tj.when = lambda: "Coming soon, Dushanbe"
 pycon_tj.where = lambda: "Dushanbe Innovation Institute"
 pycon_tj.ticket = lambda: (js.window.location.assign("/tickets/"), "Opening tickets...")[1]
 sys.modules["pycon_tj"] = pycon_tj

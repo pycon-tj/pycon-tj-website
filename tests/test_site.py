@@ -107,3 +107,18 @@ def test_language_links_open_the_same_page_in_each_language(client, start, expec
     page = client.get(start).content.decode()
     for link in expected:
         assert link in page
+
+
+@pytest.mark.parametrize(
+    ("lang", "soon", "old_date"),
+    [
+        ("en", "Coming soon", "December"),
+        ("ru", "Скоро", "декабря"),
+        ("tg", "Ба наздикӣ", "декабри"),
+    ],
+)
+def test_home_says_coming_soon_without_a_date(client, lang, soon, old_date):
+    page = client.get(f"/{lang}/").content.decode()
+    assert soon in page
+    assert old_date not in page
+    assert "days to go" not in page and "до начала" not in page and "рӯз монд" not in page

@@ -5,9 +5,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "12 December 2026"
-msgstr "12 декабри 2026"
-
 msgid "25 minutes and 5 for questions"
 msgstr "25 дақиқа ва 5 дақиқа барои саволҳо"
 
@@ -77,6 +74,9 @@ msgstr ""
 
 msgid "Code of Conduct"
 msgstr "Кодекси рафтор"
+
+msgid "Coming soon"
+msgstr "Ба наздикӣ"
 
 msgid "Coming up"
 msgstr ""
@@ -372,9 +372,9 @@ msgstr "Беҳтарин суҳбатҳо дар байни маърӯзаҳо, 
 msgid "The call for talks opens soon."
 msgstr "Қабули маърӯзаҳо ба наздикӣ оғоз мешавад."
 
-msgid "The capital. On 12 December the first PyCon in Tajikistan opens here."
+msgid "The capital. The first PyCon in Tajikistan opens here soon."
 msgstr ""
-"Пойтахт. 12 декабр дар ин ҷо аввалин PyCon дар Тоҷикистон кушода мешавад."
+"Пойтахт. Ба наздикӣ дар ин ҷо аввалин PyCon дар Тоҷикистон кушода мешавад."
 
 msgid ""
 "The first PyCon in Tajikistan. One day of talks, workshops and friends in "

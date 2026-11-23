@@ -16,9 +16,15 @@
     </h1>
     <p class="hero-sub">{% translate "“Hello, world” in Tajik. The first PyCon in Tajikistan: talks, workshops and green tea for 100 Pythonistas in Dushanbe." %}</p>
     <ul class="hero-facts">
-      <li><time datetime="{{ event.start }}">{% translate "12 December 2026" %}</time></li>
+      {% if event.start_dt %}
+        <li><time datetime="{{ event.start }}">{{ event.start_dt|date:"j F Y" }}</time></li>
+      {% else %}
+        <li>{% translate "Coming soon" %}</li>
+      {% endif %}
       <li>{% translate "Dushanbe Innovation Institute" %}</li>
-      <li>{% blocktranslate count days=days_left %}{{ days }} day to go{% plural %}{{ days }} days to go{% endblocktranslate %}</li>
+      {% if days_left %}
+        <li>{% blocktranslate count days=days_left %}{{ days }} day to go{% plural %}{{ days }} days to go{% endblocktranslate %}</li>
+      {% endif %}
     </ul>
     <div class="hero-actions">
       <a class="btn btn-sun" href="{% url 'tickets' %}">{% translate "Get a ticket" %}</a>
@@ -35,7 +41,7 @@
     <figure class="chapter-art chapter-tower" data-draw>{% include "pages/_tower.svg.html" %}</figure>
     <div class="wrap chapter-copy">
       <h2 class="chapter-title" lang="tg">Душанбе</h2>
-      <p>{% translate "The capital. On 12 December the first PyCon in Tajikistan opens here." %}</p>
+      <p>{% translate "The capital. The first PyCon in Tajikistan opens here soon." %}</p>
     </div>
   </article>
 </section>
@@ -77,7 +83,7 @@
 <pre><span class="p">&gt;&gt;&gt;</span> print("Салом, ҷаҳон!")
 Салом, ҷаҳон!
 <span class="p">&gt;&gt;&gt;</span> pycon_tj.when()
-'12 December 2026, Dushanbe'</pre>
+'Coming soon, Dushanbe'</pre>
       </div>
       <div class="terminal-canvas" data-canvas></div>
       <form class="terminal-input" data-form>
