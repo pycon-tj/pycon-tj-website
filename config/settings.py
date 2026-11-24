@@ -169,6 +169,10 @@ EVENT = {
     "capacity": 100,
     "summit_altitude_m": 2026,
     "base_altitude_m": 800,
+    # Proposed dates for a May 2027 conference: confirm with the program committee.
+    "cfp_deadline": "2027-02-01",
+    "cfp_decisions": "2027-03-01",
+    "cohost": {"name": "Alif", "url": "https://alif.tj"},
 }
 PRETALX_EVENT_URL = os.environ.get(
     "PRETALX_EVENT_URL", ""

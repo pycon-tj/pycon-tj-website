@@ -1,16 +1,24 @@
 {% load i18n %}
-<form class="form" method="post" hx-post="{{ request.path }}" hx-target="#form-wrap" hx-swap="innerHTML">
+<form class="form" method="post" hx-post="{{ request.path }}" hx-target="#form-wrap" hx-swap="innerHTML" novalidate>
   {% csrf_token %}
   {{ form.non_field_errors }}
   {% for field in form %}
-    <div>
-      {% if field.field.widget.input_type == "checkbox" %}
-        <label>{{ field }} {{ field.label }}</label>
-      {% else %}
-        {{ field.label_tag }} {{ field }}
-      {% endif %}
-      {{ field.errors }}
-    </div>
+    {% if field.widget_type == "radioselect" or field.widget_type == "checkboxselectmultiple" %}
+      <fieldset class="choices">
+        <legend>{{ field.label }}{% if field.field.required %} <span class="req" aria-hidden="true">*</span>{% endif %}</legend>
+        {% for option in field %}<label class="choice">{{ option.tag }} <span>{{ option.choice_label }}</span></label>{% endfor %}
+        {{ field.errors }}
+      </fieldset>
+    {% elif field.widget_type == "checkbox" %}
+      <div><label class="choice">{{ field }} <span>{{ field.label }}</span></label>{{ field.errors }}</div>
+    {% else %}
+      <div>
+        <label for="{{ field.id_for_label }}">{{ field.label }}{% if field.field.required %} <span class="req" aria-hidden="true">*</span>{% endif %}</label>
+        {% if field.help_text %}<p class="help" id="{{ field.auto_id }}_help">{{ field.help_text }}</p>{% endif %}
+        {{ field }}
+        {{ field.errors }}
+      </div>
+    {% endif %}
   {% endfor %}
   <div><button class="btn btn-sun" type="submit">{{ submit }}</button></div>
 </form>

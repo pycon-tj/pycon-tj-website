@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load i18n suzani_tags %}
+{% block title %}{% translate "Call for volunteers" %} | PyCon Tajikistan{% endblock %}
+{% block description %}{% translate "Volunteer at the first PyCon in Tajikistan: registration, room support, photography, speaker assistance and more." %}{% endblock %}
+{% block content %}
+<article class="page">
+  <header class="page-head">
+    <div>
+      <h1>{% translate "Call for volunteers" %}</h1>
+      <p class="lead">{% translate "The first PyCon in Tajikistan is run by volunteers. Give a few hours and get a free ticket, a crew T-shirt and a story about how it all started." %}</p>
+    </div>
+    <div class="medallion" aria-hidden="true">{% rosette "volunteer" 160 %}</div>
+  </header>
+
+  <section class="block">
+    <h2>{% translate "Roles" %}</h2>
+    <div class="cards">
+      <article class="card"><h3>{% translate "Registration desk" %}</h3><p>{% translate "Welcome attendees, check tickets and hand out badges. Yours is the first face everyone sees." %}</p></article>
+      <article class="card"><h3>{% translate "Room support" %}</h3><p>{% translate "Keep a room running: start sessions on time, pass the microphone for questions and help people find seats." %}</p></article>
+      <article class="card"><h3>{% translate "Speaker assistance" %}</h3><p>{% translate "Meet speakers, take them to their room and check their slides and timing before they go on stage." %}</p></article>
+      <article class="card"><h3>{% translate "Photography" %}</h3><p>{% translate "Capture talks, hallway moments and the crowd. Bring your own camera or a good phone." %}</p></article>
+      <article class="card"><h3>{% translate "Social media" %}</h3><p>{% translate "Share the day as it happens, in Tajik, Russian or English." %}</p></article>
+      <article class="card"><h3>{% translate "Setup and teardown" %}</h3><p>{% translate "Help set up the hall the day before and pack everything up at the end." %}</p></article>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>{% translate "Good to know" %}</h2>
+    <ul class="ticks">
+      <li>{% translate "No experience needed. We run a short training before the conference." %}</li>
+      <li>{% translate "We plan shifts so you can still see the talks you care about." %}</li>
+      <li>{% translate "Volunteers follow our" %} <a class="link" href="{% url 'code_of_conduct' %}">{% translate "Code of Conduct" %}</a>.</li>
+    </ul>
+  </section>
+
+  <section class="block form-block">
+    <h2 id="apply">{% translate "Join the crew" %}</h2>
+    <p>{% translate "Choose the role you would like most and tell us when you can help." %}</p>
+    <div id="form-wrap">{% include "partials/form.html" %}</div>
+  </section>
+</article>
+{% endblock %}

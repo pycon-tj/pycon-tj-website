@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils.translation import gettext_lazy as _
 
 
 class Tier(models.Model):
@@ -34,3 +35,37 @@ class Sponsor(models.Model):
 
     def __str__(self) -> str:
         return self.name
+
+
+class Inquiry(models.Model):
+    """An organization asking about sponsorship, a booth, or both, from /sponsors/."""
+
+    class Interest(models.TextChoices):
+        SPONSORSHIP = "sponsorship", _("Sponsorship")
+        BOOTH = "booth", _("A booth")
+        BOTH = "both", _("Both")
+
+    organization = models.CharField(_("Organization"), max_length=200)
+    name = models.CharField(_("Contact person"), max_length=200)
+    email = models.EmailField(_("Email"))
+    phone = models.CharField(_("Phone or Telegram"), max_length=60, blank=True)
+    interest = models.CharField(
+        _("We are interested in"), max_length=20, choices=Interest.choices, default=Interest.BOTH
+    )
+    tier = models.ForeignKey(
+        Tier,
+        verbose_name=_("Package"),
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        help_text=_("Optional. Not sure yet? Leave it empty."),
+    )
+    message = models.TextField(_("Message"), blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ["-created_at"]
+        verbose_name_plural = "inquiries"
+
+    def __str__(self) -> str:
+        return f"{self.organization} ({self.get_interest_display()})"

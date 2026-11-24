@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% translate "Sponsors and exhibitors" %} | PyCon Tajikistan{% endblock %}
+{% block description %}{% translate "Sponsor or exhibit at the first PyCon in Tajikistan: packages, benefits, booth options and an organizer contact." %}{% endblock %}
+{% block content %}
+<article class="page">
+  <header class="page-head page-head-wide">
+    <div>
+      <h1>{% translate "Sponsors and exhibitors" %}</h1>
+      <p class="lead">{% translate "PyCon Tajikistan brings developers, students and companies from across Central Asia into one hall. Sponsors keep tickets affordable and pay for students to attend." %}</p>
+    </div>
+  </header>
+
+  <aside class="cohost">
+    <p class="cohost-label">{% translate "Co-hosted with" %}</p>
+    <a class="cohost-name" href="{{ event.cohost.url }}" rel="noopener">{{ event.cohost.name }}</a>
+    <p>{% translate "Alif is co-hosting the first PyCon in Tajikistan together with the local Python community." %}</p>
+  </aside>
+
+  <nav class="toc" aria-label="{% translate "On this page" %}">
+    <a href="#why">{% translate "Why sponsor" %}</a>
+    <a href="#packages">{% translate "Packages" %}</a>
+    <a href="#booths">{% translate "Booths" %}</a>
+    <a href="#contact">{% translate "Contact the organizers" %}</a>
+  </nav>
+
+  <section class="block">
+    <h2 id="why">{% translate "Why sponsor" %}</h2>
+    <ul class="ticks">
+      <li><strong>{% translate "Meet people you could hire." %}</strong> {% translate "Python developers, data people and students who are about to start their careers." %}</li>
+      <li><strong>{% translate "Show your engineering." %}</strong> {% translate "Tell the community how your team uses Python, on stage or at your booth." %}</li>
+      <li><strong>{% translate "Help start something." %}</strong> {% translate "This is the first PyCon in Tajikistan. Your support pays for student tickets and Education Day." %}</li>
+    </ul>
+  </section>
+
+  <section class="block">
+    <h2 id="packages">{% translate "Packages" %}</h2>
+    <p>{% translate "Packages are named after the climb, from base camp to the summit. Prices and the full prospectus are sent on request." %}</p>
+    <div class="cards">
+      {% for tier in tiers %}
+        <article class="card{% if forloop.first %} card-featured{% endif %}">
+          <h3>{% translate tier.name %}</h3>
+          <p class="card-price">{% if tier.price %}{{ tier.price }}{% else %}{% translate "Price on request" %}{% endif %}</p>
+          <p>{% translate tier.benefits %}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="block">
+    <h2 id="booths">{% translate "Booths" %}</h2>
+    <p>{% translate "Booths stand in the hall where attendees have tea and lunch, so people stop by all day. Book a booth on its own or add one to any package." %}</p>
+    <div class="cards">
+      <article class="card"><h3>{% translate "Booth" %}</h3><p>{% translate "A table, chairs, power and space for your banner. For companies that want to meet attendees and hire." %}</p></article>
+      <article class="card"><h3>{% translate "Startup table" %}</h3><p>{% translate "A smaller table at a lower price, for young companies from Tajikistan." %}</p></article>
+      <article class="card"><h3>{% translate "Community table" %}</h3><p>{% translate "Free for user groups, universities and non-profits, while space lasts." %}</p></article>
+    </div>
+  </section>
+
+  <section class="block form-block">
+    <h2 id="contact">{% translate "Contact the organizers" %}</h2>
+    <p>{% translate "Tell us what you are interested in and we will send the prospectus. Or write directly to" %} <a class="link" href="mailto:sponsors@pycon.tj">sponsors@pycon.tj</a>.</p>
+    <div id="form-wrap">{% include "partials/form.html" %}</div>
+  </section>
+</article>
+{% endblock %}

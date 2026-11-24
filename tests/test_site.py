@@ -31,7 +31,9 @@ def test_pages_load(client, name):
 def test_volunteer_form_saves(client):
     with translation.override("en"):
         url = reverse("volunteer")
-    response = client.post(url, {"name": "Test", "email": "t@example.com", "role": "any"})
+    response = client.post(
+        url, {"name": "Test", "email": "t@example.com", "role": "any", "availability": ["full_day"]}
+    )
     assert response.status_code == 200
     assert VolunteerApplication.objects.count() == 1
 

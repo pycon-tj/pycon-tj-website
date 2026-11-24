@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% load i18n suzani_tags %}
+{% block title %}{% translate "Call for speakers" %} | PyCon Tajikistan{% endblock %}
+{% block description %}{% translate "Speak at the first PyCon in Tajikistan: talk formats, languages, deadline and how to send a proposal. First-time speakers welcome." %}{% endblock %}
+{% block content %}
+<article class="page">
+  <header class="page-head">
+    <div>
+      <h1>{% translate "Call for speakers" %}</h1>
+      <p class="lead">{% translate "We are looking for talks and workshops about Python. Whether you have spoken at ten conferences or never spoken in public, we want to hear what you have learned." %}</p>
+    </div>
+    <div class="medallion" aria-hidden="true">{% rosette "speaker" 160 %}</div>
+  </header>
+
+  <dl class="facts">
+    <div><dt>{% translate "Proposals close" %}</dt><dd>{{ event.cfp_deadline_dt|date:"j F Y" }}</dd></div>
+    <div><dt>{% translate "You hear back by" %}</dt><dd>{{ event.cfp_decisions_dt|date:"j F Y" }}</dd></div>
+    <div><dt>{% translate "Languages" %}</dt><dd>{% translate "Tajik, Russian or English" %}</dd></div>
+    <div><dt>{% translate "Formats" %}</dt><dd>{% translate "Talk or workshop" %}</dd></div>
+  </dl>
+  <p><a class="btn btn-sun" href="#proposal">{% translate "Send a proposal" %}</a></p>
+
+  <nav class="toc" aria-label="{% translate "On this page" %}">
+    <a href="#formats">{% translate "Formats" %}</a>
+    <a href="#first-time">{% translate "First-time speakers" %}</a>
+    <a href="#what-to-send">{% translate "What to send" %}</a>
+    <a href="#how-we-choose">{% translate "How we choose" %}</a>
+    <a href="#proposal">{% translate "Send a proposal" %}</a>
+  </nav>
+
+  <section class="block">
+    <h2 id="formats">{% translate "Formats" %}</h2>
+    <dl class="formats">
+      <div><dt>{% translate "Talk" %}</dt><dd>{% translate "25 minutes, then 5 minutes for questions. Most of the program is talks." %}</dd></div>
+      <div><dt>{% translate "Workshop" %}</dt><dd>{% translate "90 minutes, hands-on. Attendees bring laptops, so tell us what they should install first." %}</dd></div>
+      <div><dt>{% translate "Lightning talk" %}</dt><dd>{% translate "5 minutes on anything. No proposal needed: sign up on the conference day." %}</dd></div>
+    </dl>
+    <p>{% translate "Give your talk in Tajik, Russian or English, whichever you speak best. Slides in English help guests from abroad follow along, but they are not required." %}</p>
+    <p>{% translate "Any Python topic is welcome: web, data and machine learning, education, science, automation, testing, Python in Tajik and other local languages, and stories from your community or your first open-source contribution." %}</p>
+  </section>
+
+  <aside class="callout" aria-labelledby="first-time">
+    <h2 id="first-time">{% translate "First time? This call is for you." %}</h2>
+    <p>{% translate "Many of the best talks come from people who have never spoken before. Tick the box in the form and we will pair you with an experienced speaker who helps with your proposal, your slides and a practice run. First-time speakers compete for the same slots as everyone else." %}</p>
+  </aside>
+
+  <section class="block">
+    <h2 id="what-to-send">{% translate "What to send" %}</h2>
+    <dl class="formats">
+      <div><dt>{% translate "Title" %}</dt><dd>{% translate "Short and clear. Say what the talk is about, not just something clever." %}</dd></div>
+      <div><dt>{% translate "Abstract" %}</dt><dd>{% translate "2 to 5 sentences on what people will learn. This goes in the program." %}</dd></div>
+      <div><dt>{% translate "Intended audience" %}</dt><dd>{% translate "Who it is for, their level, and what they should already know." %}</dd></div>
+      <div><dt>{% translate "Short bio" %}</dt><dd>{% translate "2 or 3 sentences about you, in the third person." %}</dd></div>
+      <div><dt>{% translate "Contact details" %}</dt><dd>{% translate "Your email, and a phone number or Telegram so we can reach you quickly." %}</dd></div>
+      <div><dt>{% translate "Outline" %}</dt><dd>{% translate "Optional, for reviewers only: the main parts with rough minutes." %}</dd></div>
+    </dl>
+  </section>
+
+  <section class="block">
+    <h2 id="how-we-choose">{% translate "How we choose" %}</h2>
+    <ol class="steps">
+      <li><strong>{% translate "Proposals close" %} {{ event.cfp_deadline_dt|date:"j F Y" }}.</strong> {% translate "You can send up to three proposals." %}</li>
+      <li><strong>{% translate "The program committee reads every proposal." %}</strong> {% translate "We look at what attendees will take away, not at your job title or how famous you are." %}</li>
+      <li><strong>{% translate "We write to every speaker by" %} {{ event.cfp_decisions_dt|date:"j F Y" }},</strong> {% translate "whether the proposal is accepted or not." %}</li>
+      <li><strong>{% translate "Accepted speakers confirm within a week." %}</strong> {% translate "Then we publish the program." %}</li>
+    </ol>
+    <h3>{% translate "Good to know" %}</h3>
+    <ul class="ticks">
+      <li>{% translate "Accepted speakers get a free conference ticket." %}</li>
+      <li>{% translate "Talks may be recorded and published after the conference. If you prefer not to be recorded, say so in the form." %}</li>
+      <li>{% translate "No sales pitches: talk about what you built and learned, not about a product." %}</li>
+      <li>{% translate "Need help with travel costs?" %} <a class="link" href="{% url 'aid' %}">{% translate "Apply for financial aid" %}</a></li>
+      <li>{% translate "All speakers follow our" %} <a class="link" href="{% url 'code_of_conduct' %}">{% translate "Code of Conduct" %}</a>.</li>
+    </ul>
+  </section>
+
+  <section class="block form-block">
+    <h2 id="proposal">{% translate "Send a proposal" %}</h2>
+    <p>{% translate "Questions before you send? Write to" %} <a class="link" href="mailto:program@pycon.tj">program@pycon.tj</a>.</p>
+    <div id="form-wrap">{% include "partials/form.html" %}</div>
+  </section>
+</article>
+{% endblock %}
