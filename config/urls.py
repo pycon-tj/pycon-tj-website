@@ -34,6 +34,7 @@ urlpatterns += i18n_patterns(
     path("program/<slug:slug>/", program_views.talk_detail, name="talk"),
     path("speak/", program_views.speak, name="speak"),
     path("sponsors/", sponsor_views.sponsors, name="sponsors"),
+    path("attend/", TemplateView.as_view(template_name="pages/attend.html"), name="attend"),
     path("explore/", TemplateView.as_view(template_name="pages/explore.html"), name="explore"),
     path("tickets/", ticket_views.tickets, name="tickets"),
     path("tickets/aid/", aid_views.apply, name="aid"),

@@ -35,13 +35,37 @@ def test_navigation_has_one_entry_per_audience(client):
     page = client.get("/en/").content.decode()
     for url in (
         "/en/program/",
+        "/en/attend/",
+        "/en/tickets/",
+        "/en/tickets/aid/",
+        "/en/explore/",
+        "/en/code-of-conduct/",
         "/en/speak/",
         "/en/sponsors/",
         "/en/volunteer/",
-        "/en/explore/",
-        "/en/tickets/",
     ):
         assert f'href="{url}"' in page
+
+
+def test_attend_groups_everything_for_visitors(client):
+    page = client.get("/en/attend/").content.decode()
+    assert "<h1>Attend PyCon Tajikistan</h1>" in page
+    for url in ("/en/tickets/", "/en/tickets/aid/", "/en/explore/", "/en/code-of-conduct/"):
+        assert f'class="card card-link" href="{url}"' in page
+    assert "<h1>Посетителям PyCon Tajikistan</h1>" in client.get("/ru/attend/").content.decode()
+
+
+def test_attend_menu_is_marked_current_on_its_pages(client):
+    for path in ("/en/attend/", "/en/explore/", "/en/tickets/"):
+        assert 'class="nav-group is-current"' in client.get(path).content.decode()
+    assert 'class="nav-group is-current"' not in client.get("/en/speak/").content.decode()
+
+
+def test_home_has_a_door_for_each_audience(client):
+    page = client.get("/tg/").content.decode()
+    assert 'id="find-your-way"' in page
+    for url in ("/tg/attend/", "/tg/speak/", "/tg/sponsors/", "/tg/volunteer/"):
+        assert f'class="door" href="{url}"' in page
 
 
 def test_call_for_speakers_states_what_speakers_need(client):

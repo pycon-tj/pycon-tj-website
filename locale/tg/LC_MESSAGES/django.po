@@ -157,6 +157,12 @@ msgstr "Барои кӯмаки молиявӣ ариза диҳед"
 msgid "Ask before you photograph people. Most will say yes."
 msgstr "Пеш аз аксгирии одамон иҷозат пурсед. Аксарият розӣ мешаванд."
 
+msgid "Attend"
+msgstr "Барои меҳмонон"
+
+msgid "Attend PyCon Tajikistan"
+msgstr "Барои меҳмонони PyCon Tajikistan"
+
 msgid "Back to home"
 msgstr "Ба саҳифаи асосӣ"
 
@@ -171,6 +177,13 @@ msgstr "Сарпараст шавед"
 
 msgid "Beginner"
 msgstr "Ибтидоӣ"
+
+msgid ""
+"Beginners are welcome. Many talks are made for people who are just starting "
+"with Python."
+msgstr ""
+"Навкорон хуш омадед. Бисёр маърӯзаҳо барои онҳое ҳастанд, ки Python-ро нав "
+"оғоз мекунанд."
 
 msgid "Big logo on stage, booth, short talk slot, 4 tickets."
 msgstr "Логотипи калон дар саҳна, стенд, маърӯзаи кӯтоҳ, 4 чипта."
@@ -194,6 +207,9 @@ msgstr "Ҳарду"
 
 msgid "Bring Education Day to your school"
 msgstr "Рӯзи маорифро ба мактаби худ даъват кунед"
+
+msgid "Bring a laptop if you join a workshop."
+msgstr "Агар ба семинар равед, ноутбук гиред."
 
 msgid "Bring your laptop. Leave with working code."
 msgstr "Ноутбуки худро биёред. Бо коди корӣ баргардед."
@@ -326,6 +342,13 @@ msgstr ""
 "Ҳар чипта ҳамаи маърӯзаҳо ва семинарҳо, хӯроки нисфирӯзӣ, чой тамоми рӯз, "
 "стикерҳо ва бейҷи шахсии сӯзаниро дар бар мегирад."
 
+msgid ""
+"Everything a visitor needs: tickets, financial aid, the Code of Conduct and "
+"a guide to Tajikistan."
+msgstr ""
+"Ҳама чиз барои меҳмонон: чиптаҳо, кӯмаки молиявӣ, кодекси рафтор ва роҳнамо "
+"дар бораи Тоҷикистон."
+
 msgid "Explore Tajikistan"
 msgstr "Тоҷикистонро кашф кунед"
 
@@ -334,6 +357,13 @@ msgstr "Филтр"
 
 msgid "Financial aid"
 msgstr "Кӯмаки молиявӣ"
+
+msgid "Find your way in"
+msgstr "Аз куҷо оғоз кунед"
+
+msgid ""
+"First time here? Dushanbe, food, culture and trips around the conference."
+msgstr "Бори аввал ин ҷо? Душанбе, таом, фарҳанг ва сафарҳо атрофи конфронс."
 
 msgid "First time? This call is for you."
 msgstr "Бори аввал? Ин даъват барои шумост."
@@ -378,6 +408,12 @@ msgstr "Форматҳо"
 msgid "Free for user groups, universities and non-profits, while space lasts."
 msgstr ""
 "Ройгон барои ҷомеаҳо, донишгоҳҳо ва ташкилотҳои ғайритиҷоратӣ, то ҷой ҳаст."
+
+msgid ""
+"Free tickets and travel support for people who could not come otherwise."
+msgstr ""
+"Чиптаҳои ройгон ва кӯмак барои сафар ба онҳое, ки бе он омада "
+"наметавонистанд."
 
 msgid "Friends of the trail"
 msgstr "Дӯстони пайраҳа"
@@ -438,6 +474,11 @@ msgstr "Таърих ва санъат аз Суғди қадим то имрӯ�
 msgid "How we choose"
 msgstr "Мо чӣ тавр интихоб мекунем"
 
+msgid "How we keep PyCon friendly and safe, and how to get help."
+msgstr ""
+"Чӣ тавр мо PyCon-ро дӯстона ва бехатар нигоҳ медорем ва аз куҷо кӯмак "
+"гирифтан мумкин аст."
+
 msgid "I need a free ticket"
 msgstr "Ба ман чиптаи ройгон лозим аст"
 
@@ -472,6 +513,9 @@ msgstr "Искандаркӯл — кӯли кӯҳӣ дар кӯҳҳои Фон.
 
 msgid "Join the crew"
 msgstr "Ба даста ҳамроҳ шавед"
+
+msgid "Join the crew that runs the first PyCon here."
+msgstr "Ба дастае ҳамроҳ шавед, ки аввалин PyCon-ро дар ин ҷо мегузаронад."
 
 msgid ""
 "Keep a room running: start sessions on time, pass the microphone for "
@@ -624,6 +668,13 @@ msgid "One day of Python, in three languages"
 msgstr "Як рӯзи Python бо се забон"
 
 msgid ""
+"One day of talks, workshops and green tea in Dushanbe. Here is everything "
+"you need as a visitor."
+msgstr ""
+"Як рӯзи маърӯзаҳо, семинарҳо ва чойи кабуд дар Душанбе. Ин ҷо ҳама чизест, "
+"ки ба меҳмон лозим аст."
+
+msgid ""
 "One ticket, one day, a hundred new friends. Student tickets are paid for by "
 "our sponsors."
 msgstr ""
@@ -665,6 +716,9 @@ msgid ""
 msgstr ""
 "Бастаҳо аз рӯи марҳилаҳои кӯҳнавардӣ ном гирифтаанд — аз лагери асосӣ то "
 "қулла. Нархҳо ва проспекти пурраро бо дархост мефиристем."
+
+msgid "Packages, booths and how to reach the organizers."
+msgstr "Бастаҳо, стендҳо ва тарзи тамос бо ташкилотчиён."
 
 msgid "Page not found"
 msgstr "Саҳифа ёфт нашуд"
@@ -771,6 +825,9 @@ msgstr "Саволҳо"
 msgid "Questions before you send? Write to"
 msgstr "Савол доред? Нависед ба"
 
+msgid "Questions? Write to"
+msgstr "Савол доред? Нависед ба"
+
 msgid "Qurutob"
 msgstr "Қурутоб"
 
@@ -821,6 +878,9 @@ msgstr "Самбӯса"
 msgid "Say hello in Python"
 msgstr "Бо Python салом гӯед"
 
+msgid "Seats"
+msgstr "Ҷойҳо"
+
 msgid "See the program"
 msgstr "Барномаро бинед"
 
@@ -852,6 +912,9 @@ msgstr "Рӯзро ҳамон лаҳза нақл кунед — бо тоҷик
 msgid "Share what you know"
 msgstr "Донистаҳои худро нақл кунед"
 
+msgid "Share what you know. First-time speakers welcome."
+msgstr "Донишатонро нақл кунед. Маърӯзачиёни навкор хуш омадед."
+
 msgid ""
 "Short and clear. Say what the talk is about, not just something clever."
 msgstr ""
@@ -882,6 +945,9 @@ msgstr ""
 msgid "Speaker assistance"
 msgstr "Кӯмак ба маърӯзачиён"
 
+msgid "Speakers"
+msgstr "Маърӯзачиён"
+
 msgid "Sponsor"
 msgstr "Сарпарастӣ"
 
@@ -891,6 +957,9 @@ msgid ""
 msgstr ""
 "Сарпараст ё намоишгари аввалин PyCon дар Тоҷикистон шавед: бастаҳо, "
 "бартариҳо, стендҳо ва тамос бо ташкилотчиён."
+
+msgid "Sponsors"
+msgstr "Сарпарастон"
 
 msgid "Sponsors and exhibitors"
 msgstr "Сарпарастон ва намоишгарон"
@@ -922,6 +991,13 @@ msgstr "Донишҷӯӣ"
 
 msgid "Student exhibition"
 msgstr "Намоишгоҳи донишҷӯён"
+
+msgid ""
+"Student, personal and supporter tickets. Every ticket includes lunch and tea"
+" all day."
+msgstr ""
+"Чиптаҳои донишҷӯӣ, шахсӣ ва дастгирӣ. Ҳар чипта хӯроки нисфирӯзӣ ва чойро "
+"тамоми рӯз дар бар мегирад."
 
 msgid "Submit a talk"
 msgstr "Маъруза пешниҳод кунед"
@@ -959,6 +1035,9 @@ msgstr ""
 "Забони тоҷикӣ забони форсист, ки бо хати кириллӣ навишта мешавад. Бисёриҳо "
 "русӣ медонанд ва ҷавонон аксар англисӣ ҳам."
 
+msgid "Tajik, Russian and English"
+msgstr "Тоҷикӣ, русӣ ва англисӣ"
+
 msgid "Tajik, Russian or English"
 msgstr "Тоҷикӣ, русӣ ё англисӣ"
 
@@ -983,6 +1062,9 @@ msgstr "Маърӯза, 25 дақиқа + 5 барои саволҳо"
 
 msgid "Talks"
 msgstr "Маърузаҳо"
+
+msgid "Talks and workshops, filtered by language and level."
+msgstr "Маърӯзаҳо ва семинарҳо бо филтр аз рӯи забон ва сатҳ."
 
 msgid ""
 "Talks appear here after the call for talks closes. Want to be on this list?"
@@ -1149,6 +1231,9 @@ msgstr ""
 msgid "Tickets"
 msgstr "Чиптаҳо"
 
+msgid "Tickets, financial aid and a guide to Tajikistan."
+msgstr "Чиптаҳо, кӯмаки молиявӣ ва роҳнамо дар бораи Тоҷикистон."
+
 msgid "Title"
 msgstr "Сарлавҳа"
 
@@ -1168,6 +1253,9 @@ msgstr "Дараи Варзоб"
 msgid "Visa"
 msgstr "Раводид"
 
+msgid "Visitors"
+msgstr "Меҳмонон"
+
 msgid "Volunteer"
 msgstr "Ихтиёриён"
 
@@ -1178,11 +1266,21 @@ msgstr ""
 "Волонтёри аввалин PyCon дар Тоҷикистон шавед: бақайдгирӣ, кӯмак дар толорҳо,"
 " аксбардорӣ, кӯмак ба маърӯзачиён ва ғайра."
 
+msgid "Volunteers"
+msgstr "Волонтёрон"
+
 msgid "Volunteers follow our"
 msgstr "Волонтёрон риоя мекунанд:"
 
 msgid "Waiting list"
 msgstr "Рӯйхати интизорӣ"
+
+msgid ""
+"Want to give a 5-minute lightning talk? Sign up at the registration desk on "
+"the day."
+msgstr ""
+"Мехоҳед маърӯзаи 5-дақиқаӣ кунед? Дар рӯзи конфронс дар мизи бақайдгирӣ "
+"номнавис шавед."
 
 msgid ""
 "Warm and sunny, often 20 to 30 °C in the day. Bring a jacket for the "
@@ -1241,6 +1339,9 @@ msgstr "Чӣ фиристодан лозим"
 msgid "What will people learn? 2 to 5 sentences. This goes in the program."
 msgstr "Шунавандагон чӣ меомӯзанд? 2–5 ҷумла. Ин ба барнома дохил мешавад."
 
+msgid "When"
+msgstr "Кай"
+
 msgid "When can you help?"
 msgstr "Кай кӯмак карда метавонед?"
 
@@ -1248,6 +1349,9 @@ msgid "When your employer pays. You help pay for student tickets."
 msgstr ""
 "Вақте ки корфармо пардохт мекунад. Шумо дар пардохти чиптаҳои донишҷӯён "
 "кӯмак мекунед."
+
+msgid "Where"
+msgstr "Дар куҷо"
 
 msgid "Who is it for?"
 msgstr "Барои кӣ?"

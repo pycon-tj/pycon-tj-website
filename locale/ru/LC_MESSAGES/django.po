@@ -156,6 +156,12 @@ msgstr ""
 "Спрашивайте разрешения, прежде чем фотографировать людей. Почти все "
 "согласятся."
 
+msgid "Attend"
+msgstr "Посетителям"
+
+msgid "Attend PyCon Tajikistan"
+msgstr "Посетителям PyCon Tajikistan"
+
 msgid "Back to home"
 msgstr "На главную"
 
@@ -170,6 +176,13 @@ msgstr "Стать спонсором"
 
 msgid "Beginner"
 msgstr "Начальный"
+
+msgid ""
+"Beginners are welcome. Many talks are made for people who are just starting "
+"with Python."
+msgstr ""
+"Новичкам рады. Многие доклады рассчитаны на тех, кто только начинает с "
+"Python."
 
 msgid "Big logo on stage, booth, short talk slot, 4 tickets."
 msgstr "Большой логотип на сцене, стенд, короткий доклад, 4 билета."
@@ -192,6 +205,9 @@ msgstr "И то, и другое"
 
 msgid "Bring Education Day to your school"
 msgstr "Пригласите День образования в вашу школу"
+
+msgid "Bring a laptop if you join a workshop."
+msgstr "Возьмите ноутбук, если идёте на воркшоп."
 
 msgid "Bring your laptop. Leave with working code."
 msgstr "Приходите с ноутбуком. Уходите с работающим кодом."
@@ -322,6 +338,13 @@ msgstr ""
 "В каждый билет входят все доклады и воркшопы, обед, чай весь день, стикеры и"
 " ваш личный бейдж с сюзане."
 
+msgid ""
+"Everything a visitor needs: tickets, financial aid, the Code of Conduct and "
+"a guide to Tajikistan."
+msgstr ""
+"Всё для посетителей: билеты, финансовая помощь, кодекс поведения и гид по "
+"Таджикистану."
+
 msgid "Explore Tajikistan"
 msgstr "Откройте Таджикистан"
 
@@ -330,6 +353,13 @@ msgstr "Фильтр"
 
 msgid "Financial aid"
 msgstr "Финансовая помощь"
+
+msgid "Find your way in"
+msgstr "С чего начать"
+
+msgid ""
+"First time here? Dushanbe, food, culture and trips around the conference."
+msgstr "Впервые здесь? Душанбе, еда, культура и поездки вокруг конференции."
 
 msgid "First time? This call is for you."
 msgstr "Впервые? Этот призыв — для вас."
@@ -374,6 +404,11 @@ msgid "Free for user groups, universities and non-profits, while space lasts."
 msgstr ""
 "Бесплатно для сообществ, университетов и некоммерческих организаций, пока "
 "есть места."
+
+msgid ""
+"Free tickets and travel support for people who could not come otherwise."
+msgstr ""
+"Бесплатные билеты и помощь с дорогой для тех, кто иначе не смог бы приехать."
 
 msgid "Friends of the trail"
 msgstr "Друзья тропы"
@@ -436,6 +471,9 @@ msgstr ""
 msgid "How we choose"
 msgstr "Как мы выбираем"
 
+msgid "How we keep PyCon friendly and safe, and how to get help."
+msgstr "Как мы делаем PyCon дружелюбным и безопасным и где получить помощь."
+
 msgid "I need a free ticket"
 msgstr "Мне нужен бесплатный билет"
 
@@ -471,6 +509,9 @@ msgstr "Искандеркуль — горное озеро в Фанских �
 
 msgid "Join the crew"
 msgstr "Присоединиться к команде"
+
+msgid "Join the crew that runs the first PyCon here."
+msgstr "Присоединяйтесь к команде, которая проводит первый PyCon здесь."
 
 msgid ""
 "Keep a room running: start sessions on time, pass the microphone for "
@@ -621,6 +662,13 @@ msgid "One day of Python, in three languages"
 msgstr "Один день Python на трёх языках"
 
 msgid ""
+"One day of talks, workshops and green tea in Dushanbe. Here is everything "
+"you need as a visitor."
+msgstr ""
+"Один день докладов, воркшопов и зелёного чая в Душанбе. Здесь всё, что нужно"
+" посетителю."
+
+msgid ""
 "One ticket, one day, a hundred new friends. Student tickets are paid for by "
 "our sponsors."
 msgstr ""
@@ -663,6 +711,9 @@ msgid ""
 msgstr ""
 "Пакеты названы по этапам восхождения — от базового лагеря до вершины. Цены и"
 " полный проспект отправляем по запросу."
+
+msgid "Packages, booths and how to reach the organizers."
+msgstr "Пакеты, стенды и как связаться с организаторами."
 
 msgid "Page not found"
 msgstr "Страница не найдена"
@@ -769,6 +820,9 @@ msgstr "Вопросы"
 msgid "Questions before you send? Write to"
 msgstr "Есть вопросы? Пишите на"
 
+msgid "Questions? Write to"
+msgstr "Вопросы? Пишите на"
+
 msgid "Qurutob"
 msgstr "Курутоб"
 
@@ -819,6 +873,9 @@ msgstr "Самбуса"
 msgid "Say hello in Python"
 msgstr "Скажите привет на Python"
 
+msgid "Seats"
+msgstr "Мест"
+
 msgid "See the program"
 msgstr "Смотреть программу"
 
@@ -852,6 +909,9 @@ msgstr ""
 msgid "Share what you know"
 msgstr "Поделитесь знаниями"
 
+msgid "Share what you know. First-time speakers welcome."
+msgstr "Поделитесь знаниями. Ждём и тех, кто выступает впервые."
+
 msgid ""
 "Short and clear. Say what the talk is about, not just something clever."
 msgstr "Коротко и ясно. Скажите, о чём доклад, а не просто что-то остроумное."
@@ -881,6 +941,9 @@ msgstr ""
 msgid "Speaker assistance"
 msgstr "Помощь спикерам"
 
+msgid "Speakers"
+msgstr "Спикерам"
+
 msgid "Sponsor"
 msgstr "Спонсорам"
 
@@ -890,6 +953,9 @@ msgid ""
 msgstr ""
 "Станьте спонсором или экспонентом первого PyCon в Таджикистане: пакеты, "
 "преимущества, стенды и контакт организаторов."
+
+msgid "Sponsors"
+msgstr "Спонсоры"
 
 msgid "Sponsors and exhibitors"
 msgstr "Спонсоры и экспоненты"
@@ -921,6 +987,13 @@ msgstr "Студенческий"
 
 msgid "Student exhibition"
 msgstr "Студенческая выставка"
+
+msgid ""
+"Student, personal and supporter tickets. Every ticket includes lunch and tea"
+" all day."
+msgstr ""
+"Студенческие, личные и билеты поддержки. В каждый билет входят обед и чай "
+"весь день."
 
 msgid "Submit a talk"
 msgstr "Подать доклад"
@@ -958,6 +1031,9 @@ msgstr ""
 "Таджикский — персидский язык на кириллице. Многие говорят по-русски, а "
 "молодёжь часто и по-английски."
 
+msgid "Tajik, Russian and English"
+msgstr "Таджикский, русский и английский"
+
 msgid "Tajik, Russian or English"
 msgstr "Таджикский, русский или английский"
 
@@ -983,6 +1059,9 @@ msgstr "Доклад, 25 минут + 5 на вопросы"
 
 msgid "Talks"
 msgstr "Доклады"
+
+msgid "Talks and workshops, filtered by language and level."
+msgstr "Доклады и воркшопы с фильтром по языку и уровню."
 
 msgid ""
 "Talks appear here after the call for talks closes. Want to be on this list?"
@@ -1147,6 +1226,9 @@ msgstr ""
 msgid "Tickets"
 msgstr "Билеты"
 
+msgid "Tickets, financial aid and a guide to Tajikistan."
+msgstr "Билеты, финансовая помощь и гид по Таджикистану."
+
 msgid "Title"
 msgstr "Название"
 
@@ -1166,6 +1248,9 @@ msgstr "Варзобское ущелье"
 msgid "Visa"
 msgstr "Виза"
 
+msgid "Visitors"
+msgstr "Посетителям"
+
 msgid "Volunteer"
 msgstr "Волонтёрам"
 
@@ -1176,11 +1261,21 @@ msgstr ""
 "Станьте волонтёром первого PyCon в Таджикистане: регистрация, работа в "
 "залах, фотосъёмка, помощь спикерам и другое."
 
+msgid "Volunteers"
+msgstr "Волонтёрам"
+
 msgid "Volunteers follow our"
 msgstr "Волонтёры соблюдают наш"
 
 msgid "Waiting list"
 msgstr "Лист ожидания"
+
+msgid ""
+"Want to give a 5-minute lightning talk? Sign up at the registration desk on "
+"the day."
+msgstr ""
+"Хотите выступить с 5-минутным блиц-докладом? Запишитесь на стойке "
+"регистрации в день конференции."
 
 msgid ""
 "Warm and sunny, often 20 to 30 °C in the day. Bring a jacket for the "
@@ -1239,11 +1334,17 @@ msgstr "Что прислать"
 msgid "What will people learn? 2 to 5 sentences. This goes in the program."
 msgstr "Что узнают слушатели? 2–5 предложений. Это попадёт в программу."
 
+msgid "When"
+msgstr "Когда"
+
 msgid "When can you help?"
 msgstr "Когда вы можете помочь?"
 
 msgid "When your employer pays. You help pay for student tickets."
 msgstr "Когда платит работодатель. Вы помогаете оплатить студенческие билеты."
+
+msgid "Where"
+msgstr "Где"
 
 msgid "Who is it for?"
 msgstr "Для кого доклад?"

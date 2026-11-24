@@ -47,6 +47,19 @@
   </article>
 </section>
 
+{# ── Find your way in: one door per audience ─────────────────────── #}
+<section class="doors" id="find-your-way">
+  <div class="wrap">
+    <h2>{% translate "Find your way in" %}</h2>
+    <div class="doors-grid">
+      <a class="door" href="{% url 'attend' %}"><span class="door-mark" aria-hidden="true">{% rosette "visitor" 72 %}</span><h3>{% translate "Visitors" %}</h3><p>{% translate "Tickets, financial aid and a guide to Tajikistan." %}</p></a>
+      <a class="door" href="{% url 'speak' %}"><span class="door-mark" aria-hidden="true">{% rosette "speaker" 72 %}</span><h3>{% translate "Speakers" %}</h3><p>{% translate "Share what you know. First-time speakers welcome." %}</p></a>
+      <a class="door" href="{% url 'sponsors' %}"><span class="door-mark" aria-hidden="true">{% rosette "sponsor" 72 %}</span><h3>{% translate "Sponsors" %}</h3><p>{% translate "Packages, booths and how to reach the organizers." %}</p></a>
+      <a class="door" href="{% url 'volunteer' %}"><span class="door-mark" aria-hidden="true">{% rosette "volunteer" 72 %}</span><h3>{% translate "Volunteers" %}</h3><p>{% translate "Join the crew that runs the first PyCon here." %}</p></a>
+    </div>
+  </div>
+</section>
+
 {# ── The day ─────────────────────────────────────────────────────── #}
 <section class="day" id="program">
   <div class="wrap day-grid">
