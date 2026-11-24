@@ -41,11 +41,20 @@
       <span class="menu-lines" aria-hidden="true"></span><span class="visually-hidden">{% translate "Menu" %}</span>
     </button>
     <nav class="main-nav" id="main-nav" aria-label="{% translate "Main" %}">
-      <a href="{% url 'schedule' %}">{% translate "Program" %}</a>
-      <a href="/{{ LANG }}/#speak">{% translate "Speak" %}</a>
-      <a href="/{{ LANG }}/#sponsors">{% translate "Sponsors" %}</a>
-      <a href="{% url 'suzani' %}">{% translate "Your suzani" %}</a>
-      <a href="{% url 'volunteer' %}">{% translate "Volunteer" %}</a>
+      {% url 'schedule' as u_program %}{% url 'attend' as u_attend %}{% url 'tickets' as u_tickets %}{% url 'aid' as u_aid %}{% url 'explore' as u_explore %}{% url 'code_of_conduct' as u_coc %}{% url 'speak' as u_speak %}{% url 'sponsors' as u_sponsors %}{% url 'volunteer' as u_volunteer %}
+      <a href="{{ u_program }}"{% if request.path == u_program %} aria-current="page"{% endif %}>{% translate "Program" %}</a>
+      <div class="nav-group{% if request.path == u_attend or request.path == u_tickets or request.path == u_aid or request.path == u_explore or request.path == u_coc %} is-current{% endif %}">
+        <a class="nav-top" href="{{ u_attend }}"{% if request.path == u_attend %} aria-current="page"{% endif %}>{% translate "Attend" %}</a>
+        <div class="nav-sub">
+          <a href="{{ u_tickets }}"{% if request.path == u_tickets %} aria-current="page"{% endif %}>{% translate "Tickets" %}</a>
+          <a href="{{ u_aid }}"{% if request.path == u_aid %} aria-current="page"{% endif %}>{% translate "Financial aid" %}</a>
+          <a href="{{ u_explore }}"{% if request.path == u_explore %} aria-current="page"{% endif %}>{% translate "Explore Tajikistan" %}</a>
+          <a href="{{ u_coc }}"{% if request.path == u_coc %} aria-current="page"{% endif %}>{% translate "Code of Conduct" %}</a>
+        </div>
+      </div>
+      <a href="{{ u_speak }}"{% if request.path == u_speak %} aria-current="page"{% endif %}>{% translate "Speak" %}</a>
+      <a href="{{ u_sponsors }}"{% if request.path == u_sponsors %} aria-current="page"{% endif %}>{% translate "Sponsor" %}</a>
+      <a href="{{ u_volunteer }}"{% if request.path == u_volunteer %} aria-current="page"{% endif %}>{% translate "Volunteer" %}</a>
     </nav>
     <nav class="lang" aria-label="{% translate "Language" %}">
       {% for code, url in language_links %}
@@ -69,12 +78,18 @@
       <div>
         <p class="footer-logo"><img src="{% static 'img/logo.png' %}" srcset="{% static 'img/logo.png' %} 600w, {% static 'img/logo-large.webp' %} 1200w" sizes="200px" alt="PyCon Tajikistan 2026" width="200" height="150" loading="lazy"></p>
         <p>{% translate "Made with Python and green tea in Dushanbe." %}</p>
+        <p class="footer-cohost">{% translate "Co-hosted with" %} <a href="{{ event.cohost.url }}" rel="noopener">{{ event.cohost.name }}</a></p>
         <p class="small">{% translate "This site runs on Django." %} <a href="https://github.com/">{% translate "Read the code" %}</a></p>
       </div>
       <nav aria-label="{% translate "Footer" %}">
+        <a href="{% url 'attend' %}">{% translate "Attend" %}</a>
         <a href="{% url 'tickets' %}">{% translate "Tickets" %}</a>
         <a href="{% url 'aid' %}">{% translate "Financial aid" %}</a>
+        <a href="{% url 'speak' %}">{% translate "Call for speakers" %}</a>
+        <a href="{% url 'sponsors' %}">{% translate "Sponsors and exhibitors" %}</a>
         <a href="{% url 'volunteer' %}">{% translate "Volunteer" %}</a>
+        <a href="{% url 'explore' %}">{% translate "Explore Tajikistan" %}</a>
+        <a href="{% url 'suzani' %}">{% translate "Your suzani" %}</a>
         <a href="{% url 'news' %}">{% translate "News" %}</a>
         <a href="{% url 'live' %}">{% translate "Live" %}</a>
         <a href="{% url 'code_of_conduct' %}">{% translate "Code of Conduct" %}</a>

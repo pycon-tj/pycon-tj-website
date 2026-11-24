@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load i18n suzani_tags %}
+{% block title %}{% translate "Attend" %} | PyCon Tajikistan{% endblock %}
+{% block description %}{% translate "Everything a visitor needs: tickets, financial aid, the Code of Conduct and a guide to Tajikistan." %}{% endblock %}
+{% block content %}
+<article class="page">
+  <header class="page-head">
+    <div>
+      <h1>{% translate "Attend PyCon Tajikistan" %}</h1>
+      <p class="lead">{% translate "One day of talks, workshops and green tea in Dushanbe. Here is everything you need as a visitor." %}</p>
+    </div>
+    <div class="medallion" aria-hidden="true">{% rosette "visitor" 160 %}</div>
+  </header>
+
+  <dl class="facts">
+    <div><dt>{% translate "When" %}</dt><dd>{% if event.start_dt %}{{ event.start_dt|date:"j F Y" }}{% else %}{% translate "Coming soon" %}{% endif %}</dd></div>
+    <div><dt>{% translate "Where" %}</dt><dd>{% translate "Dushanbe Innovation Institute" %}</dd></div>
+    <div><dt>{% translate "Languages" %}</dt><dd>{% translate "Tajik, Russian and English" %}</dd></div>
+    <div><dt>{% translate "Seats" %}</dt><dd>{{ event.capacity }}</dd></div>
+  </dl>
+
+  <div class="cards doors-list">
+    <a class="card card-link" href="{% url 'tickets' %}"><h2>{% translate "Tickets" %}</h2><p>{% translate "Student, personal and supporter tickets. Every ticket includes lunch and tea all day." %}</p></a>
+    <a class="card card-link" href="{% url 'aid' %}"><h2>{% translate "Financial aid" %}</h2><p>{% translate "Free tickets and travel support for people who could not come otherwise." %}</p></a>
+    <a class="card card-link" href="{% url 'explore' %}"><h2>{% translate "Explore Tajikistan" %}</h2><p>{% translate "First time here? Dushanbe, food, culture and trips around the conference." %}</p></a>
+    <a class="card card-link" href="{% url 'code_of_conduct' %}"><h2>{% translate "Code of Conduct" %}</h2><p>{% translate "How we keep PyCon friendly and safe, and how to get help." %}</p></a>
+    <a class="card card-link" href="{% url 'schedule' %}"><h2>{% translate "Program" %}</h2><p>{% translate "Talks and workshops, filtered by language and level." %}</p></a>
+  </div>
+
+  <section class="block">
+    <h2>{% translate "Good to know" %}</h2>
+    <ul class="ticks">
+      <li>{% translate "Beginners are welcome. Many talks are made for people who are just starting with Python." %}</li>
+      <li>{% translate "Bring a laptop if you join a workshop." %}</li>
+      <li>{% translate "Want to give a 5-minute lightning talk? Sign up at the registration desk on the day." %}</li>
+      <li>{% translate "Questions? Write to" %} <a class="link" href="mailto:hello@pycon.tj">hello@pycon.tj</a>.</li>
+    </ul>
+  </section>
+</article>
+{% endblock %}

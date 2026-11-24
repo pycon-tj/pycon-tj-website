@@ -5,11 +5,30 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-msgid "12 December 2026"
-msgstr "12 декабря 2026"
+msgid "2 or 3 sentences about you, in the third person."
+msgstr "2–3 предложения о вас, в третьем лице."
+
+msgid "2 to 5 sentences on what people will learn. This goes in the program."
+msgstr "2–5 предложений о том, что узнают слушатели. Это попадёт в программу."
 
 msgid "25 minutes and 5 for questions"
 msgstr "25 минут и 5 на вопросы"
+
+msgid ""
+"25 minutes, then 5 minutes for questions. Most of the program is talks."
+msgstr "25 минут и ещё 5 на вопросы. Большая часть программы — доклады."
+
+msgid ""
+"30 to 60 minutes north by car. A cold mountain river, fresh air and "
+"teahouses where you eat on platforms over the water. Half a day is enough."
+msgstr ""
+"30–60 минут на машине к северу. Холодная горная река, свежий воздух и "
+"чайханы, где едят на помостах над водой. Хватит полдня."
+
+msgid ""
+"5 minutes on anything. No proposal needed: sign up on the conference day."
+msgstr ""
+"5 минут на любую тему. Заявка не нужна: запишитесь в день конференции."
 
 msgid "5 minutes, sign up on the day"
 msgstr "5 минут, запись в день события"
@@ -17,51 +36,178 @@ msgstr "5 минут, запись в день события"
 msgid "90 minutes, hands-on"
 msgstr "90 минут практики"
 
-msgid "Accepted"
+msgid ""
+"90 minutes, hands-on. Attendees bring laptops, so tell us what they should "
+"install first."
 msgstr ""
+"90 минут практики. Участники приходят с ноутбуками, поэтому напишите, что им"
+" нужно установить заранее."
+
+msgid "A booth"
+msgstr "Стенд"
+
+msgid ""
+"A first-timer's guide to Dushanbe, Tajik food and culture, and day trips and"
+" hikes around the conference."
+msgstr ""
+"Путеводитель для тех, кто впервые в Душанбе: еда и культура, поездки на день"
+" и походы вокруг конференции."
+
+msgid "A hike"
+msgstr "Поход"
+
+msgid "A hike: Gusgarf waterfall"
+msgstr "Поход: водопад Гусгарф"
+
+msgid "A smaller table at a lower price, for young companies from Tajikistan."
+msgstr "Стол поменьше и дешевле — для молодых компаний из Таджикистана."
+
+msgid ""
+"A table, chairs, power and space for your banner. For companies that want to"
+" meet attendees and hire."
+msgstr ""
+"Стол, стулья, электричество и место для баннера. Для компаний, которые хотят"
+" знакомиться с участниками и нанимать."
+
+msgid ""
+"A turquoise lake at about 2,200 m in the Fann Mountains, around three to "
+"four hours by car. Plan a long day, or stay a night."
+msgstr ""
+"Бирюзовое озеро на высоте около 2200 м в Фанских горах, три–четыре часа на "
+"машине. Запланируйте долгий день или останьтесь на ночь."
+
+msgid "A wooden bowl of qurutob with herbs, surrounded by sambusa and bread"
+msgstr "Деревянное блюдо курутоба с зеленью, вокруг самбуса и хлеб"
+
+msgid ""
+"About 30 km west of Dushanbe. A restored fortress gate, an old madrasa and a"
+" small museum. Half a day."
+msgstr ""
+"Около 30 км к западу от Душанбе. Восстановленные ворота крепости, старое "
+"медресе и небольшой музей. Полдня."
+
+msgid "Abstract"
+msgstr "Аннотация"
+
+msgid "Accepted"
+msgstr "Принята"
+
+msgid "Accepted speakers confirm within a week."
+msgstr "Принятые спикеры подтверждают участие в течение недели."
+
+msgid "Accepted speakers get a free conference ticket."
+msgstr "Принятые спикеры получают бесплатный билет."
 
 msgid ""
 "Add a donation and give a free ticket to a student who cannot afford one."
 msgstr ""
+"Добавьте пожертвование и подарите билет студенту, который не может его "
+"купить."
 
 msgid "Advanced"
+msgstr "Продвинутый"
+
+msgid ""
+"Alif is co-hosting the first PyCon in Tajikistan together with the local "
+"Python community."
 msgstr ""
+"Alif проводит первый PyCon в Таджикистане вместе с местным Python-"
+"сообществом."
 
 msgid "All languages"
-msgstr ""
+msgstr "Все языки"
 
 msgid "All levels"
+msgstr "Все уровни"
+
+msgid "All speakers follow our"
+msgstr "Все спикеры соблюдают наш"
+
+msgid "An embroidered suzani with red, pink and teal rosettes on white cloth"
 msgstr ""
+"Вышитое сюзане с красными, розовыми и бирюзовыми розетками на белой ткани"
+
+msgid ""
+"Any Python topic is welcome: web, data and machine learning, education, "
+"science, automation, testing, Python in Tajik and other local languages, and"
+" stories from your community or your first open-source contribution."
+msgstr ""
+"Подойдёт любая тема о Python: веб, данные и машинное обучение, образование, "
+"наука, автоматизация, тестирование, Python и таджикский и другие местные "
+"языки, истории вашего сообщества или ваш первый вклад в open source."
+
+msgid "Anything else for the committee?"
+msgstr "Что-то ещё для комитета?"
 
 msgid "Anything else we should know?"
-msgstr ""
+msgstr "Что ещё нам нужно знать?"
 
 msgid "Anything that helps"
-msgstr ""
+msgstr "Любая помощь"
 
 msgid "Application received. We'll reply by email within two weeks."
-msgstr ""
+msgstr "Заявка получена. Ответим по почте в течение двух недель."
 
 msgid "Apply for financial aid"
 msgstr "Подать заявку на помощь"
+
+msgid "Ask before you photograph people. Most will say yes."
+msgstr ""
+"Спрашивайте разрешения, прежде чем фотографировать людей. Почти все "
+"согласятся."
+
+msgid "Attend"
+msgstr "Посетителям"
+
+msgid "Attend PyCon Tajikistan"
+msgstr "Посетителям PyCon Tajikistan"
 
 msgid "Back to home"
 msgstr "На главную"
 
 msgid "Back to the program"
-msgstr ""
+msgstr "Назад к программе"
+
+msgid "Base camp"
+msgstr "Базовый лагерь"
 
 msgid "Become a sponsor"
 msgstr "Стать спонсором"
 
-msgid "Become part of the crew"
-msgstr ""
-
 msgid "Beginner"
+msgstr "Начальный"
+
+msgid ""
+"Beginners are welcome. Many talks are made for people who are just starting "
+"with Python."
 msgstr ""
+"Новичкам рады. Многие доклады рассчитаны на тех, кто только начинает с "
+"Python."
+
+msgid "Big logo on stage, booth, short talk slot, 4 tickets."
+msgstr "Большой логотип на сцене, стенд, короткий доклад, 4 билета."
+
+msgid "Booth"
+msgstr "Стенд"
+
+msgid "Booths"
+msgstr "Стенды"
+
+msgid ""
+"Booths stand in the hall where attendees have tea and lunch, so people stop "
+"by all day. Book a booth on its own or add one to any package."
+msgstr ""
+"Стенды стоят в зале, где участники пьют чай и обедают, поэтому к ним "
+"подходят весь день. Стенд можно взять отдельно или добавить к любому пакету."
+
+msgid "Both"
+msgstr "И то, и другое"
 
 msgid "Bring Education Day to your school"
 msgstr "Пригласите День образования в вашу школу"
+
+msgid "Bring a laptop if you join a workshop."
+msgstr "Возьмите ноутбук, если идёте на воркшоп."
 
 msgid "Bring your laptop. Leave with working code."
 msgstr "Приходите с ноутбуком. Уходите с работающим кодом."
@@ -69,38 +215,118 @@ msgstr "Приходите с ноутбуком. Уходите с работа
 msgid "Buy a ticket"
 msgstr "Купить билет"
 
+msgid "Call for speakers"
+msgstr "Приём заявок на доклады"
+
+msgid "Call for volunteers"
+msgstr "Набор волонтёров"
+
 msgid "Cannot afford a ticket or travel?"
+msgstr "Не можете оплатить билет или дорогу?"
+
+msgid ""
+"Capture talks, hallway moments and the crowd. Bring your own camera or a "
+"good phone."
 msgstr ""
+"Снимайте доклады, общение в коридорах и зал. Возьмите свою камеру или "
+"хороший телефон."
+
+msgid "Check the rules for your passport before you book."
+msgstr "Проверьте правила для вашего паспорта до покупки билетов."
+
+msgid "Choose the role you would like most and tell us when you can help."
+msgstr "Выберите роль, которая вам ближе, и укажите, когда сможете помочь."
 
 msgid "City you travel from"
-msgstr ""
+msgstr "Город, откуда вы едете"
+
+msgid "Co-hosted with"
+msgstr "Соорганизатор:"
 
 msgid "Code of Conduct"
 msgstr "Кодекс поведения"
 
-msgid "Coming up"
+msgid "Coming soon"
+msgstr "Скоро"
+
+msgid ""
+"Coming to Tajikistan for the first time? Here is a short guide to Dushanbe, "
+"Tajik food and a few trips to take before or after the conference."
 msgstr ""
+"Впервые едете в Таджикистан? Вот короткий гид по Душанбе, таджикской кухне и"
+" нескольким поездкам до или после конференции."
+
+msgid "Coming up"
+msgstr "Далее"
+
+msgid "Community partners, universities and individual supporters."
+msgstr "Партнёры из сообщества, университеты и частные сторонники."
+
+msgid "Community table"
+msgstr "Стол сообщества"
+
+msgid "Conference day, afternoon"
+msgstr "День конференции, после обеда"
+
+msgid "Conference day, morning"
+msgstr "День конференции, утро"
+
+msgid "Contact details"
+msgstr "Контакты"
+
+msgid "Contact person"
+msgstr "Контактное лицо"
+
+msgid "Contact the organizers"
+msgstr "Связаться с организаторами"
+
+msgid "Culture"
+msgstr "Культура"
+
+msgid "Day trips"
+msgstr "Поездки на день"
 
 msgid "Declined"
-msgstr ""
+msgstr "Отклонена"
 
 msgid "Download as a profile picture"
 msgstr "Скачать как аватар"
 
+msgid "Dress modestly when you visit mosques and shrines."
+msgstr "В мечетях и святых местах одевайтесь скромно."
+
+msgid ""
+"Dried apricots, nuts, spices, fresh bread and fruit. The best place to buy "
+"gifts to take home."
+msgstr ""
+"Курага, орехи, специи, свежий хлеб и фрукты. Лучшее место для подарков "
+"домой."
+
+msgid "Dushanbe"
+msgstr "Душанбе"
+
 msgid "Dushanbe Innovation Institute"
 msgstr "Душанбинский инновационный институт"
+
+msgid ""
+"Dushanbe is a green, walkable capital with wide avenues, plane trees and "
+"mountains on the horizon. Most places worth seeing are on or near Rudaki "
+"Avenue."
+msgstr ""
+"Душанбе — зелёная столица, удобная для прогулок: широкие проспекты, чинары и"
+" горы на горизонте. Почти всё интересное — на проспекте Рудаки или рядом."
 
 msgid "Education Day"
 msgstr "День образования"
 
 msgid "Email"
-msgstr ""
+msgstr "Эл. почта"
 
 msgid "Estimated travel cost, if any"
-msgstr ""
+msgstr "Примерная стоимость дороги, если есть"
 
 msgid "Even snow leopards get lost sometimes. Let's go back to base camp."
-msgstr ""
+msgstr "Даже снежные барсы иногда теряются. Вернёмся в базовый лагерь."
 
 msgid "Every attendee agrees to follow our"
 msgstr "Каждый участник соглашается соблюдать наш"
@@ -109,15 +335,37 @@ msgid ""
 "Every ticket includes all talks and workshops, lunch, tea all day, stickers "
 "and your personal suzani badge."
 msgstr ""
+"В каждый билет входят все доклады и воркшопы, обед, чай весь день, стикеры и"
+" ваш личный бейдж с сюзане."
+
+msgid ""
+"Everything a visitor needs: tickets, financial aid, the Code of Conduct and "
+"a guide to Tajikistan."
+msgstr ""
+"Всё для посетителей: билеты, финансовая помощь, кодекс поведения и гид по "
+"Таджикистану."
+
+msgid "Explore Tajikistan"
+msgstr "Откройте Таджикистан"
 
 msgid "Filter"
-msgstr ""
+msgstr "Фильтр"
 
 msgid "Financial aid"
 msgstr "Финансовая помощь"
 
-msgid "First time speaking? We'll pair you with a mentor."
-msgstr "Выступаете впервые? Мы найдём вам наставника."
+msgid "Find your way in"
+msgstr "С чего начать"
+
+msgid ""
+"First time here? Dushanbe, food, culture and trips around the conference."
+msgstr "Впервые здесь? Душанбе, еда, культура и поездки вокруг конференции."
+
+msgid "First time? This call is for you."
+msgstr "Впервые? Этот призыв — для вас."
+
+msgid "First-time speakers"
+msgstr "Новичкам"
 
 msgid ""
 "Five minutes, any topic, sign up on the day. Your first talk could be here."
@@ -125,51 +373,173 @@ msgstr ""
 "Пять минут, любая тема, запись в день события. Ваш первый доклад может быть "
 "здесь."
 
+msgid "Food"
+msgstr "Еда"
+
 msgid "Footer"
+msgstr "Подвал сайта"
+
+msgid ""
+"For example: students who know a little Python, data analysts, web "
+"developers."
 msgstr ""
+"Например: студенты, немного знающие Python, аналитики данных, веб-"
+"разработчики."
 
 msgid "For people paying for themselves."
-msgstr ""
+msgstr "Для тех, кто платит за себя сам."
 
 msgid ""
 "For school pupils and students, with ID. Paid for in part by our sponsors."
 msgstr ""
+"Для школьников и студентов с документом. Частично оплачивают наши спонсоры."
+
+msgid "Format"
+msgstr "Формат"
+
+msgid "Formats"
+msgstr "Форматы"
+
+msgid "Free for user groups, universities and non-profits, while space lasts."
+msgstr ""
+"Бесплатно для сообществ, университетов и некоммерческих организаций, пока "
+"есть места."
+
+msgid ""
+"Free tickets and travel support for people who could not come otherwise."
+msgstr ""
+"Бесплатные билеты и помощь с дорогой для тех, кто иначе не смог бы приехать."
+
+msgid "Friends of the trail"
+msgstr "Друзья тропы"
 
 msgid "Full name"
-msgstr ""
+msgstr "Имя и фамилия"
 
 msgid "Get a ticket"
 msgstr "Купить билет"
 
+msgid "Getting around"
+msgstr "Транспорт"
+
 msgid ""
-"Help at registration, in the rooms or on stage. You get a free ticket, a "
-"crew T-shirt, and a story about how you helped start the first PyCon in "
-"Tajikistan."
+"Give your talk in Tajik, Russian or English, whichever you speak best. "
+"Slides in English help guests from abroad follow along, but they are not "
+"required."
 msgstr ""
+"Выступайте на таджикском, русском или английском — на том, на котором "
+"говорите лучше. Слайды на английском помогут гостям из-за рубежа, но это не "
+"обязательно."
+
+msgid "Good to know"
+msgstr "Полезно знать"
+
+msgid ""
+"Green slopes and rocky peaks in the Varzob gorge, with a wooden pavilion"
+msgstr ""
+"Зелёные склоны и скалистые вершины Варзобского ущелья с деревянной беседкой"
+
+msgid "Green tea"
+msgstr "Зелёный чай"
+
+msgid ""
+"Halls of carved wood, painted ceilings and stone, made by craftsmen from "
+"across the country."
+msgstr ""
+"Залы с резьбой по дереву, расписными потолками и камнем — работа мастеров со"
+" всей страны."
+
+msgid "Headline partner. Your name at the top of the mountain."
+msgstr "Генеральный партнёр. Ваше имя на вершине горы."
+
+msgid "Help set up the hall the day before and pack everything up at the end."
+msgstr "Помогите подготовить зал накануне и всё собрать в конце."
+
+msgid "Help start something."
+msgstr "Помогите начать новое."
+
+msgid "Hisor fortress"
+msgstr "Гиссарская крепость"
+
+msgid ""
+"History and art from ancient Sogdiana to today, in one large modern "
+"building."
+msgstr ""
+"История и искусство от древней Согдианы до наших дней в одном большом "
+"современном здании."
+
+msgid "How we choose"
+msgstr "Как мы выбираем"
+
+msgid "How we keep PyCon friendly and safe, and how to get help."
+msgstr "Как мы делаем PyCon дружелюбным и безопасным и где получить помощь."
 
 msgid "I need a free ticket"
+msgstr "Мне нужен бесплатный билет"
+
+msgid "I'd like a mentor to help me prepare"
+msgstr "Хочу наставника для подготовки"
+
+msgid ""
+"In the Varzob valley, a path climbs a side gorge to the Gusgarf waterfall. "
+"It is an easy half-day walk on a rocky trail. Take water, sun protection and"
+" good shoes, and go with a local guide or friends who know the way. Ask in "
+"our community chat and someone will likely join you."
 msgstr ""
+"В долине Варзоба тропа поднимается по боковому ущелью к водопаду Гусгарф. "
+"Это лёгкая прогулка на полдня по каменистой тропе. Возьмите воду, защиту от "
+"солнца и удобную обувь и идите с местным гидом или друзьями, которые знают "
+"дорогу. Спросите в нашем чате сообщества — наверняка кто-то составит "
+"компанию."
+
+msgid "Intended audience"
+msgstr "Для кого доклад"
 
 msgid "Intermediate"
-msgstr ""
+msgstr "Средний"
+
+msgid "Iskanderkul"
+msgstr "Искандеркуль"
+
+msgid "Iskanderkul lake with bare mountains of the Fann range behind it"
+msgstr "Озеро Искандеркуль на фоне голых Фанских гор"
+
+msgid "Iskanderkul, a mountain lake in the Fann Mountains."
+msgstr "Искандеркуль — горное озеро в Фанских горах."
 
 msgid "Join the crew"
+msgstr "Присоединиться к команде"
+
+msgid "Join the crew that runs the first PyCon here."
+msgstr "Присоединяйтесь к команде, которая проводит первый PyCon здесь."
+
+msgid ""
+"Keep a room running: start sessions on time, pass the microphone for "
+"questions and help people find seats."
 msgstr ""
+"Следите за залом: начинайте сессии вовремя, передавайте микрофон для "
+"вопросов и помогайте найти места."
 
 msgid "Keynote"
-msgstr ""
+msgstr "Ключевой доклад"
 
 msgid "Language"
 msgstr "Язык"
 
+msgid "Language of the talk"
+msgstr "Язык доклада"
+
+msgid "Languages"
+msgstr "Языки"
+
 msgid "Languages you speak"
-msgstr ""
+msgstr "Языки, которыми вы владеете"
 
 msgid "Leave empty to use the default."
-msgstr ""
+msgstr "Оставьте пустым для значения по умолчанию."
 
 msgid "Level"
-msgstr ""
+msgstr "Уровень"
 
 msgid "Lightning talk"
 msgstr "Молниеносный доклад"
@@ -180,41 +550,123 @@ msgstr "Молниеносные доклады"
 msgid "Live"
 msgstr "Прямой эфир"
 
+msgid "Logo on site and screens, 2 tickets."
+msgstr "Логотип на сайте и экранах, 2 билета."
+
+msgid "Logo on site, 1 ticket. Made for local startups."
+msgstr "Логотип на сайте, 1 билет. Для местных стартапов."
+
+msgid "Logo on stage and site, booth, 3 tickets."
+msgstr "Логотип на сцене и сайте, стенд, 3 билета."
+
 msgid "Made with Python and green tea in Dushanbe."
 msgstr "Сделано на Python и зелёном чае в Душанбе."
 
 msgid "Main"
-msgstr ""
+msgstr "Главное меню"
 
 msgid "Make your suzani"
 msgstr "Создать своё сюзане"
 
+msgid "Many nationalities can get an e-visa online at"
+msgstr "Гражданам многих стран можно оформить электронную визу на сайте"
+
+msgid ""
+"Many of the best talks come from people who have never spoken before. Tick "
+"the box in the form and we will pair you with an experienced speaker who "
+"helps with your proposal, your slides and a practice run. First-time "
+"speakers compete for the same slots as everyone else."
+msgstr ""
+"Многие лучшие доклады делают те, кто раньше не выступал. Отметьте галочку в "
+"форме, и мы найдём вам опытного спикера: он поможет с заявкой, слайдами и "
+"репетицией. Новички претендуют на те же слоты, что и все."
+
+msgid "Meet people you could hire."
+msgstr "Познакомьтесь с будущими сотрудниками."
+
+msgid ""
+"Meet speakers, take them to their room and check their slides and timing "
+"before they go on stage."
+msgstr ""
+"Встречайте спикеров, провожайте в зал и проверяйте с ними слайды и тайминг "
+"перед выходом на сцену."
+
+msgid "Mehrgon market"
+msgstr "Рынок Мехргон"
+
+msgid "Mehrgon market: dried fruit, nuts and spices to take home."
+msgstr "Рынок Мехргон: сухофрукты, орехи и специи с собой домой."
+
 msgid "Menu"
 msgstr "Меню"
+
+msgid "Message"
+msgstr "Сообщение"
+
+msgid "Money"
+msgstr "Деньги"
 
 msgid ""
 "Money should not stop you from coming. We give free tickets and pay back "
 "travel costs against receipts after the event. Aid is based on need, not on "
 "your CV."
 msgstr ""
+"Деньги не должны вас останавливать. Мы даём бесплатные билеты и возмещаем "
+"дорогу по чекам после конференции. Помощь зависит от нужды, а не от резюме."
+
+msgid "National Museum of Tajikistan"
+msgstr "Национальный музей Таджикистана"
+
+msgid "Navruz Palace"
+msgstr "Дворец Навруз"
+
+msgid "Need help with travel costs?"
+msgstr "Нужна помощь с дорогой?"
 
 msgid "New"
-msgstr ""
+msgstr "Новая"
 
 msgid "News"
 msgstr "Новости"
 
+msgid "No experience needed. We run a short training before the conference."
+msgstr "Опыт не нужен. Перед конференцией проведём короткое обучение."
+
 msgid "No news yet. Follow our Telegram channel to hear first."
 msgstr ""
+"Новостей пока нет. Подпишитесь на наш Telegram-канал, чтобы узнать первыми."
+
+msgid ""
+"No sales pitches: talk about what you built and learned, not about a "
+"product."
+msgstr ""
+"Без рекламы: рассказывайте о том, что вы сделали и чему научились, а не о "
+"продукте."
+
+msgid "Non"
+msgstr "Нон"
+
+msgid "Not sure yet"
+msgstr "Пока не решили"
 
 msgid "Nothing on stage right now."
-msgstr ""
+msgstr "Сейчас на сцене никого."
 
 msgid "Now on stage"
-msgstr ""
+msgstr "Сейчас на сцене"
+
+msgid "On this page"
+msgstr "На этой странице"
 
 msgid "One day of Python, in three languages"
 msgstr "Один день Python на трёх языках"
+
+msgid ""
+"One day of talks, workshops and green tea in Dushanbe. Here is everything "
+"you need as a visitor."
+msgstr ""
+"Один день докладов, воркшопов и зелёного чая в Душанбе. Здесь всё, что нужно"
+" посетителю."
 
 msgid ""
 "One ticket, one day, a hundred new friends. Student tickets are paid for by "
@@ -223,20 +675,89 @@ msgstr ""
 "Один билет, один день, сто новых друзей. Студенческие билеты оплачивают наши"
 " спонсоры."
 
-msgid "Page not found"
+msgid "Optional, for reviewers only: the main parts with rough minutes."
 msgstr ""
+"Необязательно, только для рецензентов: основные части с примерным временем."
+
+msgid "Optional. Not sure yet? Leave it empty."
+msgstr "Необязательно. Ещё не решили? Оставьте пустым."
+
+msgid ""
+"Optional: the main parts with rough minutes. Only the committee sees it."
+msgstr ""
+"Необязательно: основные части с примерным временем. Видит только комитет."
+
+msgid "Organization"
+msgstr "Организация"
+
+msgid "Oshi palav"
+msgstr "Оши палав"
+
+msgid "Outline"
+msgstr "План"
+
+msgid "Outline for reviewers"
+msgstr "План для рецензентов"
+
+msgid "Package"
+msgstr "Пакет"
+
+msgid "Packages"
+msgstr "Пакеты"
+
+msgid ""
+"Packages are named after the climb, from base camp to the summit. Prices and"
+" the full prospectus are sent on request."
+msgstr ""
+"Пакеты названы по этапам восхождения — от базового лагеря до вершины. Цены и"
+" полный проспект отправляем по запросу."
+
+msgid "Packages, booths and how to reach the organizers."
+msgstr "Пакеты, стенды и как связаться с организаторами."
+
+msgid "Page not found"
+msgstr "Страница не найдена"
+
+msgid "Pastries filled with meat and onion, baked on the wall of a clay oven."
+msgstr "Пирожки с мясом и луком, испечённые на стенке глиняной печи."
 
 msgid "Pay it forward"
 msgstr "Подарите билет"
+
+msgid "Peak"
+msgstr "Пик"
+
+msgid ""
+"People greet with a hand on the heart. Салом (salom) means hello, and раҳмат"
+" (rahmat) means thank you."
+msgstr ""
+"Здороваются, приложив руку к сердцу. Салом — «здравствуйте», раҳмат — "
+"«спасибо»."
 
 msgid "Personal"
 msgstr "Личный"
 
 msgid "Phone or Telegram"
-msgstr ""
+msgstr "Телефон или Telegram"
 
-msgid "Photo and social media"
+msgid "Photography"
+msgstr "Фотосъёмка"
+
+msgid "Photos are resized."
+msgstr "Размер фотографий изменён."
+
+msgid "Photos from Wikimedia Commons:"
+msgstr "Фото с Wikimedia Commons:"
+
+msgid "Plan your visit"
+msgstr "Спланируйте поездку"
+
+msgid ""
+"Plov: rice, carrots and meat cooked slowly in a big cauldron. The dish for "
+"guests and celebrations."
 msgstr ""
+"Плов: рис, морковь и мясо, медленно приготовленные в большом казане. Блюдо "
+"для гостей и праздников."
 
 msgid ""
 "Practical stories from people who use Python at work, in research and in "
@@ -245,11 +766,29 @@ msgstr ""
 "Практические истории людей, которые используют Python в работе, науке и "
 "стартапах."
 
+msgid "Practical tips"
+msgstr "Практические советы"
+
 msgid "Preferred role"
-msgstr ""
+msgstr "Желаемая роль"
+
+msgid "Price on request"
+msgstr "Цена по запросу"
 
 msgid "Program"
 msgstr "Программа"
+
+msgid "Proposals close"
+msgstr "Приём заявок до"
+
+msgid ""
+"PyCon Tajikistan brings developers, students and companies from across "
+"Central Asia into one hall. Sponsors keep tickets affordable and pay for "
+"students to attend."
+msgstr ""
+"PyCon Tajikistan собирает в одном зале разработчиков, студентов и компании "
+"со всей Центральной Азии. Спонсоры делают билеты доступными и оплачивают "
+"участие студентов."
 
 msgid ""
 "PyCon Tajikistan is a harassment-free event for everyone. Read the Code of "
@@ -268,41 +807,158 @@ msgstr ""
 "PyCon — это всемирная семья конференций сообщества о Python. Теперь у неё "
 "есть дом в Таджикистане."
 
+msgid ""
+"Python developers, data people and students who are about to start their "
+"careers."
+msgstr ""
+"Python-разработчики, специалисты по данным и студенты, которые начинают "
+"карьеру."
+
+msgid "Questions"
+msgstr "Вопросы"
+
+msgid "Questions before you send? Write to"
+msgstr "Есть вопросы? Пишите на"
+
+msgid "Questions? Write to"
+msgstr "Вопросы? Пишите на"
+
+msgid "Qurutob"
+msgstr "Курутоб"
+
+msgid "Qurutob in a wooden bowl, with sambusa and bread around it."
+msgstr "Курутоб в деревянном блюде, вокруг самбуса и хлеб."
+
+msgid "Read the call for speakers"
+msgstr "Условия для спикеров"
+
 msgid "Read the code"
 msgstr "Посмотреть код"
 
 msgid "Registration desk"
-msgstr ""
+msgstr "Стойка регистрации"
+
+msgid "Ridge"
+msgstr "Хребет"
 
 msgid "Robots, AI demos and apps made by students from Tajikistan."
 msgstr "Роботы, демо ИИ и приложения от студентов Таджикистана."
 
-msgid "Room host and session chair"
+msgid ""
+"Rohat, the big teahouse on Rudaki Avenue. Come for green tea and a long "
+"lunch."
 msgstr ""
+"«Рохат» — большая чайхана на проспекте Рудаки. Приходите на зелёный чай и "
+"долгий обед."
+
+msgid "Roles"
+msgstr "Роли"
+
+msgid "Room support"
+msgstr "Работа в залах"
+
+msgid ""
+"Round bread with a stamped pattern. It is treated with respect: never put it"
+" upside down or throw it away."
+msgstr ""
+"Круглый хлеб с узором. К нему относятся с уважением: не кладите его вверх "
+"дном и не выбрасывайте."
+
+msgid "Rudaki Avenue and Rudaki Park"
+msgstr "Проспект и парк Рудаки"
+
+msgid "Sambusa"
+msgstr "Самбуса"
 
 msgid "Say hello in Python"
 msgstr "Скажите привет на Python"
 
+msgid "Seats"
+msgstr "Мест"
+
 msgid "See the program"
 msgstr "Смотреть программу"
 
+msgid "Send"
+msgstr "Отправить"
+
+msgid "Send a proposal"
+msgstr "Подать заявку"
+
 msgid "Send application"
+msgstr "Отправить заявку"
+
+msgid "Send my proposal"
+msgstr "Отправить заявку"
+
+msgid ""
+"Served all day in small bowls called piyola. The host keeps refilling, so a "
+"small portion is a good sign."
 msgstr ""
+"Подают весь день в маленьких пиалах. Хозяин постоянно подливает, поэтому "
+"неполная пиала — хороший знак."
 
 msgid "Setup and teardown"
+msgstr "Подготовка и сборы"
+
+msgid "Share the day as it happens, in Tajik, Russian or English."
 msgstr ""
+"Рассказывайте о дне в реальном времени — на таджикском, русском или "
+"английском."
 
 msgid "Share what you know"
 msgstr "Поделитесь знаниями"
 
+msgid "Share what you know. First-time speakers welcome."
+msgstr "Поделитесь знаниями. Ждём и тех, кто выступает впервые."
+
+msgid ""
+"Short and clear. Say what the talk is about, not just something clever."
+msgstr "Коротко и ясно. Скажите, о чём доклад, а не просто что-то остроумное."
+
+msgid "Short bio"
+msgstr "Краткая биография"
+
+msgid "Show your engineering."
+msgstr "Покажите свою инженерию."
+
 msgid "Skip to content"
 msgstr "Перейти к содержанию"
+
+msgid "Social media"
+msgstr "Соцсети"
 
 msgid "Speak"
 msgstr "Выступить"
 
+msgid ""
+"Speak at the first PyCon in Tajikistan: talk formats, languages, deadline "
+"and how to send a proposal. First-time speakers welcome."
+msgstr ""
+"Выступите на первом PyCon в Таджикистане: форматы, языки, сроки и как подать"
+" заявку. Ждём и тех, кто выступает впервые."
+
+msgid "Speaker assistance"
+msgstr "Помощь спикерам"
+
+msgid "Speakers"
+msgstr "Спикерам"
+
+msgid "Sponsor"
+msgstr "Спонсорам"
+
+msgid ""
+"Sponsor or exhibit at the first PyCon in Tajikistan: packages, benefits, "
+"booth options and an organizer contact."
+msgstr ""
+"Станьте спонсором или экспонентом первого PyCon в Таджикистане: пакеты, "
+"преимущества, стенды и контакт организаторов."
+
 msgid "Sponsors"
 msgstr "Спонсоры"
+
+msgid "Sponsors and exhibitors"
+msgstr "Спонсоры и экспоненты"
 
 msgid "Sponsors keep it open to everyone"
 msgstr "Спонсоры делают PyCon доступным для всех"
@@ -314,8 +970,8 @@ msgstr ""
 "Спонсоры делают билеты доступными и помогают студентам прийти. Больше "
 "поддержка, выше уступ."
 
-msgid "Stage and sound"
-msgstr ""
+msgid "Sponsorship"
+msgstr "Спонсорство"
 
 msgid "Start Python"
 msgstr "Запустить Python"
@@ -323,17 +979,37 @@ msgstr "Запустить Python"
 msgid "Starting downloads about 10 MB, once."
 msgstr "Запуск загрузит около 10 МБ, один раз."
 
+msgid "Startup table"
+msgstr "Стол для стартапа"
+
 msgid "Student"
 msgstr "Студенческий"
 
 msgid "Student exhibition"
 msgstr "Студенческая выставка"
 
+msgid ""
+"Student, personal and supporter tickets. Every ticket includes lunch and tea"
+" all day."
+msgstr ""
+"Студенческие, личные и билеты поддержки. В каждый билет входят обед и чай "
+"весь день."
+
 msgid "Submit a talk"
 msgstr "Подать доклад"
 
+msgid "Summit"
+msgstr "Вершина"
+
 msgid "Supporter"
 msgstr "Поддерживающий"
+
+msgid ""
+"Suzani, embroidered cloth made for weddings and homes. The rosettes on this "
+"site are drawn from it."
+msgstr ""
+"Сюзане — вышитая ткань для свадеб и дома. Розетки на этом сайте нарисованы "
+"по её мотивам."
 
 msgid "Switch to dark theme"
 msgstr "Включить тёмную тему"
@@ -341,39 +1017,153 @@ msgstr "Включить тёмную тему"
 msgid "Switch to light theme"
 msgstr "Включить светлую тему"
 
+msgid ""
+"Tajik food is made for sharing. Meals start with bread and tea and can go on"
+" for hours."
+msgstr ""
+"Таджикская еда создана, чтобы делиться. Застолье начинается с хлеба и чая и "
+"может длиться часами."
+
+msgid ""
+"Tajik is a Persian language, written in Cyrillic. Many people also speak "
+"Russian, and younger people often speak English."
+msgstr ""
+"Таджикский — персидский язык на кириллице. Многие говорят по-русски, а "
+"молодёжь часто и по-английски."
+
+msgid "Tajik, Russian and English"
+msgstr "Таджикский, русский и английский"
+
+msgid "Tajik, Russian or English"
+msgstr "Таджикский, русский или английский"
+
+msgid ""
+"Tajiks are famous for hospitality. If you are invited for tea, say yes."
+msgstr ""
+"Таджики славятся гостеприимством. Если вас позвали на чай, соглашайтесь."
+
+msgid ""
+"Take your shoes off before you sit on a tapchan, the raised wooden platform "
+"in teahouses."
+msgstr ""
+"Снимайте обувь, прежде чем сесть на топчан — деревянный помост в чайханах."
+
 msgid "Talk"
 msgstr "Доклад"
+
+msgid "Talk or workshop"
+msgstr "Доклад или воркшоп"
+
+msgid "Talk, 25 minutes + 5 for questions"
+msgstr "Доклад, 25 минут + 5 на вопросы"
 
 msgid "Talks"
 msgstr "Доклады"
 
+msgid "Talks and workshops, filtered by language and level."
+msgstr "Доклады и воркшопы с фильтром по языку и уровню."
+
 msgid ""
 "Talks appear here after the call for talks closes. Want to be on this list?"
 msgstr ""
+"Доклады появятся здесь после окончания приёма заявок. Хотите оказаться в "
+"списке?"
 
 msgid "Talks in Tajik, Russian and English"
 msgstr "Доклады на таджикском, русском и английском"
 
 msgid "Talks in Tajik, Russian and English. Filter by language and level."
 msgstr ""
+"Доклады на таджикском, русском и английском. Фильтруйте по языку и уровню."
+
+msgid ""
+"Talks in Tajik, Russian or English. First time speaking? We'll pair you with"
+" a mentor."
+msgstr ""
+"Доклады на таджикском, русском или английском. Выступаете впервые? Мы найдём"
+" вам наставника."
+
+msgid ""
+"Talks may be recorded and published after the conference. If you prefer not "
+"to be recorded, say so in the form."
+msgstr ""
+"Доклады могут записываться и публиковаться после конференции. Если вы против"
+" записи, напишите об этом в форме."
+
+msgid "Taxis are cheap. Use a ride app or agree the price before you get in."
+msgstr ""
+"Такси недорогое. Пользуйтесь приложением или договаривайтесь о цене до "
+"поездки."
 
 msgid "Tea and conversations"
 msgstr "Чай и разговоры"
 
 msgid "Tea break"
-msgstr ""
+msgstr "Чайный перерыв"
 
-msgid "Thank you! We'll write to you soon about training and your shift."
+msgid ""
+"Tell the community how your team uses Python, on stage or at your booth."
 msgstr ""
+"Расскажите сообществу, как ваша команда использует Python — со сцены или на "
+"стенде."
+
+msgid ""
+"Tell us what you are interested in and we will send the prospectus. Or write"
+" directly to"
+msgstr ""
+"Расскажите, что вам интересно, и мы пришлём проспект. Или напишите напрямую "
+"на"
+
+msgid ""
+"Thank you! We'll send the prospectus and reply within three working days."
+msgstr "Спасибо! Мы пришлём проспект и ответим в течение трёх рабочих дней."
+
+msgid "Thank you! We'll write to you about training and your shift."
+msgstr "Спасибо! Мы напишем вам об обучении и вашей смене."
+
+msgid ""
+"Thank you! Your proposal is in. We'll write to you by email with the "
+"decision by the date on this page."
+msgstr ""
+"Спасибо! Заявка получена. Мы напишем вам о решении до даты, указанной на "
+"этой странице."
+
+msgid ""
+"The Rohat teahouse on Rudaki Avenue, with tall columns and a tiled panel on "
+"its wall"
+msgstr ""
+"Чайхана «Рохат» на проспекте Рудаки с высокими колоннами и изразцовым панно "
+"на стене"
+
+msgid "The Varzob gorge, less than an hour north of the city."
+msgstr "Варзобское ущелье — меньше часа к северу от города."
+
+msgid "The arched facade of Mehrgon market in Dushanbe"
+msgstr "Арочный фасад рынка Мехргон в Душанбе"
 
 msgid "The best talks happen between talks, over a cup of green tea."
 msgstr "Лучшие разговоры случаются между докладами, за чашкой зелёного чая."
 
-msgid "The call for talks opens soon."
-msgstr "Приём докладов скоро откроется."
+msgid "The capital. The first PyCon in Tajikistan opens here soon."
+msgstr "Столица. Скоро здесь откроется первый PyCon в Таджикистане."
 
-msgid "The capital. On 12 December the first PyCon in Tajikistan opens here."
-msgstr "Столица. 12 декабря здесь откроется первый PyCon в Таджикистане."
+msgid ""
+"The currency is the Tajik somoni (TJS). Carry cash: cards work in hotels and"
+" larger shops, and there are cash machines in the centre."
+msgstr ""
+"Валюта — таджикский сомони (TJS). Носите наличные: карты принимают в отелях "
+"и крупных магазинах, банкоматы есть в центре."
+
+msgid "The day before, for setup"
+msgstr "Накануне, для подготовки"
+
+msgid ""
+"The first PyCon in Tajikistan is run by volunteers. Give a few hours and get"
+" a free ticket, a crew T-shirt and a story about how it all started."
+msgstr ""
+"Первый PyCon в Таджикистане делают волонтёры. Подарите несколько часов и "
+"получите бесплатный билет, футболку команды и историю о том, как всё "
+"начиналось."
 
 msgid ""
 "The first PyCon in Tajikistan. One day of talks, workshops and friends in "
@@ -382,8 +1172,34 @@ msgstr ""
 "Первый PyCon в Таджикистане. Один день докладов, мастер-классов и друзей в "
 "Душанбе."
 
-msgid "The program is on its way"
+msgid ""
+"The main street. Walk it in the evening, when the fountains are on and "
+"families are out."
 msgstr ""
+"Главная улица. Пройдитесь вечером, когда работают фонтаны и гуляют семьи."
+
+msgid ""
+"The national dish: flatbread soaked in qurut, a salty sauce of dried yogurt,"
+" topped with onions and herbs. Eaten by hand from a shared wooden bowl."
+msgstr ""
+"Национальное блюдо: лепёшка, пропитанная курутом — солёным соусом из "
+"сушёного кисломолочного продукта, с луком и зеленью. Едят руками из общего "
+"деревянного блюда."
+
+msgid "The program committee reads every proposal."
+msgstr "Программный комитет читает каждую заявку."
+
+msgid "The program is on its way"
+msgstr "Программа скоро будет"
+
+msgid "The whole conference day"
+msgstr "Весь день конференции"
+
+msgid "Then we publish the program."
+msgstr "После этого мы публикуем программу."
+
+msgid "This is my first talk at a conference"
+msgstr "Это мой первый доклад на конференции"
 
 msgid ""
 "This is real Python running in your browser. Start it, then try draw('your "
@@ -392,22 +1208,102 @@ msgstr ""
 "Это настоящий Python в вашем браузере. Запустите его и попробуйте draw('ваше"
 " имя'), чтобы соткать своё сюзане."
 
+msgid ""
+"This is the first PyCon in Tajikistan. Your support pays for student tickets"
+" and Education Day."
+msgstr ""
+"Это первый PyCon в Таджикистане. Ваша поддержка оплачивает студенческие "
+"билеты и День образования."
+
 msgid "This site runs on Django."
 msgstr "Сайт работает на Django."
 
 msgid "Ticket sales open soon. Follow our Telegram channel to hear first."
 msgstr ""
+"Продажа билетов скоро откроется. Подпишитесь на Telegram-канал, чтобы узнать"
+" первыми."
 
 msgid "Tickets"
 msgstr "Билеты"
+
+msgid "Tickets, financial aid and a guide to Tajikistan."
+msgstr "Билеты, финансовая помощь и гид по Таджикистану."
+
+msgid "Title"
+msgstr "Название"
 
 msgid ""
 "Type your name. Python weaves a rosette that belongs only to you. The same "
 "pattern is printed on your conference badge."
 msgstr ""
+"Введите имя. Python соткёт розетку, которая принадлежит только вам. Тот же "
+"узор будет на вашем бейдже."
+
+msgid "Valley"
+msgstr "Долина"
+
+msgid "Varzob gorge"
+msgstr "Варзобское ущелье"
+
+msgid "Visa"
+msgstr "Виза"
+
+msgid "Visitors"
+msgstr "Посетителям"
 
 msgid "Volunteer"
 msgstr "Волонтёрам"
+
+msgid ""
+"Volunteer at the first PyCon in Tajikistan: registration, room support, "
+"photography, speaker assistance and more."
+msgstr ""
+"Станьте волонтёром первого PyCon в Таджикистане: регистрация, работа в "
+"залах, фотосъёмка, помощь спикерам и другое."
+
+msgid "Volunteers"
+msgstr "Волонтёрам"
+
+msgid "Volunteers follow our"
+msgstr "Волонтёры соблюдают наш"
+
+msgid "Waiting list"
+msgstr "Лист ожидания"
+
+msgid ""
+"Want to give a 5-minute lightning talk? Sign up at the registration desk on "
+"the day."
+msgstr ""
+"Хотите выступить с 5-минутным блиц-докладом? Запишитесь на стойке "
+"регистрации в день конференции."
+
+msgid ""
+"Warm and sunny, often 20 to 30 °C in the day. Bring a jacket for the "
+"mountains."
+msgstr "Тепло и солнечно, днём часто 20–30 °C. Возьмите куртку для гор."
+
+msgid "We are happy to help you plan."
+msgstr "Мы с радостью поможем спланировать поездку."
+
+msgid "We are interested in"
+msgstr "Нас интересует"
+
+msgid ""
+"We are looking for talks and workshops about Python. Whether you have spoken"
+" at ten conferences or never spoken in public, we want to hear what you have"
+" learned."
+msgstr ""
+"Мы ищем доклады и воркшопы о Python. Выступали вы на десяти конференциях или"
+" ни разу — нам интересно, чему вы научились."
+
+msgid ""
+"We look at what attendees will take away, not at your job title or how "
+"famous you are."
+msgstr ""
+"Мы смотрим на пользу для слушателей, а не на вашу должность или известность."
+
+msgid "We plan shifts so you can still see the talks you care about."
+msgstr "Мы составляем смены так, чтобы вы успели на интересные вам доклады."
 
 msgid ""
 "We take Python to schools and universities: first programs, small robots, "
@@ -416,20 +1312,66 @@ msgstr ""
 "Мы приносим Python в школы и университеты: первые программы, маленькие "
 "роботы и занятие для учителей о том, как преподавать Python."
 
+msgid "We write to every speaker by"
+msgstr "Мы ответим каждому спикеру до"
+
+msgid "Weather in May"
+msgstr "Погода в мае"
+
 msgid "Weave"
+msgstr "Соткать"
+
+msgid ""
+"Welcome attendees, check tickets and hand out badges. Yours is the first "
+"face everyone sees."
 msgstr ""
+"Встречайте участников, проверяйте билеты и выдавайте бейджи. Вас все увидят "
+"первыми."
+
+msgid "What to send"
+msgstr "Что прислать"
+
+msgid "What will people learn? 2 to 5 sentences. This goes in the program."
+msgstr "Что узнают слушатели? 2–5 предложений. Это попадёт в программу."
+
+msgid "When"
+msgstr "Когда"
+
+msgid "When can you help?"
+msgstr "Когда вы можете помочь?"
 
 msgid "When your employer pays. You help pay for student tickets."
-msgstr ""
+msgstr "Когда платит работодатель. Вы помогаете оплатить студенческие билеты."
+
+msgid "Where"
+msgstr "Где"
+
+msgid "Who is it for?"
+msgstr "Для кого доклад?"
+
+msgid "Who it is for, their level, and what they should already know."
+msgstr "Для кого он, какой уровень и что слушателям нужно знать заранее."
 
 msgid "Why do you want to come?"
-msgstr ""
+msgstr "Почему вы хотите приехать?"
+
+msgid "Why sponsor"
+msgstr "Зачем спонсировать"
 
 msgid "Workshop"
 msgstr "Мастер-класс"
 
+msgid "Workshop, 90 minutes"
+msgstr "Воркшоп, 90 минут"
+
 msgid "Workshops"
 msgstr "Мастер-классы"
+
+msgid "Write to"
+msgstr "Пишите на"
+
+msgid "You can send up to three proposals."
+msgstr "Можно подать до трёх заявок."
 
 msgid ""
 "You don't need to be an expert. If you learned something with Python, "
@@ -438,8 +1380,15 @@ msgstr ""
 "Не нужно быть экспертом. Если вы чему-то научились с Python, кто-то в зале "
 "хочет это услышать."
 
+msgid "You hear back by"
+msgstr "Ответ до"
+
 msgid "You've lost the trail."
 msgstr "Вы сбились с тропы."
+
+msgid ""
+"Your email, and a phone number or Telegram so we can reach you quickly."
+msgstr "Ваша почта и телефон или Telegram, чтобы мы могли быстро связаться."
 
 msgid "Your logo here"
 msgstr "Здесь ваш логотип"
@@ -451,7 +1400,10 @@ msgid "Your suzani"
 msgstr "Ваше сюзане"
 
 msgid "home"
-msgstr ""
+msgstr "главная"
+
+msgid "whether the proposal is accepted or not."
+msgstr "независимо от того, принята заявка или нет."
 
 msgid ""
 "“Hello, world” in Tajik. The first PyCon in Tajikistan: talks, workshops and"

@@ -1,0 +1,127 @@
+{% extends "base.html" %}
+{% load i18n static %}
+{% block title %}{% translate "Explore Tajikistan" %} | PyCon Tajikistan{% endblock %}
+{% block description %}{% translate "A first-timer's guide to Dushanbe, Tajik food and culture, and day trips and hikes around the conference." %}{% endblock %}
+{% block content %}
+<article class="page explore">
+  <header class="page-head page-head-wide">
+    <div>
+      <h1>{% translate "Explore Tajikistan" %}</h1>
+      <p class="lead">{% translate "Coming to Tajikistan for the first time? Here is a short guide to Dushanbe, Tajik food and a few trips to take before or after the conference." %}</p>
+    </div>
+  </header>
+
+  <nav class="toc" aria-label="{% translate "On this page" %}">
+    <a href="#dushanbe">{% translate "Dushanbe" %}</a>
+    <a href="#food">{% translate "Food" %}</a>
+    <a href="#culture">{% translate "Culture" %}</a>
+    <a href="#trips">{% translate "Day trips" %}</a>
+    <a href="#hike">{% translate "A hike" %}</a>
+    <a href="#practical">{% translate "Practical tips" %}</a>
+  </nav>
+
+  <section class="block explore-row">
+    <div>
+      <h2 id="dushanbe">{% translate "Dushanbe" %}</h2>
+      <p>{% translate "Dushanbe is a green, walkable capital with wide avenues, plane trees and mountains on the horizon. Most places worth seeing are on or near Rudaki Avenue." %}</p>
+      <dl class="formats">
+        <div><dt>{% translate "Rudaki Avenue and Rudaki Park" %}</dt><dd>{% translate "The main street. Walk it in the evening, when the fountains are on and families are out." %}</dd></div>
+        <div><dt>{% translate "National Museum of Tajikistan" %}</dt><dd>{% translate "History and art from ancient Sogdiana to today, in one large modern building." %}</dd></div>
+        <div><dt>{% translate "Navruz Palace" %}</dt><dd>{% translate "Halls of carved wood, painted ceilings and stone, made by craftsmen from across the country." %}</dd></div>
+        <div><dt>{% translate "Mehrgon market" %}</dt><dd>{% translate "Dried apricots, nuts, spices, fresh bread and fruit. The best place to buy gifts to take home." %}</dd></div>
+      </dl>
+    </div>
+    <div class="photo-stack">
+      <figure class="photo">
+        <img src="{% static 'img/explore/rohat-960.webp' %}" srcset="{% static 'img/explore/rohat-500.webp' %} 500w, {% static 'img/explore/rohat-960.webp' %} 960w" sizes="(max-width: 899px) 100vw, 45vw" width="960" height="721" alt="{% translate "The Rohat teahouse on Rudaki Avenue, with tall columns and a tiled panel on its wall" %}" loading="lazy" decoding="async">
+        <figcaption>{% translate "Rohat, the big teahouse on Rudaki Avenue. Come for green tea and a long lunch." %}</figcaption>
+      </figure>
+      <figure class="photo">
+        <img src="{% static 'img/explore/mehrgon-960.webp' %}" srcset="{% static 'img/explore/mehrgon-500.webp' %} 500w, {% static 'img/explore/mehrgon-960.webp' %} 960w" sizes="(max-width: 899px) 100vw, 45vw" width="960" height="690" alt="{% translate "The arched facade of Mehrgon market in Dushanbe" %}" loading="lazy" decoding="async">
+        <figcaption>{% translate "Mehrgon market: dried fruit, nuts and spices to take home." %}</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="block explore-row explore-row-flip">
+    <div>
+      <h2 id="food">{% translate "Food" %}</h2>
+      <p>{% translate "Tajik food is made for sharing. Meals start with bread and tea and can go on for hours." %}</p>
+      <dl class="formats">
+        <div><dt>{% translate "Qurutob" %}</dt><dd>{% translate "The national dish: flatbread soaked in qurut, a salty sauce of dried yogurt, topped with onions and herbs. Eaten by hand from a shared wooden bowl." %}</dd></div>
+        <div><dt>{% translate "Oshi palav" %}</dt><dd>{% translate "Plov: rice, carrots and meat cooked slowly in a big cauldron. The dish for guests and celebrations." %}</dd></div>
+        <div><dt>{% translate "Sambusa" %}</dt><dd>{% translate "Pastries filled with meat and onion, baked on the wall of a clay oven." %}</dd></div>
+        <div><dt>{% translate "Non" %}</dt><dd>{% translate "Round bread with a stamped pattern. It is treated with respect: never put it upside down or throw it away." %}</dd></div>
+        <div><dt>{% translate "Green tea" %}</dt><dd>{% translate "Served all day in small bowls called piyola. The host keeps refilling, so a small portion is a good sign." %}</dd></div>
+      </dl>
+    </div>
+    <figure class="photo">
+      <img src="{% static 'img/explore/qurutob-960.webp' %}" srcset="{% static 'img/explore/qurutob-500.webp' %} 500w, {% static 'img/explore/qurutob-960.webp' %} 960w" sizes="(max-width: 899px) 100vw, 45vw" width="960" height="636" alt="{% translate "A wooden bowl of qurutob with herbs, surrounded by sambusa and bread" %}" loading="lazy" decoding="async">
+      <figcaption>{% translate "Qurutob in a wooden bowl, with sambusa and bread around it." %}</figcaption>
+    </figure>
+  </section>
+
+  <section class="block explore-row">
+    <div>
+      <h2 id="culture">{% translate "Culture" %}</h2>
+      <p>{% translate "Tajiks are famous for hospitality. If you are invited for tea, say yes." %}</p>
+      <ul class="ticks">
+        <li>{% translate "People greet with a hand on the heart. Салом (salom) means hello, and раҳмат (rahmat) means thank you." %}</li>
+        <li>{% translate "Take your shoes off before you sit on a tapchan, the raised wooden platform in teahouses." %}</li>
+        <li>{% translate "Ask before you photograph people. Most will say yes." %}</li>
+        <li>{% translate "Dress modestly when you visit mosques and shrines." %}</li>
+        <li>{% translate "Tajik is a Persian language, written in Cyrillic. Many people also speak Russian, and younger people often speak English." %}</li>
+      </ul>
+    </div>
+    <figure class="photo">
+      <img src="{% static 'img/explore/suzani-960.webp' %}" srcset="{% static 'img/explore/suzani-500.webp' %} 500w, {% static 'img/explore/suzani-960.webp' %} 960w" sizes="(max-width: 899px) 100vw, 45vw" width="960" height="636" alt="{% translate "An embroidered suzani with red, pink and teal rosettes on white cloth" %}" loading="lazy" decoding="async">
+      <figcaption>{% translate "Suzani, embroidered cloth made for weddings and homes. The rosettes on this site are drawn from it." %}</figcaption>
+    </figure>
+  </section>
+
+  <section class="block">
+    <h2 id="trips">{% translate "Day trips" %}</h2>
+    <div class="trips">
+      <figure class="photo">
+        <img src="{% static 'img/explore/varzob-960.webp' %}" srcset="{% static 'img/explore/varzob-500.webp' %} 500w, {% static 'img/explore/varzob-960.webp' %} 960w" sizes="(max-width: 899px) 100vw, 45vw" width="960" height="721" alt="{% translate "Green slopes and rocky peaks in the Varzob gorge, with a wooden pavilion" %}" loading="lazy" decoding="async">
+        <figcaption>{% translate "The Varzob gorge, less than an hour north of the city." %}</figcaption>
+      </figure>
+      <figure class="photo">
+        <img src="{% static 'img/explore/iskanderkul-960.webp' %}" srcset="{% static 'img/explore/iskanderkul-500.webp' %} 500w, {% static 'img/explore/iskanderkul-960.webp' %} 960w" sizes="(max-width: 899px) 100vw, 45vw" width="960" height="640" alt="{% translate "Iskanderkul lake with bare mountains of the Fann range behind it" %}" loading="lazy" decoding="async">
+        <figcaption>{% translate "Iskanderkul, a mountain lake in the Fann Mountains." %}</figcaption>
+      </figure>
+    </div>
+    <dl class="formats">
+      <div><dt>{% translate "Varzob gorge" %}</dt><dd>{% translate "30 to 60 minutes north by car. A cold mountain river, fresh air and teahouses where you eat on platforms over the water. Half a day is enough." %}</dd></div>
+      <div><dt>{% translate "Hisor fortress" %}</dt><dd>{% translate "About 30 km west of Dushanbe. A restored fortress gate, an old madrasa and a small museum. Half a day." %}</dd></div>
+      <div><dt>{% translate "Iskanderkul" %}</dt><dd>{% translate "A turquoise lake at about 2,200 m in the Fann Mountains, around three to four hours by car. Plan a long day, or stay a night." %}</dd></div>
+    </dl>
+  </section>
+
+  <aside class="callout">
+    <h2 id="hike">{% translate "A hike: Gusgarf waterfall" %}</h2>
+    <p>{% translate "In the Varzob valley, a path climbs a side gorge to the Gusgarf waterfall. It is an easy half-day walk on a rocky trail. Take water, sun protection and good shoes, and go with a local guide or friends who know the way. Ask in our community chat and someone will likely join you." %}</p>
+  </aside>
+
+  <section class="block">
+    <h2 id="practical">{% translate "Practical tips" %}</h2>
+    <dl class="formats">
+      <div><dt>{% translate "Visa" %}</dt><dd>{% translate "Many nationalities can get an e-visa online at" %} <a class="link" href="https://www.evisa.tj" rel="noopener">evisa.tj</a>. {% translate "Check the rules for your passport before you book." %}</dd></div>
+      <div><dt>{% translate "Money" %}</dt><dd>{% translate "The currency is the Tajik somoni (TJS). Carry cash: cards work in hotels and larger shops, and there are cash machines in the centre." %}</dd></div>
+      <div><dt>{% translate "Weather in May" %}</dt><dd>{% translate "Warm and sunny, often 20 to 30 °C in the day. Bring a jacket for the mountains." %}</dd></div>
+      <div><dt>{% translate "Getting around" %}</dt><dd>{% translate "Taxis are cheap. Use a ride app or agree the price before you get in." %}</dd></div>
+      <div><dt>{% translate "Questions" %}</dt><dd>{% translate "Write to" %} <a class="link" href="mailto:hello@pycon.tj">hello@pycon.tj</a>. {% translate "We are happy to help you plan." %}</dd></div>
+    </dl>
+  </section>
+
+  <p class="credits small">{% translate "Photos from Wikimedia Commons:" %}
+    <a href="https://commons.wikimedia.org/wiki/File:Chaykhona_Rohat_(17).jpg" rel="noopener">Soman</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0" rel="noopener">CC BY-SA 3.0</a>),
+    <a href="https://commons.wikimedia.org/wiki/File:Dushanbe,_Mehrgon_Market_(41929197670).jpg" rel="noopener">Ninara</a> (<a href="https://creativecommons.org/licenses/by/2.0" rel="noopener">CC BY 2.0</a>),
+    <a href="https://commons.wikimedia.org/wiki/File:Kurutob_Tajikistan.JPG" rel="noopener">Ibrahim Rustamov</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0" rel="noopener">CC BY-SA 3.0</a>),
+    <a href="https://commons.wikimedia.org/wiki/File:Hissar_Fortress,_Dushanbe,_Tajikistan_(28834271067).jpg" rel="noopener">Ninara</a> (<a href="https://creativecommons.org/licenses/by/2.0" rel="noopener">CC BY 2.0</a>),
+    <a href="https://commons.wikimedia.org/wiki/File:Varzob.JPG" rel="noopener">Ibrahim Rustamov</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0" rel="noopener">CC BY-SA 3.0</a>),
+    <a href="https://commons.wikimedia.org/wiki/File:Iskanderkul_and_Fann_Mountains.jpg" rel="noopener">Adam Harangozó</a> (<a href="https://creativecommons.org/licenses/by-sa/4.0" rel="noopener">CC BY-SA 4.0</a>).
+    {% translate "Photos are resized." %}
+  </p>
+</article>
+{% endblock %}

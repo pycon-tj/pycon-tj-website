@@ -161,12 +161,18 @@ WAGTAILSEARCH_BACKENDS = {"default": {"BACKEND": "wagtail.search.backends.databa
 # --- Event facts (single source of truth, see tezis.md) -----------------------
 EVENT = {
     "name": "PyCon Tajikistan 2026",
-    "start": "2026-12-12T09:00:00+05:00",
+    # Moved to May 2027; the day is not fixed yet. Set an ISO datetime here
+    # (e.g. "2027-05-15T09:00:00+05:00") to bring back the date and countdown.
+    "start": None,
     "city": "Dushanbe",
     "venue": "Dushanbe Innovation Institute",
     "capacity": 100,
     "summit_altitude_m": 2026,
     "base_altitude_m": 800,
+    # Proposed dates for a May 2027 conference: confirm with the program committee.
+    "cfp_deadline": "2027-02-01",
+    "cfp_decisions": "2027-03-01",
+    "cohost": {"name": "Alif", "url": "https://alif.tj"},
 }
 PRETALX_EVENT_URL = os.environ.get(
     "PRETALX_EVENT_URL", ""

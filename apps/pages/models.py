@@ -29,8 +29,9 @@ class HomePage(Page):
 
         context = super().get_context(request, *args, **kwargs)
         context["tiers"] = Tier.objects.prefetch_related("sponsors").all()
-        start = datetime.fromisoformat(settings.EVENT["start"])
-        context["days_left"] = max((start - timezone.now()).days + 1, 0)
+        if settings.EVENT["start"]:
+            start = datetime.fromisoformat(settings.EVENT["start"])
+            context["days_left"] = max((start - timezone.now()).days + 1, 0)
         return context
 
 

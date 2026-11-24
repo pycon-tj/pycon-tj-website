@@ -13,6 +13,7 @@ from apps.live import views as live_views
 from apps.news import views as news_views
 from apps.pages import views as page_views
 from apps.program import views as program_views
+from apps.sponsors import views as sponsor_views
 from apps.tickets import views as ticket_views
 from apps.volunteers import views as volunteer_views
 
@@ -31,6 +32,10 @@ urlpatterns = [
 urlpatterns += i18n_patterns(
     path("program/", program_views.schedule, name="schedule"),
     path("program/<slug:slug>/", program_views.talk_detail, name="talk"),
+    path("speak/", program_views.speak, name="speak"),
+    path("sponsors/", sponsor_views.sponsors, name="sponsors"),
+    path("attend/", TemplateView.as_view(template_name="pages/attend.html"), name="attend"),
+    path("explore/", TemplateView.as_view(template_name="pages/explore.html"), name="explore"),
     path("tickets/", ticket_views.tickets, name="tickets"),
     path("tickets/aid/", aid_views.apply, name="aid"),
     path("volunteer/", volunteer_views.volunteer, name="volunteer"),

@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Room, Speaker, Talk
+from .models import Proposal, Room, Speaker, Talk
 
 
 @admin.register(Room)
@@ -22,3 +22,20 @@ class TalkAdmin(admin.ModelAdmin):
     search_fields = ["title", "abstract"]
     filter_horizontal = ["speakers"]
     prepopulated_fields = {"slug": ["title"]}
+
+
+@admin.register(Proposal)
+class ProposalAdmin(admin.ModelAdmin):
+    list_display = [
+        "title",
+        "name",
+        "format",
+        "language",
+        "level",
+        "first_time",
+        "status",
+        "created_at",
+    ]
+    list_filter = ["status", "format", "language", "level", "first_time", "wants_mentor"]
+    list_editable = ["status"]
+    search_fields = ["title", "abstract", "name", "email"]

@@ -16,13 +16,19 @@
     </h1>
     <p class="hero-sub">{% translate "“Hello, world” in Tajik. The first PyCon in Tajikistan: talks, workshops and green tea for 100 Pythonistas in Dushanbe." %}</p>
     <ul class="hero-facts">
-      <li><time datetime="{{ event.start }}">{% translate "12 December 2026" %}</time></li>
+      {% if event.start_dt %}
+        <li><time datetime="{{ event.start }}">{{ event.start_dt|date:"j F Y" }}</time></li>
+      {% else %}
+        <li>{% translate "Coming soon" %}</li>
+      {% endif %}
       <li>{% translate "Dushanbe Innovation Institute" %}</li>
-      <li>{% blocktranslate count days=days_left %}{{ days }} day to go{% plural %}{{ days }} days to go{% endblocktranslate %}</li>
+      {% if days_left %}
+        <li>{% blocktranslate count days=days_left %}{{ days }} day to go{% plural %}{{ days }} days to go{% endblocktranslate %}</li>
+      {% endif %}
     </ul>
     <div class="hero-actions">
       <a class="btn btn-sun" href="{% url 'tickets' %}">{% translate "Get a ticket" %}</a>
-      <a class="btn btn-ghost" href="#speak">{% translate "Submit a talk" %}</a>
+      <a class="btn btn-ghost" href="{% url 'speak' %}">{% translate "Submit a talk" %}</a>
     </div>
   </div>
   <canvas class="ikat" data-ikat="hero" data-weave aria-hidden="true"></canvas>
@@ -35,9 +41,23 @@
     <figure class="chapter-art chapter-tower" data-draw>{% include "pages/_tower.svg.html" %}</figure>
     <div class="wrap chapter-copy">
       <h2 class="chapter-title" lang="tg">Душанбе</h2>
-      <p>{% translate "The capital. On 12 December the first PyCon in Tajikistan opens here." %}</p>
+      <p>{% translate "The capital. The first PyCon in Tajikistan opens here soon." %}</p>
+      <a class="link link-light" href="{% url 'explore' %}">{% translate "Plan your visit" %}</a>
     </div>
   </article>
+</section>
+
+{# ── Find your way in: one door per audience ─────────────────────── #}
+<section class="doors" id="find-your-way">
+  <div class="wrap">
+    <h2>{% translate "Find your way in" %}</h2>
+    <div class="doors-grid">
+      <a class="door" href="{% url 'attend' %}"><span class="door-mark" aria-hidden="true">{% rosette "visitor" 72 %}</span><h3>{% translate "Visitors" %}</h3><p>{% translate "Tickets, financial aid and a guide to Tajikistan." %}</p></a>
+      <a class="door" href="{% url 'speak' %}"><span class="door-mark" aria-hidden="true">{% rosette "speaker" 72 %}</span><h3>{% translate "Speakers" %}</h3><p>{% translate "Share what you know. First-time speakers welcome." %}</p></a>
+      <a class="door" href="{% url 'sponsors' %}"><span class="door-mark" aria-hidden="true">{% rosette "sponsor" 72 %}</span><h3>{% translate "Sponsors" %}</h3><p>{% translate "Packages, booths and how to reach the organizers." %}</p></a>
+      <a class="door" href="{% url 'volunteer' %}"><span class="door-mark" aria-hidden="true">{% rosette "volunteer" 72 %}</span><h3>{% translate "Volunteers" %}</h3><p>{% translate "Join the crew that runs the first PyCon here." %}</p></a>
+    </div>
+  </div>
 </section>
 
 {# ── The day ─────────────────────────────────────────────────────── #}
@@ -77,7 +97,7 @@
 <pre><span class="p">&gt;&gt;&gt;</span> print("Салом, ҷаҳон!")
 Салом, ҷаҳон!
 <span class="p">&gt;&gt;&gt;</span> pycon_tj.when()
-'12 December 2026, Dushanbe'</pre>
+'Coming soon, Dushanbe'</pre>
       </div>
       <div class="terminal-canvas" data-canvas></div>
       <form class="terminal-input" data-form>
@@ -101,12 +121,9 @@
         <div><dt>{% translate "Workshop" %}</dt><dd>{% translate "90 minutes, hands-on" %}</dd></div>
         <div><dt>{% translate "Lightning talk" %}</dt><dd>{% translate "5 minutes, sign up on the day" %}</dd></div>
       </dl>
-      <p>{% translate "First time speaking? We'll pair you with a mentor." %}</p>
-      {% if event.pretalx_url %}
-        <a class="btn btn-ink" href="{{ event.pretalx_url }}/cfp">{% translate "Submit a talk" %}</a>
-      {% else %}
-        <p class="soon">{% translate "The call for talks opens soon." %}</p>
-      {% endif %}
+      <p>{% translate "Talks in Tajik, Russian or English. First time speaking? We'll pair you with a mentor." %}</p>
+      <p class="soon">{% translate "Proposals close" %} {{ event.cfp_deadline_dt|date:"j F Y" }}</p>
+      <a class="btn btn-ink" href="{% url 'speak' %}">{% translate "Read the call for speakers" %}</a>
     </div>
     <div class="medallion" aria-hidden="true">{% rosette "speaker" 480 %}</div>
   </div>
@@ -129,6 +146,7 @@
     <div class="sponsors-head">
       <h2>{% translate "Sponsors keep it open to everyone" %}</h2>
       <p class="lead">{% translate "Sponsors keep tickets affordable and help students attend. Higher support, higher ledge." %}</p>
+      <p class="cohost-line">{% translate "Co-hosted with" %} <a href="{{ event.cohost.url }}" rel="noopener">{{ event.cohost.name }}</a></p>
     </div>
     <div class="ledges">
       {% for tier in tiers %}
@@ -144,7 +162,7 @@
         </div>
       {% endfor %}
     </div>
-    <a class="btn btn-ink" href="mailto:sponsors@pycon.tj">{% translate "Become a sponsor" %}</a>
+    <a class="btn btn-ink" href="{% url 'sponsors' %}">{% translate "Become a sponsor" %}</a>
   </div>
 </section>
 
